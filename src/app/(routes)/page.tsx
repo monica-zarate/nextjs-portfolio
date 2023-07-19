@@ -1,12 +1,13 @@
-import Image from 'next/image';
-import Parallax from '../_components/Parallax';
-import Intro from '../_components/Intro';
+import Navbar from "../_components/Navbar"
+import Intro from "../_components/Intro"
 
 export default function Home() {
   return (
+    <>
+    <Navbar/>
     <main className="">
-      <Parallax/>
       <Intro/>
     </main>
+    </>
   )
 }
