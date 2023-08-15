@@ -1,0 +1,125 @@
+// Vendor imports
+"use client";
+import { useRef, useState } from "react";
+import Link from "next/link";
+import { motion as m, useCycle } from "framer-motion";
+
+// Project imports
+import { routes } from "../constants";
+
+// Menu Variants
+const sidebarVariants = {
+  visible: (height = 1000) => ({
+    clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+    transition: {
+      type: "spring",
+      stiffness: 20,
+      restDelta: 2
+    }
+  }),
+  hidden: {
+    clipPath: "circle(30px at 40px 40px)",
+    transition: {
+      delay: 0.5,
+      type: "spring",
+      stiffness: 400,
+      damping: 40
+    }
+  }
+};
+
+const listVariants = {
+    visible: {
+        transition: { staggerChildren: 0.07, delayChildren: 0.2 }
+    },
+    hidden: {
+        transition: { staggerChildren: 0.05, staggerDirection: -1 }
+    }
+};
+
+const listItemVariants = {
+  open: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      y: { stiffness: 1000, velocity: -100 }
+    }
+  },
+  closed: {
+    y: 50,
+    opacity: 0,
+    transition: {
+      y: { stiffness: 1000 }
+    }
+  }
+};
+
+// Hamburger Icon
+const Path = props => (
+  <m.path
+    fill="transparent"
+    strokeWidth="3"
+    stroke="#1A2E3A"
+    strokeLinecap="round"
+    {...props}
+  />
+);
+
+const IconToggle = ({ toggle }) => (
+  <button onClick={toggle} className="relative z-[1]">
+    <svg width="32" height="32" viewBox="0 0 24 24">
+      <Path
+        variants={{
+          hidden: { d: "M 2 2.5 L 20 2.5" },
+          visible: { d: "M 3 16.5 L 17 2.5" }
+        }}
+      />
+      <Path
+        d="M 2 9.423 L 20 9.423"
+        variants={{
+          hidden: { opacity: 1 },
+          visible: { opacity: 0 }
+        }}
+        transition={{ duration: 0.1 }}
+      />
+      <Path
+        variants={{
+          hidden: { d: "M 2 16.346 L 20 16.346" },
+          visible: { d: "M 3 2.5 L 17 16.346" }
+        }}
+      />
+    </svg>
+  </button>
+);
+
+
+// Mobile Menu
+export const MobileMenu = () => {
+  const [isIconActive, setIsIconActive] = useCycle(false, true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const containerRef = useRef(null);
+
+  const showMenu = () => {
+    setIsIconActive();
+    setIsMenuOpen(!isMenuOpen);
+  }
+
+  return (
+    <m.nav
+      initial={false}
+      animate={isIconActive ? "visible" : "hidden"}
+      ref={containerRef}
+    >
+        <m.div variants={sidebarVariants} className={`${isMenuOpen ? "block" :"hidden"} absolute w-1/2 h-screen top-0 right-0 bottom-0 bg-lime-700`}/>
+        <m.ul variants={listVariants} className="absolute top-[100px] right-[100px]">
+            {routes.map((__) => (
+                    <m.li variants={listItemVariants} whileTap={{ scale: 0.95 }} key={__.id} className="mt-8">
+                        <Link href={`/${__.id}`} className="text-white text-h3" onClick={() => showMenu()}>{__.title}</Link>
+                    </m.li>
+                )
+            )}
+        </m.ul>
+        <IconToggle toggle={() => showMenu()} />
+    </m.nav>
+  );
+};

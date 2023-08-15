@@ -12,7 +12,7 @@ export default function Social() {
             {social.map((__) => (
                 <li key={__.id} className='mr-4'>
                     <a href={__.url} target='__blank' rel='noreferrer'>
-                        <FontAwesomeIcon icon={__.icon} className='w-auto h-8' style={{color: '#4D7C0F'}}/>
+                        <FontAwesomeIcon icon={__.icon} className='w-auto h-8' style={{color: '#1A2E3A'}}/>
                     </a>
                 </li>
             ))}
