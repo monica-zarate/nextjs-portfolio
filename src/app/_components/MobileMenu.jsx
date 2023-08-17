@@ -10,7 +10,7 @@ import { routes } from "../constants";
 // Menu Variants
 const sidebarVariants = {
   visible: (height = 1000) => ({
-    clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+    clipPath: `circle(${height * 2 + 200}px)`,
     transition: {
       type: "spring",
       stiffness: 20,
@@ -18,7 +18,7 @@ const sidebarVariants = {
     }
   }),
   hidden: {
-    clipPath: "circle(30px at 40px 40px)",
+    clipPath: "circle(24px)",
     transition: {
       delay: 0.5,
       type: "spring",
@@ -29,10 +29,10 @@ const sidebarVariants = {
 };
 
 const listVariants = {
-    visible: {
+    open: {
         transition: { staggerChildren: 0.07, delayChildren: 0.2 }
     },
-    hidden: {
+    closed: {
         transition: { staggerChildren: 0.05, staggerDirection: -1 }
     }
 };
@@ -66,7 +66,7 @@ const Path = props => (
 );
 
 const IconToggle = ({ toggle }) => (
-  <button onClick={toggle} className="relative z-[1]">
+  <button onClick={toggle} className="absolute top-4 right-8 z-[1]">
     <svg width="32" height="32" viewBox="0 0 24 24">
       <Path
         variants={{
@@ -109,16 +109,17 @@ export const MobileMenu = () => {
       initial={false}
       animate={isIconActive ? "visible" : "hidden"}
       ref={containerRef}
+      className="absolute top-0 right-0 bottom-0 w-1/2"
     >
-        <m.div variants={sidebarVariants} className={`${isMenuOpen ? "block" :"hidden"} absolute w-1/2 h-screen top-0 right-0 bottom-0 bg-lime-700`}/>
-        <m.ul variants={listVariants} className="absolute top-[100px] right-[100px]">
+        <m.div variants={sidebarVariants} className={"absolute top-2 right-6 bottom-0 w-12 h-12 bg-lime-700"}/>
+        {isMenuOpen && <m.ul variants={listVariants} className="absolute top-32 right-8">
             {routes.map((__) => (
-                    <m.li variants={listItemVariants} whileTap={{ scale: 0.95 }} key={__.id} className="mt-8">
+                    <m.li variants={listItemVariants} whileTap={{ scale: 0.95 }} key={__.id} className="text-right mb-8">
                         <Link href={`/${__.id}`} className="text-white text-h3" onClick={() => showMenu()}>{__.title}</Link>
                     </m.li>
                 )
             )}
-        </m.ul>
+        </m.ul>}
         <IconToggle toggle={() => showMenu()} />
     </m.nav>
   );
