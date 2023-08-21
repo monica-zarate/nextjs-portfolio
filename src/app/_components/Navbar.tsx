@@ -32,7 +32,7 @@ export default function Navbar() {
 
 
     return (
-        <div className="flex justify-between items-center bg-white px-8 py-4 mx-auto bg-lime-700">
+        <div className="flex justify-between items-center bg-white px-8 py-4 mx-auto bg-lime-700 border-b border-solid border-neutral-100 drop-shadow-md">
             <Link href="/" className={`${caveat.className} text-lime-950 text-h2`}>Monica Zarate</Link>
             {isMobile && <MobileMenu/>}
             {!isMobile && <ul>

@@ -58,7 +58,7 @@ const listItemVariants = {
 const Path = props => (
   <m.path
     fill="transparent"
-    strokeWidth="3"
+    strokeWidth="2.5"
     stroke="#1A2E3A"
     strokeLinecap="round"
     {...props}
@@ -66,7 +66,7 @@ const Path = props => (
 );
 
 const IconToggle = ({ toggle }) => (
-  <button onClick={toggle} className="absolute top-4 right-8 z-[1]">
+  <button onClick={toggle} className="absolute top-[1.1rem] right-[1.92rem] z-[1]">
     <svg width="32" height="32" viewBox="0 0 24 24">
       <Path
         variants={{
@@ -111,11 +111,11 @@ export const MobileMenu = () => {
       ref={containerRef}
       className="absolute top-0 right-0 bottom-0 w-1/2"
     >
-        <m.div variants={sidebarVariants} className={"absolute top-2 right-6 bottom-0 w-12 h-12 bg-lime-700"}/>
+        <m.div variants={sidebarVariants} className={`${isMenuOpen ? "top-0 right-0 w-full h-screen" : "top-2 right-6 rounded-full"} absolute bottom-0 w-12 h-12 bg-white`}/>
         {isMenuOpen && <m.ul variants={listVariants} className="absolute top-32 right-8">
             {routes.map((__) => (
                     <m.li variants={listItemVariants} whileTap={{ scale: 0.95 }} key={__.id} className="text-right mb-8">
-                        <Link href={`/${__.id}`} className="text-white text-h3" onClick={() => showMenu()}>{__.title}</Link>
+                        <Link href={`/${__.id}`} className="text-lime-950 text-h3" onClick={() => showMenu()}>{__.title}</Link>
                     </m.li>
                 )
             )}
