@@ -46,4 +46,26 @@ export const pagesContent = {
       ],
     },
   },
+  about: {
+    copy: {
+      h1: "Hello there!",
+      p: [
+        "I'm a Web Designer and Developer who values inclusion, accessibility and agile work.",
+        "Being a part of a team that welcomes diversity and encourages me to learn and to improve my skills keeps me motivated.",
+        "I like to bring a proactive attitude, empathy and excellent time management skills to all my projects.",
+      ],
+      ul: {
+        title: "When I'm not working, you'll find me:",
+        listItems: [
+          "Baking something sweet",
+          "Reading novels and manga",
+          "Drinking lots of chai lattes",
+        ],
+      },
+      cta: {
+        title: "Say hi before you go!",
+        p: ["Find me on", "or send me an"],
+      },
+    },
+  },
 };

@@ -36,6 +36,13 @@ module.exports = {
             fontWeight: "700",
           },
         ],
+        h1Light: [
+          "40px",
+          {
+            lineHeight: "60px",
+            fontWeight: "500",
+          },
+        ],
         h2: [
           "32px",
           {
@@ -71,11 +78,18 @@ module.exports = {
             fontWeight: "100",
           },
         ],
+        bodyBold: [
+          "16",
+          {
+            lineHeight: "30px",
+            fontWeight: "500",
+          },
+        ],
         bodyLarge: [
           "20",
           {
             lineHeight: "30px",
-            fontWeight: "300",
+            fontWeight: "500",
           },
         ],
       },
