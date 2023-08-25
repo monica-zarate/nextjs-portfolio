@@ -6,7 +6,10 @@ import { caveat } from "../../fonts";
 
 //Project imports
 import { monicaAboutPhoto } from "../../../assets/";
-import { pagesContent } from "@/app/constants";
+import { pagesContent, social } from "@/app/constants";
+
+const linkedInData = social[0];
+const emailData = social[2];
 
 export default function About() {
 
@@ -37,8 +40,12 @@ export default function About() {
             <div className="flex">
                 <div className="basis-1/2 mr-4">
                     <ul>
-                        {pagesContent.about.copy.p.map((__, i) => (
-                            <li key={i} className={`${i === 0 ? "" : "mt-4"} text-lime-950 text-body`}>{__}</li>
+                        {pagesContent.about.copy.p.map((paragraph, i) => (
+                            <li key={i} className={i === 0 ? "" : "mt-4"}>
+                            {paragraph.map((__, i) => (   
+                                <span key={i} className={`${__.isHighlight ? "text-lime-700 text-bodyBold" : "text-lime-950 text-body"}`}>{`${__.content} `}</span>
+                            ))}
+                            </li>
                         ))}
                     </ul>
                     <p className="text-lime-950 text-body mt-4">{pagesContent.about.copy.ul.title}</p>
@@ -47,11 +54,22 @@ export default function About() {
                             <li key={i} className="text-lime-950 text-body mt-4">{p}</li>
                         ))}
                     </ul>
-                    <h4>{pagesContent.about.copy.cta.title}</h4>
+                    <h4 className="text-lime-700 text-bodyBold mt-4">{pagesContent.about.copy.cta.title}</h4>
                     <ul>
-                        {pagesContent.about.copy.cta.p.map((__, i) => (
-                            <li key={i} className="text-lime-950 text-body mt-4">{__}</li>
-                        ))}
+                        <li className="mt-4">
+                            {pagesContent.about.copy.cta.p.slice(0,1).map((__, i) => (
+                                <span key={i}>
+                                    <span className="text-lime-950 text-body">{__}</span>
+                                    <a href={linkedInData.url} title={linkedInData.title} className="text-lime-900 text-bodyBold hover:text-lime-700 delay-200 duration-200 ease-in-out uppercase">{` ${linkedInData.network}`}</a>
+                                </span>
+                            ))}
+                            {pagesContent.about.copy.cta.p.slice(1,2).map((__, i) => (
+                                <span key={i}>
+                                    <span className="text-lime-950 text-body">{` ${__} `}</span>
+                                    <a href={emailData.url} title={emailData.title} className="text-lime-900 text-bodyBold hover:text-lime-700 delay-200 duration-200 ease-in-out uppercase">{`${emailData.network}.`}</a>
+                                </span>
+                            ))}
+                        </li>
                     </ul>
                 </div>
                 <div className="basis-1/2 ml-4">

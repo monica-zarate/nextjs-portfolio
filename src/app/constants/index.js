@@ -3,12 +3,12 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 export const routes = [
   {
-    id: "about",
-    title: "About",
-  },
-  {
     id: "projects",
     title: "Projects",
+  },
+  {
+    id: "about",
+    title: "About",
   },
 ];
 
@@ -50,9 +50,69 @@ export const pagesContent = {
     copy: {
       h1: "Hello there!",
       p: [
-        "I'm a Web Designer and Developer who values inclusion, accessibility and agile work.",
-        "Being a part of a team that welcomes diversity and encourages me to learn and to improve my skills keeps me motivated.",
-        "I like to bring a proactive attitude, empathy and excellent time management skills to all my projects.",
+        [
+          {
+            id: "1",
+            content: "I'm a",
+            isHighlight: false,
+          },
+          {
+            id: "2",
+            content: "Web Designer",
+            isHighlight: true,
+          },
+          {
+            id: "3",
+            content: "and",
+            isHighlight: false,
+          },
+          {
+            id: "4",
+            content: "Developer",
+            isHighlight: true,
+          },
+          {
+            id: "5",
+            content: "who values inclusion, accessibility and agile work.",
+            isHighlight: false,
+          },
+        ],
+        [
+          {
+            id: "1",
+            content: "Being a part of a team that welcomes",
+            isHighlight: false,
+          },
+          {
+            id: "2",
+            content: "diversity",
+            isHighlight: true,
+          },
+          {
+            id: "3",
+            content:
+              "and encourages me to learn and to improve my skills keeps me motivated.",
+            isHighlight: false,
+          },
+        ],
+        [
+          {
+            id: "1",
+            content: "I like to bring a",
+            isHighlight: false,
+          },
+          {
+            id: "2",
+            content: "proactive attitude",
+            isHighlight: true,
+          },
+          {
+            id: "3",
+            content:
+              ", empathy and excellent time management skills to all my projects.",
+            isHighlight: false,
+          },
+        ],
       ],
       ul: {
         title: "When I'm not working, you'll find me:",
