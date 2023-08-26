@@ -92,6 +92,13 @@ module.exports = {
             fontWeight: "500",
           },
         ],
+        bodyLargeBold: [
+          "20",
+          {
+            lineHeight: "30px",
+            fontWeight: "700",
+          },
+        ],
       },
     },
   },
