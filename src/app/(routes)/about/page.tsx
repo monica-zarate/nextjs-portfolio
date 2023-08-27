@@ -1,6 +1,5 @@
 // Vendor imports
 "use client";
-import { useState, useEffect } from "react";
 import Image from "next/image";
 import { caveat } from "../../fonts";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -15,27 +14,6 @@ const emailData = social[2];
 
 export default function About() {
 
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect(() => {
-
-        window.scrollTo(0,0);
-
-        const mobileMediaQuery = window.matchMedia("(max-width: 639px)");
-        setIsMobile(mobileMediaQuery.matches);
-    
-        const handleMobileMediaQueryChange = (event: any) => {
-            setIsMobile(event.matches)
-        }
-    
-        mobileMediaQuery.addEventListener("change", handleMobileMediaQueryChange);
-  
-        return ()=> {
-            mobileMediaQuery.removeEventListener("change", handleMobileMediaQueryChange);
-        }
-    }, []);
-
-
     return (
         <div className="h-screen" style={{backgroundImage: `url(/sunflower-bg.png)`}}>
             <div className="w-full h-full bg-white/[.5]">
@@ -47,7 +25,7 @@ export default function About() {
                                 {pagesContent.about.copy.p.map((paragraph, i) => (
                                     <li key={i} className={i === 0 ? "" : "mt-4"}>
                                     {paragraph.map((__, i) => (   
-                                        <span key={i} className={`${__.isHighlight ? "text-fuchsia-700 text-bodyBold" : "text-lime-950 text-body"}`}>{`${__.content} `}</span>
+                                        <span key={i} className={`${__.isHighlight ? "text-fuchsia-700 text-bodyBold" : "text-lime-950 text-body"}`}>{`${__.content}${__.id === "comma" ? "" : " "}`}</span>
                                     ))}
                                     </li>
                                 ))}

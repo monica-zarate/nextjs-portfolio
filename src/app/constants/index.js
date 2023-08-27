@@ -102,14 +102,33 @@ export const pagesContent = {
             isHighlight: false,
           },
           {
-            id: "2",
+            id: "comma",
             content: "proactive attitude",
             isHighlight: true,
           },
           {
             id: "3",
-            content:
-              ", empathy and excellent time management skills to all my projects.",
+            content: ",",
+            isHighlight: false,
+          },
+          {
+            id: "4",
+            content: "empathy",
+            isHighlight: true,
+          },
+          {
+            id: "5",
+            content: "and excellent",
+            isHighlight: false,
+          },
+          {
+            id: "6",
+            content: "time management skills",
+            isHighlight: true,
+          },
+          {
+            id: "5",
+            content: "to all my projects.",
             isHighlight: false,
           },
         ],
@@ -126,6 +145,11 @@ export const pagesContent = {
         title: "Say hi before you go!",
         p: ["Find me on", "or send me an"],
       },
+    },
+  },
+  projects: {
+    copy: {
+      h1: "Projects",
     },
   },
 };
