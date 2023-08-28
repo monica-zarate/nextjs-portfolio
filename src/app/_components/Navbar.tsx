@@ -36,7 +36,7 @@ export default function Navbar() {
 
 
     return (
-        <header className="bg-white border-b border-solid border-neutral-100 drop-shadow-md sticky top-0">
+        <header className="bg-white border-b border-solid border-neutral-100 drop-shadow-md sticky top-0 z-[1]">
             <div className="flex justify-between items-center px-8 2xl:px-2 py-4 mx-auto max-w-7xl">
                 <Link href="/" className={`${caveat.className} text-lime-950 text-h2`}>Monica Zarate</Link>
                 {isMobile && <MobileMenu/>}

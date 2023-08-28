@@ -53,7 +53,7 @@ import {
   react,
   expo,
   android,
-} from "../../src/assets";
+} from "../../assets";
 
 export const projects = [
   {
