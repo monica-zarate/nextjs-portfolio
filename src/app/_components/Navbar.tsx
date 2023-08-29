@@ -8,7 +8,7 @@ import { caveat } from "../fonts";
 // Project imports
 import { routes } from "../constants"
 import { MobileMenu } from "./MobileMenu";
-import path from "path";
+
 
 export default function Navbar() {
 

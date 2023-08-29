@@ -17,8 +17,8 @@ export default function About() {
     return (
         <div className="h-screen" style={{backgroundImage: `url(/sunflower-bg.png)`}}>
             <div className="w-full h-full bg-white/[.5]">
-                <div className="px-8 py-4 sm:p-8 max-w-7xl mx-auto bg-white h-screen">
-                    <h1 className={`${caveat.className} text-lime-950 text-h1Light text-center mb-4 sm:mb-8`}>{pagesContent.about.copy.h1}</h1>
+                <div className="px-8 py-4 sm:p-8 2xl:py-12 max-w-7xl mx-auto bg-white h-screen">
+                    <h1 className={`${caveat.className} text-lime-950 text-h1Light text-center mb-4 sm:mb-8 2xl:mb-12`}>{pagesContent.about.copy.h1}</h1>
                     <div className="flex flex-col-reverse sm:flex-row">
                         <div className="basis-1/2 max-w-sm mx-auto">
                             <ul>

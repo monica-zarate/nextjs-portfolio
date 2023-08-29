@@ -10,25 +10,25 @@ import { social } from "../constants"
 
 export default function Social() {
 
-        const [isMobile, setIsMobile] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
 
-        useEffect(() => {
+    useEffect(() => {
 
-            window.scrollTo(0,0);
+        window.scrollTo(0,0);
 
-            const mobileMediaQuery = window.matchMedia("(max-width: 639px)");
-            setIsMobile(mobileMediaQuery.matches);
-        
-            const handleMobileMediaQueryChange = (event: any) => {
-                setIsMobile(event.matches)
-            }
-        
-            mobileMediaQuery.addEventListener("change", handleMobileMediaQueryChange);
+        const mobileMediaQuery = window.matchMedia("(max-width: 639px)");
+        setIsMobile(mobileMediaQuery.matches);
     
-            return ()=> {
-                mobileMediaQuery.removeEventListener("change", handleMobileMediaQueryChange);
-            }
-        }, []);
+        const handleMobileMediaQueryChange = (event: any) => {
+            setIsMobile(event.matches)
+        }
+    
+        mobileMediaQuery.addEventListener("change", handleMobileMediaQueryChange);
+
+        return ()=> {
+            mobileMediaQuery.removeEventListener("change", handleMobileMediaQueryChange);
+        }
+    }, []);
 
     return (
         <ul className='flex'>
