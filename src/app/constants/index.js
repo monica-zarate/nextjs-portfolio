@@ -152,4 +152,9 @@ export const pagesContent = {
       h1: "Projects",
     },
   },
+  featured: {
+    copy: {
+      h2: "Featured Projects",
+    },
+  },
 };

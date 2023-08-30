@@ -34,7 +34,7 @@ export default function Intro() {
     const { copy } = pagesContent.intro;
 
     return (
-        <div className="bg-white p-8 sm:px-4 w-fit mx-auto">
+        <div className="bg-white p-8 pb-16 sm:px-4 w-fit mx-auto">
             <div className="mx-auto sm:flex max-w-5xl justify-center">
                 <div className="flex flex-col justify-center items-center max-auto mb-8 sm:mb-0 lg:justify-end">
                     <Image alt="monica zarate" src={monicaProfilePhoto} className="rounded-full w-1/2 max-w-[250px] sm:w-full"/>
