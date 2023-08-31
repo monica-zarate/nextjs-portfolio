@@ -40,10 +40,16 @@ export default function Navbar() {
             <div className="flex justify-between items-center px-8 2xl:px-2 py-4 mx-auto max-w-7xl">
                 <Link href="/" className={`${caveat.className} text-lime-950 text-h2`}>Monica Zarate</Link>
                 {isMobile && <MobileMenu/>}
-                {!isMobile && <ul>
-                    {routes.map((__, i) => (
+                {!isMobile && <ul className="flex">
+                    <li key={routes[0].id}>
+                        <Link href="/projects" className={`${pathname === routes[0].id ? "text-fuchsia-700" : "text-lime-950"} text-bodyLargeBold ml-4 hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase`}>{routes[0].title}</Link>
+                    </li>
+                    <li key={routes[1].id}>
+                        <Link href="/about" className={`${pathname === routes[1].id ? "text-fuchsia-700" : "text-lime-950"} text-bodyLargeBold ml-4 hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase`}>{routes[1].title}</Link>
+                    </li>
+                    {/* {routes.map((__, i) => (
                         <Link href={__.id} key={i} className={`${pathname === __.id ? "text-fuchsia-700" : "text-lime-950"} text-bodyLargeBold ml-4 hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase`}>{__.title}</Link>
-                    ))}
+                    ))} */}
                 </ul>}
             </div>
         </header>

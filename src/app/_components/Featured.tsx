@@ -15,7 +15,10 @@ export default function Featured() {
                 <h2 className={`${caveat.className} text-lime-950 text-h2 text-center mb-8 2xl:mb-12`}>{pagesContent.featured.copy.h2}</h2>
                 <div className="grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 2xl:gap-x-12 2xl:gap-y-12">
                     {projects.reverse().filter(project => project.isFeatured).map((__: any, i: number) => (
-                        <Link href={`/projects/${__.id}`} key={i} className={`${i % 2 ? "sm:mr-auto" : "sm:ml-auto"} max-sm:mx-auto max-w-[392.67px]`}>
+                        <Link href={{
+                            pathname: `/projects/${__.path}`,
+                            query: {project: JSON.stringify(__)}
+                        }} key={i} className={`${i % 2 ? "sm:mr-auto" : "sm:ml-auto"} max-sm:mx-auto max-w-[392.67px]`}>
                             <ProjectCard {...__} />
                         </Link>
                     ))}
