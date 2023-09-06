@@ -2,7 +2,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from 'next/navigation'
+import { usePathname } from "next/navigation";
 import { caveat } from "../fonts";
 
 // Project imports
@@ -47,9 +47,6 @@ export default function Navbar() {
                     <li key={routes[1].id}>
                         <Link href="/about" className={`${pathname === routes[1].id ? "text-fuchsia-700" : "text-lime-950"} text-bodyLargeBold ml-4 hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase`}>{routes[1].title}</Link>
                     </li>
-                    {/* {routes.map((__, i) => (
-                        <Link href={__.id} key={i} className={`${pathname === __.id ? "text-fuchsia-700" : "text-lime-950"} text-bodyLargeBold ml-4 hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase`}>{__.title}</Link>
-                    ))} */}
                 </ul>}
             </div>
         </header>
