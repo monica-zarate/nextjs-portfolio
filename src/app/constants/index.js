@@ -157,4 +157,17 @@ export const pagesContent = {
       h2: "Featured Projects",
     },
   },
+  projectDetails: {
+    copy: {
+      overview: {
+        h2: "Overview",
+      },
+      tools: {
+        h2: "Tools",
+      },
+      steps: {
+        h2: "Introduction",
+      },
+    },
+  },
 };
