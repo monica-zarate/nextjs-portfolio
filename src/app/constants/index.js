@@ -160,14 +160,17 @@ export const pagesContent = {
   projectDetails: {
     copy: {
       overview: {
-        h2: "Overview",
+        h3: "Overview",
       },
       tools: {
-        h2: "Tools",
+        h3: "Tools",
       },
       steps: {
-        h2: "Introduction",
+        h3: "Introduction",
       },
+    },
+    ids: {
+      intro: "intro",
     },
   },
 };

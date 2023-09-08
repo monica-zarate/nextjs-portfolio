@@ -160,7 +160,7 @@ export const projects = [
       featuredImgAlt: "paper lantern interface preview",
     },
     description:
-      "Designed, developed and tested a prototype for a fictitious bookstore. The project includes a website and a mobile interface.",
+      "Designed and tested a prototype for a fictitious bookstore. The project includes a website and a mobile interface.",
     chip: "UX Design",
     discipline: "design",
     path: "paper-lantern",
@@ -440,7 +440,7 @@ export const projects = [
     ],
     steps: [
       {
-        name: "Research & Project Scope",
+        name: "Research and Project Scope",
         description: [
           "This project started with research on other apps that already exist with similar functionality and features. I couldn't find many apps specifically targeted to leisure travel management; this topic tends to be important for employees on business trips, but I wanted to target the general public.",
           "The unique selling proposition the proposed Travel Compass app would have is the ability to save the trip's schedule and access all information even if the user is offline, which might be a common occurrence if the user is visiting a foreign country.",
@@ -543,7 +543,7 @@ export const projects = [
         imgs: [],
       },
       {
-        name: "Project Scope & Research",
+        name: "Project Scope and Research",
         description: [
           "Once I'd decided on the basic functionality for the app, I did some research on other apps that already exist with similar functionality and features.",
           "The best-rated applications were too robust since they offered a more aggressive approach to keeping their users' expenses in check with their budget, sending alerts when expenses were going over budget or making use of the envelope budgeting system. In these cases, I found their interface suffered because they fit a lot of information in one place, which reflects in a very cluttered interface with a lot of numbers associated with a single expense.",
@@ -647,7 +647,7 @@ export const projects = [
     ],
     steps: [
       {
-        name: "Navigation Set-up & Screens",
+        name: "Navigation Set-up and Screens",
         description: [
           'This app uses bottom tabs navigation for its four main sections: Home, Discover, Notifications and Account. The Home Screen is making use of stacked navigation for the Add New Trip and Trip Details Screens. In order to achieve the desired navigation patterns, I\'m using the "React Navigation" library, in particular the Stack and the Bottom Tabs navigators.',
           "In order to set up the navigation patterns, I started with the Bottom Tabs navigation, to define the four main sections the application has. I created a file per screen and placed the <Navigation Container> in App.js as the root element to manage the linking of the app.",
@@ -671,7 +671,7 @@ export const projects = [
         imgs: [tcDev2],
       },
       {
-        name: "Theme & Styles",
+        name: "Theme and Styles",
         description: [
           "The app's design started to come together once I started implementing the RNE Theming. In order to help style components that will be used across different Screens, I've applied the styling that was defined during Phase 1 of this project to the Button, Text and Icon Components, I'm also making use of a Theme Colour Palette to have the app's palette available as a constant.",
           "Further styling is applied using the Native Style Sheet Component on each screen according to its particular design.",
@@ -679,7 +679,7 @@ export const projects = [
         imgs: [tcDev3],
       },
       {
-        name: "Splash Screen & Icons",
+        name: "Splash Screen and Icons",
         description: [
           "The application logo was implemented on a splash screen image and together with an app icon was added to the app.json file to help with branding and make for a more genuine experience when launching the app.",
         ],

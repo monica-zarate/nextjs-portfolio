@@ -92,6 +92,13 @@ module.exports = {
             fontWeight: "500",
           },
         ],
+        bodyLargeLight: [
+          "20",
+          {
+            lineHeight: "30px",
+            fontWeight: "300",
+          },
+        ],
         bodyLargeBold: [
           "20",
           {
