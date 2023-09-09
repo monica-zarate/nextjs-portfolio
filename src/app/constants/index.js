@@ -168,9 +168,13 @@ export const pagesContent = {
       steps: {
         h3: "Introduction",
       },
+      ctas: {
+        h3: "Learn more",
+      },
     },
     ids: {
       intro: "intro",
+      learnMore: "learnmore",
     },
   },
 };
