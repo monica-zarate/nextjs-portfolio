@@ -45,7 +45,7 @@ export default function Intro() {
                     {copy.p.map((__, i, {length}) => (
                         <p key={i} className={`${i + 1 === length ? "text-fuchsia-700 text-bodyLarge" : "text-lime-950 text-body"} mb-4`}>{__}</p>
                     ))}
-                    <Social/>
+                    <Social />
                 </div>
             </div>
         </div>

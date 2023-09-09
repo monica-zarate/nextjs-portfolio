@@ -8,7 +8,7 @@ import { motion as m } from "framer-motion";
 import { social } from "../constants"
 
 
-export default function Social() {
+export default function Social(props: any) {
 
     const [isMobile, setIsMobile] = useState(false);
 
@@ -31,11 +31,11 @@ export default function Social() {
     }, []);
 
     return (
-        <ul className='flex'>
-            {social.map((__) => (
-                <m.li whileHover={!isMobile?{translateY: -2} : {}} key={__.id} className='mr-4 duration-75 ease-in-out'>
-                    <a href={__.url} target='__blank' rel='noreferrer'>
-                        <FontAwesomeIcon icon={__.icon} className='w-auto h-8' style={{color: '#1A2E3A'}}/>
+        <ul className="flex">
+            {social.map((__, i) => (
+                <m.li whileHover={!isMobile?{translateY: -2} : {}} key={__.id} className={`${i === social.length - 1 ? "" : "mr-4"} duration-75 ease-in-out`}>
+                    <a href={__.url} target="__blank" rel="noreferrer">
+                        <FontAwesomeIcon icon={__.icon} className="w-auto h-8" style={{color: props.isLight ? "#ffffff" : "#1A2E3A"}}/>
                     </a>
                 </m.li>
             ))}
