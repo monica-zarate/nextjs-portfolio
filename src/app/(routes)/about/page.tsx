@@ -8,6 +8,7 @@ import { faSeedling } from "@fortawesome/free-solid-svg-icons";
 //Project imports
 import { monicaAboutPhoto } from "../../../assets/";
 import { pagesContent, social } from "@/app/constants";
+import RevealElement from "@/app/_components/RevealElement";
 
 const linkedInData = social[0];
 const emailData = social[2];
@@ -23,43 +24,55 @@ export default function About() {
                         <div className="basis-1/2 max-w-sm mx-auto">
                             <ul>
                                 {pagesContent.about.copy.p.map((paragraph, i) => (
-                                    <li key={i} className={i === 0 ? "" : "mt-4"}>
-                                    {paragraph.map((__, i) => (   
-                                        <span key={i} className={`${__.isHighlight ? "text-fuchsia-700 text-bodyBold" : "text-lime-950 text-body"}`}>{`${__.content}${__.id === "comma" ? "" : " "}`}</span>
-                                    ))}
-                                    </li>
+                                    <RevealElement key={i}>
+                                        <li className={i === 0 ? "" : "mt-4"}>
+                                        {paragraph.map((__, i) => (   
+                                            <span key={i} className={`${__.isHighlight ? "text-fuchsia-700 text-bodyBold" : "text-lime-950 text-body"}`}>{`${__.content}${__.id === "comma" ? "" : " "}`}</span>
+                                        ))}
+                                        </li>
+                                    </RevealElement>
                                 ))}
                             </ul>
-                            <p className="text-lime-950 text-body mt-4">{pagesContent.about.copy.ul.title}</p>
+                            <RevealElement>
+                                <p className="text-lime-950 text-body mt-4">{pagesContent.about.copy.ul.title}</p>
+                            </RevealElement>
                             <ul>
                                 {pagesContent.about.copy.ul.listItems.map((p, i) => (
-                                    <li key={i} className="text-lime-950 text-body mt-4 flex items-center">
-                                        <FontAwesomeIcon icon={faSeedling} style={{color: '#64a30d'}}/>
-                                        <p className="ml-2">{p}</p>
-                                    </li>
+                                    <RevealElement key={i}>
+                                        <li className="text-lime-950 text-body mt-4 flex items-center">
+                                            <FontAwesomeIcon icon={faSeedling} style={{color: '#64a30d'}}/>
+                                            <p className="ml-2">{p}</p>
+                                        </li>
+                                    </RevealElement>
                                 ))}
                             </ul>
-                            <h4 className="text-fuchsia-700 text-bodyBold mt-4">{pagesContent.about.copy.cta.title}</h4>
+                            <RevealElement>
+                                <h4 className="text-fuchsia-700 text-bodyBold mt-4">{pagesContent.about.copy.cta.title}</h4>
+                            </RevealElement>
                             <ul>
-                                <li className="mt-4">
-                                    {pagesContent.about.copy.cta.p.slice(0,1).map((__, i) => (
-                                        <span key={i}>
-                                            <span className="text-lime-950 text-body">{__}</span>
-                                            <a href={linkedInData.url} target="_blank" title={linkedInData.title} className="text-lime-950 text-bodyLargeBold hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase">{` ${linkedInData.network}`}</a>
-                                        </span>
-                                    ))}
-                                    {pagesContent.about.copy.cta.p.slice(1,2).map((__, i) => (
-                                        <span key={i}>
-                                            <span className="text-lime-950 text-body">{` ${__} `}</span>
-                                            <a href={emailData.url} target="_blank" title={emailData.title} className="text-lime-950 text-bodyLargeBold hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase">{emailData.network}</a>
-                                            <span className="text-lime-950 text-body">.</span>
-                                        </span>
-                                    ))}
-                                </li>
+                                <RevealElement>
+                                    <li className="mt-4">
+                                        {pagesContent.about.copy.cta.p.slice(0,1).map((__, i) => (
+                                            <span key={i}>
+                                                <span className="text-lime-950 text-body">{__}</span>
+                                                <a href={linkedInData.url} target="_blank" title={linkedInData.title} className="text-lime-950 text-bodyLargeBold hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase">{` ${linkedInData.network}`}</a>
+                                            </span>
+                                        ))}
+                                        {pagesContent.about.copy.cta.p.slice(1,2).map((__, i) => (
+                                            <span key={i}>
+                                                <span className="text-lime-950 text-body">{` ${__} `}</span>
+                                                <a href={emailData.url} target="_blank" title={emailData.title} className="text-lime-950 text-bodyLargeBold hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase">{emailData.network}</a>
+                                                <span className="text-lime-950 text-body">.</span>
+                                            </span>
+                                        ))}
+                                    </li>
+                                </RevealElement>
                             </ul>
                         </div>
                         <div className="basis-1/2 mb-4 md:ml-4 lg:ml-0 sm:mb-0">
-                            <Image alt="monica zarate" src={monicaAboutPhoto} className="w-full h-auto max-w-sm mx-auto"/>
+                            <RevealElement>
+                                <Image alt="monica zarate" src={monicaAboutPhoto} className="w-full h-auto max-w-sm mx-auto"/>
+                            </RevealElement>
                         </div>
                     </div>
                 </div>

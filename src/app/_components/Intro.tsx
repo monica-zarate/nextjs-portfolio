@@ -8,6 +8,7 @@ import { caveat } from "../fonts";
 import { monicaProfilePhoto } from "../../assets";
 import { pagesContent } from "../constants"
 import Social from "./Social";
+import RevealElement from "./RevealElement";
 
 export default function Intro() {
 
@@ -43,9 +44,13 @@ export default function Intro() {
                 <div className="max-w-md sm:ml-8 mx-auto">
                     {!isMobile && <h1 className={`${caveat.className} text-lime-950 text-h2`}>{copy.h1}</h1>}
                     {copy.p.map((__, i, {length}) => (
-                        <p key={i} className={`${i + 1 === length ? "text-fuchsia-700 text-bodyLarge" : "text-lime-950 text-body"} mb-4`}>{__}</p>
+                        <RevealElement key={i}>
+                            <p className={`${i + 1 === length ? "text-fuchsia-700 text-bodyLarge" : "text-lime-950 text-body"} mb-4`}>{__}</p>
+                        </RevealElement>
                     ))}
-                    <Social />
+                    <RevealElement>
+                        <Social />
+                    </RevealElement>
                 </div>
             </div>
         </div>
