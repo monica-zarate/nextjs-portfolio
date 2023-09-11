@@ -3,6 +3,7 @@ import {
   acnh2,
   acnh3,
   acnh4,
+  acnh5,
   acnhThumb,
   acnh,
   apod1,
@@ -18,6 +19,10 @@ import {
   billy,
   guavaPunch1,
   guavaPunch2,
+  guavaPunch3,
+  guavaPunch4,
+  guavaPunch5,
+  guavaPunch6,
   guavaPunchThumb,
   guavaPunch,
   paperLantern1,
@@ -26,6 +31,8 @@ import {
   paperLantern4,
   paperLantern5,
   paperLantern6,
+  paperLantern7,
+  paperLantern8,
   paperLanternThumb,
   paperLantern,
   tcDesign1,
@@ -102,13 +109,6 @@ export const projects = [
         description: [
           "I got inspired by a drink I used to enjoy in my childhood which was guava nectar and decided to add sparkling water as a twist, to make it more interesting. I wanted to create a casual beverage that could be enjoyed by everyone, as a soft drink.",
         ],
-        imgs: [],
-      },
-      {
-        name: "Creative Process",
-        description: [
-          "The colour palette was decided based on the beverage's main ingredient: the guava fruit, which has a pink vibrant colour, as well as some green from its leaves. The logo gravitates towards round shapes, to reference the bubbles the sparkling water will add to the mix.",
-        ],
         imgs: [guavaPunch1],
       },
       {
@@ -119,11 +119,18 @@ export const projects = [
         imgs: [guavaPunch2],
       },
       {
+        name: "Creative Process",
+        description: [
+          "The colour palette was decided based on the beverage's main ingredient: the guava fruit, which has a pink vibrant colour, as well as some green from its leaves. The logo gravitates towards round shapes, to reference the bubbles the sparkling water will add to the mix.",
+        ],
+        imgs: [guavaPunch3],
+      },
+      {
         name: "Black and White Version",
         description: [
           "The selected sketches were translated into Adobe Illustrator in a black and white version. The guava fruit was traced using the pen tool. Balance and hierarchy were applied to create harmony and emphasize the more important information.",
         ],
-        imgs: [],
+        imgs: [guavaPunch4],
       },
       {
         name: "Poster Brainstorming",
@@ -138,14 +145,14 @@ export const projects = [
           "The park photo was placed as a background image, then the container was brought in using a fill colour and the label as a decal, to wrap around the can for a realistic effect. The 3D model perspective was matched to the background image. The most challenging part of the project was the lighting. This was my first time using Adobe Dimension, so it took some time to figure out the lighting options and settings.",
           "The final result was built with two light sources, one considered as “natural lighting” recreating the outdoor lighting the background image has, and because the natural light is hitting the can from behind/ to one side, an ambient light was added to help with the illumination of the front of the container, where the label is placed.",
         ],
-        imgs: [],
+        imgs: [guavaPunch5, guavaPunch6],
       },
       {
         name: "Adobe Photoshop",
         description: [
           "Once the poster was rendered, it was then exported to Adobe Photoshop, where the slogan text and certification logos were added. Typography and text colours were chosen to complement the container and provide enough contrast to be readable.",
         ],
-        imgs: [],
+        imgs: [guavaPunch],
       },
     ],
   },
@@ -204,14 +211,14 @@ export const projects = [
         description: [
           "User Persona: Benjamin is a pet owner who likes to explore new hobbies. Scenario: He's looking for a reference book that can introduce him to indoor gardening while keeping his cat safe. User Flow: Ben browses the Paper Lantern website looking for a specific book and successfully goes through the checkout process.",
         ],
-        imgs: [paperLantern1],
+        imgs: [paperLantern1, paperLantern2],
       },
       {
         name: "Mobile App",
         description: [
           "User Persona: Taylor's a young professional that works at a creative agency. Scenario: They're looking to update their credit card information on the Paper Lantern app, so they can check out faster whenever they need to place an order. User Flow: Taylor launches the Paper Lantern App and successfully adds a new payment method.",
         ],
-        imgs: [paperLantern2],
+        imgs: [paperLantern3, paperLantern4],
       },
       {
         name: "Wireframes",
@@ -225,21 +232,21 @@ export const projects = [
         description: [
           "When translating the Website and App Interfaces to their high-fidelity version, I kept in mind principles of design like balance, patterns and unity to create a useful and aesthetically pleasing experience for the users.",
         ],
-        imgs: [paperLantern3, paperLantern4],
+        imgs: [paperLantern5, paperLantern6],
       },
       {
         name: "Website User Testing",
         description: [
           "The website prototype was tested using Useberry. All six participants completed the three tasks they were presented with, however, thanks to their feedback and Useberry heat maps I found the users had some difficulties completing one of the tasks given. The search functionality could be improved, as well as the wording of the task. A second iteration of the prototype was completed, with updated labels and navigation options.",
         ],
-        imgs: [paperLantern5],
+        imgs: [paperLantern7],
       },
       {
         name: "App User Testing",
         description: [
           "The app prototype was tested using Maze. All nine participants completed the three tasks they were presented with. The test has a Usability Score of 76, placing it on a Medium level of usability, which is a sign that there's room for improvement. Similar to the website prototype, users had difficulties with the search functionality. A revised version includes adding placeholder text on the search bar and increased contrast of the interface icons.",
         ],
-        imgs: [paperLantern6],
+        imgs: [paperLantern8],
       },
       {
         name: "Final Thoughts",
@@ -314,21 +321,21 @@ export const projects = [
         description: [
           "Inside the data folder, two files were created to contain the instances of the Villagers and Npc's classes accordingly. Each resident is built making use of the “new” keyword, the name of the Class, and is passing a relational array as a parameter. All these instances are then included in a Villager or NPC array.",
         ],
-        imgs: [acnh3],
+        imgs: [acnh3, acnh4],
       },
       {
         name: "Card Partial",
         description: [
           "Once all the data has been created, we're ready to access and display it. A partial called card was created to display all the residents' information. This partial contains an if statement, to display their personality if the resident is a Villager or the service they offer if the resident is an NPC.",
         ],
-        imgs: [acnh4],
+        imgs: [acnh5],
       },
       {
         name: "Final Result",
         description: [
           "The page loads a card for each resident and displays its distinctive information for Villagers and NPCs. All cards contain the character's name, image and other general details like species and birthday. I was pleased with the final result, considering it was my first PHP project. For future iterations, I would like to expand on this project and have the ability to filter residents per type of offer and the possibility to click on each card to access a resident's individual profile page with more information.",
         ],
-        imgs: [],
+        imgs: [acnh],
       },
     ],
   },
@@ -370,7 +377,7 @@ export const projects = [
     ],
     steps: [
       {
-        name: "API's Endpoints",
+        name: "API Endpoints",
         description: [
           "For the Picture of the Day and a specific date, the endpoint must include a date string as yyyy-mm-dd. I.e: &date=2022-11-01. For the pictures of the month, I'm using a start date. I.e: &start_date=2022-11-01. If no end date is included, this query will retrieve pictures from the start date to the present day. I'm including &thumbs=true at the end of all endpoints, this is for when the APOD is a video, to display the thumbnail images of the video instead.",
         ],
@@ -384,7 +391,7 @@ export const projects = [
         imgs: [apod1],
       },
       {
-        name: "fetch()",
+        name: "fetch",
         description: [
           "The fetch() method gets invoked when there's a call to the APOD API, passing the query as a parameter. A then() method follows, which transforms the response from the API into a JSON format. A second then() method is called to pass the received data to a function that's in charge of displaying it in the DOM. A ctach() method is chained, to catch any errors from the API call, and display them in the browser's console. The finally() method closes this code block, which is removing a spinner from the DOM once all the data has loaded and it's ready to populate the page.",
         ],
@@ -402,7 +409,7 @@ export const projects = [
         description: [
           "This project offers three different ways to call the APOD API. On page load, the Picture of the Day gets displayed. Users also have the option to display all the pictures of the current month, or they can also find a specific date. For future iterations, I would like to re-work the page's layout, especially when having more than one card, to better align the content, as each picture's explanation varies in length.",
         ],
-        imgs: [],
+        imgs: [apod],
       },
     ],
   },
@@ -470,14 +477,14 @@ export const projects = [
           "By adding green into the mix, I'm also aiming to promote a balanced and soothing experience, as this colour brings out a grounding feeling. I would like the users of this app to feel they can rely on having access to their information at any point of their trip.",
           "The orange elements form a complementary colour scheme and add contrast to the interface to be eye-catching enough for call-to-action buttons and links.",
         ],
-        imgs: [],
+        imgs: [tcDesign3],
       },
       {
         name: "Adobe Xd Components",
         description: [
           "Since some elements of the interface are used multiple times across the app, I took advantage of the Component functionality Adobe Xd offers, to create reusable elements that could have multiple states as needed. For example, the button component has an Inactive state to show on a pristine form. I also created card components for the trip details overview and icons to use for the different sections of the interface.",
         ],
-        imgs: [tcDesign3],
+        imgs: [],
       },
       {
         name: "Mockups",
@@ -491,7 +498,7 @@ export const projects = [
         description: [
           "The Travel Compass App prototype offers an overview of the app for an existing user and mocks the ability to add a new trip up. Views for the Discover and Account Settings screens are also available.",
         ],
-        imgs: [],
+        imgs: [tc],
       },
       {
         name: "Final Thoughts",
@@ -690,7 +697,7 @@ export const projects = [
         description: [
           "I had fun building this project, it was the first time I worked with React Native and I appreciate having the experience of stepping outside of my comfort zone in terms of developing a website or application for the web. For future iterations, I would like to include a back-end integration, so the app can get tested with real data.",
         ],
-        imgs: [],
+        imgs: [tc],
       },
     ],
   },

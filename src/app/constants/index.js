@@ -175,6 +175,7 @@ export const pagesContent = {
     ids: {
       intro: "intro",
       learnMore: "learnmore",
+      guavaPunch: "guava-punch",
     },
   },
 };

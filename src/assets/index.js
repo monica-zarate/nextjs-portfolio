@@ -7,22 +7,27 @@ import acnh1 from "./images/projects/acnh-1.png";
 import acnh2 from "./images/projects/acnh-2.png";
 import acnh3 from "./images/projects/acnh-3.png";
 import acnh4 from "./images/projects/acnh-4.png";
-import acnhThumb from "./images/projects/acnh-thumb.jpg";
+import acnh5 from "./images/projects/acnh-5.png";
+import acnhThumb from "./images/projects/acnh-thumb.png";
 import acnh from "./images/projects/acnh.png";
 import apod1 from "./images/projects/apod-1.png";
 import apod2 from "./images/projects/apod-2.png";
 import apod3 from "./images/projects/apod-3.png";
-import apodThumb from "./images/projects/apod-thumb.jpg";
+import apodThumb from "./images/projects/apod-thumb.png";
 import apod from "./images/projects/apod.png";
 import billy1 from "./images/projects/billy-1.png";
 import billy2 from "./images/projects/billy-2.png";
 import billy3 from "./images/projects/billy-3.png";
 import billy4 from "./images/projects/billy-4.png";
-import billyThumb from "./images/projects/billy-thumb.jpg";
+import billyThumb from "./images/projects/billy-thumb.png";
 import billy from "./images/projects/billy.png";
-import guavaPunch1 from "./images/projects/guava-punch-1.jpg";
-import guavaPunch2 from "./images/projects/guava-punch-2.jpg";
-import guavaPunchThumb from "./images/projects/guava-punch-thumb.jpg";
+import guavaPunch1 from "./images/projects/guava-punch-1.png";
+import guavaPunch2 from "./images/projects/guava-punch-2.png";
+import guavaPunch3 from "./images/projects/guava-punch-3.png";
+import guavaPunch4 from "./images/projects/guava-punch-4.png";
+import guavaPunch5 from "./images/projects/guava-punch-5.png";
+import guavaPunch6 from "./images/projects/guava-punch-6.png";
+import guavaPunchThumb from "./images/projects/guava-punch-thumb.png";
 import guavaPunch from "./images/projects/guava-punch.png";
 import paperLantern1 from "./images/projects/paper-lantern-1.png";
 import paperLantern2 from "./images/projects/paper-lantern-2.png";
@@ -30,7 +35,9 @@ import paperLantern3 from "./images/projects/paper-lantern-3.png";
 import paperLantern4 from "./images/projects/paper-lantern-4.png";
 import paperLantern5 from "./images/projects/paper-lantern-5.png";
 import paperLantern6 from "./images/projects/paper-lantern-6.png";
-import paperLanternThumb from "./images/projects/paper-lantern-thumb.jpg";
+import paperLantern7 from "./images/projects/paper-lantern-7.png";
+import paperLantern8 from "./images/projects/paper-lantern-8.png";
+import paperLanternThumb from "./images/projects/paper-lantern-thumb.png";
 import paperLantern from "./images/projects/paper-lantern.png";
 import tcDesign1 from "./images/projects/tc-design-1.png";
 import tcDesign2 from "./images/projects/tc-design-2.png";
@@ -40,7 +47,7 @@ import tcDev1 from "./images/projects/tc-dev-1.png";
 import tcDev2 from "./images/projects/tc-dev-2.png";
 import tcDev3 from "./images/projects/tc-dev-3.png";
 import tc from "./images/projects/tc.png";
-import tcThumb from "./images/projects/travel-compass-thumb.jpg";
+import tcThumb from "./images/projects/travel-compass-thumb.png";
 
 // Icons
 import ps from "./icons/tools/photoshop.png";
@@ -67,6 +74,7 @@ export {
   acnh2,
   acnh3,
   acnh4,
+  acnh5,
   acnhThumb,
   acnh,
   apod1,
@@ -82,6 +90,10 @@ export {
   billy,
   guavaPunch1,
   guavaPunch2,
+  guavaPunch3,
+  guavaPunch4,
+  guavaPunch5,
+  guavaPunch6,
   guavaPunchThumb,
   guavaPunch,
   paperLantern1,
@@ -90,6 +102,8 @@ export {
   paperLantern4,
   paperLantern5,
   paperLantern6,
+  paperLantern7,
+  paperLantern8,
   paperLanternThumb,
   paperLantern,
   tcDesign1,

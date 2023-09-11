@@ -1,3 +1,7 @@
+// Vendor imports
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
+
 // Project imports
 import Social from "./Social"
 
@@ -12,7 +16,7 @@ export default function Footer() {
                     <p className="text-body">&copy; Monica Zarate {year}</p>
                 </div>
                 <div className="mb-8">
-                    <p className="text-body text-center">Designed and developed with 🤍 <br/> in Vancouver, BC</p>
+                    <p className="text-body text-center">Designed and developed with <FontAwesomeIcon icon={faHeart}/> <br/> in Vancouver, BC</p>
                 </div>
                 <Social isLight />
             </div>
