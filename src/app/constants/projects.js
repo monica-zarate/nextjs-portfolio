@@ -15,6 +15,8 @@ import {
   billy2,
   billy3,
   billy4,
+  billy5,
+  billy6,
   billyThumb,
   billy,
   guavaPunch1,
@@ -596,14 +598,14 @@ export const projects = [
           "The elements on the interface were conceived under the 8 points rule to create a harmonious balance. This can be found on paddings, font sizes and line heights, widths and heights of icons, buttons, and containers.",
           "Since Billy is intended to be used as an application, (instead of a traditional website), the navigation menu is occupying a fixed space to the left-hand side of the layout, for the remaining area, where all the content is being presented, I'm using a nine-column grid to keep all elements aligned and promote consistency across pages.",
         ],
-        imgs: [billy4],
+        imgs: [billy4, billy5, billy6],
       },
       {
         name: "Prototype",
         description: [
           "Billy's app prototype offers an overview of the app for an existing user and mocks the ability to add a new expense. The prototype offers the user the ability to navigate the three main sections, and to change the view for the Transactions section from Chart to List.",
         ],
-        imgs: [],
+        imgs: [billy],
       },
       {
         name: "Final Thoughts",

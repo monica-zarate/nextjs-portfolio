@@ -19,6 +19,8 @@ import billy1 from "./images/projects/billy-1.png";
 import billy2 from "./images/projects/billy-2.png";
 import billy3 from "./images/projects/billy-3.png";
 import billy4 from "./images/projects/billy-4.png";
+import billy5 from "./images/projects/billy-5.png";
+import billy6 from "./images/projects/billy-6.png";
 import billyThumb from "./images/projects/billy-thumb.png";
 import billy from "./images/projects/billy.png";
 import guavaPunch1 from "./images/projects/guava-punch-1.png";
@@ -86,6 +88,8 @@ export {
   billy2,
   billy3,
   billy4,
+  billy5,
+  billy6,
   billyThumb,
   billy,
   guavaPunch1,
