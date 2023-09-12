@@ -10,6 +10,7 @@ import { AnimatePresence, motion as m } from "framer-motion";
 import { projects } from "../../../constants/projects";
 import { pagesContent } from "@/app/constants";
 import RevealElement from "@/app/_components/RevealElement";
+import Modal from "../../../_components/Modal";
 
 
 const getCTAs = (project: any) => (
@@ -29,6 +30,7 @@ const lowercaseString = (string : string) => {
 export default function ProjectDetails() {
 
     const [selectedStep, setSelectedStep] = useState("");
+    const [selected, setSelected] = useState<string | any >("");
     const projectPath = usePathname().split("/");
     const project = projects.filter((__) => __.path === projectPath[2])[0];
     const sectionIds = project.steps.map((__) => __.name);
@@ -116,7 +118,14 @@ export default function ProjectDetails() {
                                             <p key={x} className="text-lime-950 text-body mb-4">{p}</p>
                                         ))}
                                         {step.imgs && step.imgs.map((image, j) => (
-                                            <Image key={j} src={image} alt={step.name}/>
+                                            <m.div
+                                                key={j} 
+                                                onClick={() => setSelected(image)} 
+                                                whileHover={{translateY: -2, transition: { duration: 0.2 }}} 
+                                                whileTap={{scale: 0.95}}
+                                                className="cursor-pointer shadow-md">
+                                                    <Image src={image} alt={step.name}/>  
+                                            </m.div>
                                         ))}
                                     </RevealElement>
                                 </div>
@@ -129,6 +138,7 @@ export default function ProjectDetails() {
                             </div>}
                         </div>
                     </div>
+                    <Modal selected={selected} setSelected={setSelected} />
                 </div>
             </m.div>
         </AnimatePresence>
