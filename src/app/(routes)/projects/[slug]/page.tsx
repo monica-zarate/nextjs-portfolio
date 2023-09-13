@@ -11,16 +11,22 @@ import { projects } from "../../../constants/projects";
 import { pagesContent } from "@/app/constants";
 import RevealElement from "@/app/_components/RevealElement";
 import Modal from "../../../_components/Modal";
+import { link } from "fs";
 
 
-const getCTAs = (project: any) => (
+const getCTAs = (project: any) => {
+
+    const { links } = pagesContent.projectDetails.copy;
+
+    return (
     <div className="">
-        {project.links.repo && <Link href={project.links.repo} title={project.links.repoTitle} target="_blank" rel="noreferrer" className="text-lime-950 text-bodyLargeBold hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase block mb-2 w-fit">GitHub Repository</Link>}
-        {project.links.figmaPrototype && <Link href={project.links.figmaPrototype} title={project.links.figmaPrototypeTitle} target="_blank" rel="noreferrer" className="text-lime-950 text-bodyLargeBold hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase block mb-2 w-fit">Figma Prototype</Link>}
-        {project.links.xdPrototype && <Link href={project.links.xdPrototype} title={project.links.xdPrototypeTitle} target="_blank" rel="noreferrer" className="text-lime-950 text-bodyLargeBold hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase block mb-2 w-fit">Adobe Xd Prototype</Link>}
-        {project.links.site && <Link href={project.links.site} title={project.links.siteTitle} target="_blank" rel="noreferrer" className="text-lime-950 text-bodyLargeBold hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase block mb-2 w-fit">Project's Website</Link>}
+        {project.links.repo && <Link href={project.links.repo} title={project.links.repoTitle} target="_blank" rel="noreferrer" className="text-lime-950 text-bodyLargeBold hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase block mb-2 w-fit">{links.github}</Link>}
+        {project.links.figmaPrototype && <Link href={project.links.figmaPrototype} title={project.links.figmaPrototypeTitle} target="_blank" rel="noreferrer" className="text-lime-950 text-bodyLargeBold hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase block mb-2 w-fit">{links.figma}</Link>}
+        {project.links.xdPrototype && <Link href={project.links.xdPrototype} title={project.links.xdPrototypeTitle} target="_blank" rel="noreferrer" className="text-lime-950 text-bodyLargeBold hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase block mb-2 w-fit">{links.adobeXd}</Link>}
+        {project.links.site && <Link href={project.links.site} title={project.links.siteTitle} target="_blank" rel="noreferrer" className="text-lime-950 text-bodyLargeBold hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase block mb-2 w-fit">{links.website}</Link>}
     </div>
-);
+    );
+};
 
 const lowercaseString = (string : string) => {
     return string.toLowerCase().replaceAll(' ', '');

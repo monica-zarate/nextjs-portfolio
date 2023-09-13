@@ -171,6 +171,12 @@ export const pagesContent = {
       ctas: {
         h3: "Learn more",
       },
+      links: {
+        github: "GitHub Repository",
+        figma: "Figma Prototype",
+        adobeXd: "Adobe Xd Prototype",
+        website: "Project's Website",
+      },
     },
     ids: {
       intro: "intro",
