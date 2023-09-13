@@ -5,7 +5,7 @@ import { motion as m, useInView, useAnimation } from "framer-motion";
 // Project imports
 import { variants } from "../constants";
 
-export default function RevealElement({children}: any){
+export default function RevealElement({children}){
 
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
