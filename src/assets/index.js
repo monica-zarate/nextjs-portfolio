@@ -1,6 +1,7 @@
 // General Images
 import monicaProfilePhoto from "./images/monica-zarate.png";
 import monicaAboutPhoto from "./images/monica-zarate-about.png";
+import sunflower from "./images/sunflower.png";
 
 // Projects
 import acnh1 from "./images/projects/acnh-1.png";
@@ -72,6 +73,7 @@ import android from "./icons/tools/android.png";
 export {
   monicaProfilePhoto,
   monicaAboutPhoto,
+  sunflower,
   acnh1,
   acnh2,
   acnh3,

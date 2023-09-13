@@ -178,6 +178,13 @@ export const pagesContent = {
       guavaPunch: "guava-punch",
     },
   },
+  notFound: {
+    copy: {
+      h1: "Page Not Found",
+      p: "Oops! Looks like you've ventured into the Bermuda Triangle. Please return to safety.",
+      cta: "Home Page",
+    },
+  },
 };
 
 export const variants = {

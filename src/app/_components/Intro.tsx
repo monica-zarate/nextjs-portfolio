@@ -39,7 +39,7 @@ export default function Intro() {
             <div className="mx-auto sm:flex max-w-5xl justify-center">
                 <RevealElement>
                     <div className="flex flex-col justify-center items-center max-auto mb-8 sm:mb-0 lg:justify-end">
-                        <Image alt="monica zarate" src={monicaProfilePhoto} className="rounded-full w-1/2 max-w-[250px] sm:w-full"/>
+                        <Image alt="monica zarate" src={monicaProfilePhoto} className="rounded-full w-1/2 max-w-[250px] sm:w-full shadow-md"/>
                         {isMobile && <h1 className={`${caveat.className} text-lime-950 text-h2 mt-4`}>{copy.h1}</h1>}
                     </div>
                 </RevealElement>
