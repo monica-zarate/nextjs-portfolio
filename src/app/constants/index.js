@@ -1,5 +1,9 @@
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import {
+  faGithub,
+  faLinkedin,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
 
 export const routes = [
   {
@@ -14,6 +18,13 @@ export const routes = [
 
 export const social = [
   {
+    id: "github",
+    network: "GitHub",
+    title: "Monica Zarate's Github Profile",
+    url: "https://github.com/monica-zarate",
+    icon: faGithub,
+  },
+  {
     id: "linkedin",
     network: "LinkedIn",
     title: "Monica Zarate's LinkedIn Profile",
@@ -21,11 +32,11 @@ export const social = [
     icon: faLinkedin,
   },
   {
-    id: "github",
-    network: "GitHub",
-    title: "Monica Zarate's Github Profile",
-    url: "https://github.com/monica-zarate",
-    icon: faGithub,
+    id: "instagram",
+    network: "Instagram",
+    title: "Monica Zarate's Instagram Profile",
+    url: "https://www.instagram.com/monicanstudio/",
+    icon: faInstagram,
   },
   {
     id: "email",
