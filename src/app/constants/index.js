@@ -184,6 +184,11 @@ export const pagesContent = {
       guavaPunch: "guava-punch",
     },
   },
+  projectCard: {
+    copy: {
+      span: "Built with",
+    },
+  },
   notFound: {
     copy: {
       h1: "Page Not Found",
@@ -196,4 +201,9 @@ export const pagesContent = {
 export const variants = {
   hidden: { opacity: 0, y: 75 },
   visible: { opacity: 1, y: 0 },
+};
+
+export const disciplines = {
+  design: "design",
+  development: "development",
 };

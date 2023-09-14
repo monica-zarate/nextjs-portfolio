@@ -50,7 +50,8 @@ import tcDev1 from "./images/projects/tc-dev-1.png";
 import tcDev2 from "./images/projects/tc-dev-2.png";
 import tcDev3 from "./images/projects/tc-dev-3.png";
 import tc from "./images/projects/tc.png";
-import tcThumb from "./images/projects/travel-compass-thumb.png";
+import tcDesignThumb from "./images/projects/tc-design-thumb.png";
+import tcDevThumb from "./images/projects/tc-dev-thumb.png";
 
 // Icons
 import ps from "./icons/tools/photoshop.png";
@@ -120,7 +121,8 @@ export {
   tcDev2,
   tcDev3,
   tc,
-  tcThumb,
+  tcDesignThumb,
+  tcDevThumb,
   ps,
   ai,
   dn,

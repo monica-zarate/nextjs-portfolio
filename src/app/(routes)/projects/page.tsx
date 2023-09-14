@@ -15,7 +15,7 @@ export default function Projects() {
     return (
         <AnimatePresence mode="wait">
         <m.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 0.3, ease: 'easeInOut'}} exit={{opacity: 0}}>
-            <div className="px-8 py-4 lg:pb-32 sm:p-8 2xl:px-0 2xl:pt-12 max-w-7xl mx-auto">
+            <div className="px-8 pt-4 pb-8 lg:pb-32 sm:p-8 2xl:px-0 2xl:pt-12 max-w-7xl mx-auto">
                 <h1 className={`${caveat.className} text-lime-950 text-h1Light text-center mb-8 2xl:mb-12`}>{copy.h1}</h1>
                 <div className="grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 xl:grid-cols-3 2xl:gap-x-12 2xl:gap-y-12">
                     {projects.reverse().map((__: any, i: number) => (

@@ -6,10 +6,13 @@ import { motion as m } from "framer-motion";
 
 // Project imports
 import RevealElement from "./RevealElement";
+import { disciplines, pagesContent } from "../constants";
 
 export default function ProjectCard(props: any) {
 
     const [isMobile, setIsMobile] = useState(false);
+
+    const { copy } = pagesContent.projectCard;
 
     useEffect(() => {
 
@@ -38,16 +41,19 @@ export default function ProjectCard(props: any) {
                 <div className="p-4 flex flex-col sm:h-[24rem] md:h-[20rem] xl:min-h-[19rem] justify-between">
                     <div className="flex flex-col">
                         <h2 className="text-lime-950 text-h3 mb-2">{props.title}</h2>
-                        <span className="text-sm text-gray-600 rounded-full bg-gray-50 py-1.5 px-3 mb-4 w-fit capitalize">{props.discipline}</span>
+                        <span className={`${props.discipline === disciplines.design ? "text-fuchsia-700 bg-fuchsia-50 ring-fuchsia-700/10" : "text-lime-700 bg-lime-50 ring-lime-700/10"} inline-flex items-center rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset mb-4 w-fit capitalize`}>{props.discipline}</span>
                         <p className="text-lime-950 text-body mb-8">{props.description}</p>
                     </div>
-                    <ul className="flex">
-                        {props.featuredTools.map((__: any) => (
-                            <li key={__.name} className="w-9 h-9 mr-2">
+                    <div>
+                        <span className="text-gray-500 text-xs mb-2 block">{copy.span}</span>
+                        <ul className="flex">
+                        {props.tools.map((__: any) => (
+                            <li key={__.name} className="w-9 h-9 mr-2 flex items-center justify-center">
                                 <Image src={__.icon} alt={__.name} className="w-full"/>
                             </li>
                         ))}
-                    </ul>
+                        </ul>
+                    </div>
                 </div>
             </m.div>
         </RevealElement>

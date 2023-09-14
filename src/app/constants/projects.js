@@ -45,7 +45,8 @@ import {
   tcDev2,
   tcDev3,
   tc,
-  tcThumb,
+  tcDesignThumb,
+  tcDevThumb,
   ps,
   ai,
   dn,
@@ -78,7 +79,7 @@ export const projects = [
     description:
       "Developed a fictional beverage company profile and designed a logo and a promotional poster that would attract their target audience.",
     chip: "Graphic Design",
-    discipline: "graphic-design",
+    discipline: "design",
     path: "guava-punch",
     isFeatured: false,
     links: {
@@ -420,7 +421,7 @@ export const projects = [
     title: "Travel Compass: Phase 1 App Prototype",
     subtitle: "Travel Management Mobile App Interface Design",
     images: {
-      thumb: tcThumb,
+      thumb: tcDesignThumb,
       thumbAlt: "travel compass mobile interface preview",
       featuredImg: tc,
       featuredImgAlt: "travel compass mobile interface preview",
@@ -622,7 +623,7 @@ export const projects = [
     title: "Travel Compass: Phase 2 Development",
     subtitle: "React Native Application for Android devices",
     images: {
-      thumb: tcThumb,
+      thumb: tcDevThumb,
       thumbAlt: "travel compass mobile interface preview",
       featuredImg: tc,
       featuredImgAlt: "travel compass mobile interface preview",

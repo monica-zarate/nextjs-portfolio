@@ -11,7 +11,7 @@ import { projects } from "../../../constants/projects";
 import { pagesContent } from "@/app/constants";
 import RevealElement from "@/app/_components/RevealElement";
 import Modal from "../../../_components/Modal";
-import { link } from "fs";
+import { disciplines } from "@/app/constants";
 
 
 const getCTAs = (project: any) => {
@@ -60,7 +60,7 @@ export default function ProjectDetails() {
                     <div className="mb-4">
                         <h1 className="text-lime-700 text-h1Light">{project.title}</h1>
                         <p className="text-lime-950 text-bodyLargeLight mb-4">{project.subtitle}</p>
-                        <span className="block text-sm text-gray-600 rounded-full bg-gray-50 py-1.5 px-3 mb-4 w-fit capitalize">{project.discipline}</span>
+                        <span className={`${project.discipline === disciplines.design ? "text-fuchsia-700 bg-fuchsia-50 ring-fuchsia-700/10" : "text-lime-700 bg-lime-50 ring-lime-700/10"} inline-flex items-center rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset mb-4 w-fit capitalize`}>{project.discipline}</span>
                         <RevealElement>
                             <Image src={project.images.featuredImg} alt={project.images.featuredImgAlt}/>
                         </RevealElement>
