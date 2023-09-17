@@ -111,7 +111,7 @@ export const MobileMenu = () => {
       ref={containerRef}
       className="absolute top-0 right-0 bottom-0 w-1/2"
     >
-        <m.div variants={sidebarVariants} className={`${isMenuOpen ? "top-0 right-0 w-full h-screen" : "top-4 right-6 rounded-full"} absolute bottom-0 w-12 h-12 bg-fuchsia-50`}/>
+        <m.div variants={sidebarVariants} className={`${isMenuOpen ? "top-0 right-0 w-full h-screen" : "top-4 right-6 rounded-full"} absolute bottom-0 w-12 h-12 bg-white`}/>
         {isMenuOpen && <m.ul variants={listVariants} className="absolute top-32 right-8">
             {routes.map((__) => (
                     <m.li variants={listItemVariants} whileTap={{ scale: 0.95 }} key={__.id} className="text-right mb-8">

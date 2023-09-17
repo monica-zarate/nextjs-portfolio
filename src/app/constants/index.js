@@ -48,6 +48,11 @@ export const social = [
 ];
 
 export const pagesContent = {
+  navbar: {
+    copy: {
+      title: "Monica Zarate",
+    },
+  },
   intro: {
     copy: {
       h1: "Hola! I'm Monica",
@@ -60,11 +65,21 @@ export const pagesContent = {
           },
           {
             id: 2,
-            content: "Web Designer and Developer",
+            content: "Web Designer",
             isHighlight: true,
           },
           {
             id: 3,
+            content: "and",
+            isHighlight: false,
+          },
+          {
+            id: 4,
+            content: "Developer",
+            isHighlight: true,
+          },
+          {
+            id: 5,
             content: "with 1.5 years of experience building web applications.",
             isHighlight: false,
           },
