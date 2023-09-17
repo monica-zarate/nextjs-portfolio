@@ -47,16 +47,26 @@ export default function Intro() {
                 </RevealElement>
                 <div className="max-w-md sm:ml-8 mx-auto">
                     {!isMobile && <h1 className={`${caveat.className} text-lime-950 text-h1Light`}>{copy.h1}</h1>}
-                    {copy.p.map((__, i, {length}) => (
+                    <ul>
+                        {copy.p.map((paragraph, i, {length}) => (
                         <RevealElement key={i}>
-                            {i + 1 === length ? 
-                            <div className="flex items-center mb-4">
-                            <FontAwesomeIcon icon={faSeedling} style={{color: '#64a30d'}}/>
-                            <p className="text-lime-600 text-bodyLarge ml-2">{__}</p>
-                            </div> 
-                            : <p className="text-lime-950 text-body mb-4">{__}</p>}
+                            <li className={i === 0 ? "" : "mt-4"}>
+                                {i + 1 === length 
+                                ? 
+                                paragraph.map((__) => ( 
+                                    <div key={__.id} className="flex items-center mb-4">
+                                    <FontAwesomeIcon icon={faSeedling} style={{color: '#64a30d'}}/>
+                                    <p className="text-lime-950 text-bodyLarge ml-2">{__.content}</p>
+                                    </div>)) 
+                                :
+                                paragraph.map((__) => (
+                                    <span key={__.id} className={`${__.isHighlight ? "text-fuchsia-700 text-bodyBold" : "text-lime-950 text-body"} mb-4`}>{`${__.content} `}</span>
+                                ))
+                                }
+                            </li>
                         </RevealElement>
-                    ))}
+                        ))}
+                    </ul>
                     <RevealElement>
                         <Social />
                     </RevealElement>

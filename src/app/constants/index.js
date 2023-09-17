@@ -52,9 +52,38 @@ export const pagesContent = {
     copy: {
       h1: "Hola! I'm Monica",
       p: [
-        "I'm a Vancouver BC-based Web Designer and Developer with 1.5 years of experience building web applications.",
-        "Some of the things I value in a project are inclusion, accessibility and agile work.",
-        "Let's work together!",
+        [
+          {
+            id: 1,
+            content: "I'm a Vancouver BC-based",
+            isHighlight: false,
+          },
+          {
+            id: 2,
+            content: "Web Designer and Developer",
+            isHighlight: true,
+          },
+          {
+            id: 3,
+            content: "with 1.5 years of experience building web applications.",
+            isHighlight: false,
+          },
+        ],
+        [
+          {
+            id: 1,
+            content:
+              "Some of the things I value in a project are inclusion, accessibility and agile work.",
+            isHighlight: false,
+          },
+        ],
+        [
+          {
+            id: 1,
+            content: "Let's work together!",
+            isHighlight: false,
+          },
+        ],
       ],
     },
   },
