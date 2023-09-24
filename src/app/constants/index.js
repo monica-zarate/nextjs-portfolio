@@ -104,101 +104,127 @@ export const pagesContent = {
   },
   about: {
     copy: {
-      h1: "Hello there!",
-      p: [
-        [
+      intro: {
+        heading: "Hello there!",
+        p: [
+          [
+            {
+              id: "1",
+              content: "I'm a",
+              isHighlight: false,
+            },
+            {
+              id: "2",
+              content: "Web Designer",
+              isHighlight: true,
+            },
+            {
+              id: "3",
+              content: "and",
+              isHighlight: false,
+            },
+            {
+              id: "4",
+              content: "Developer",
+              isHighlight: true,
+            },
+            {
+              id: "5",
+              content:
+                "with 1.5 years of experience building web applications.",
+              isHighlight: false,
+            },
+          ],
+          [
+            {
+              id: "1",
+              content:
+                "Being a part of a team that welcomes diversity and encourages me to learn and to improve my skills keeps me motivated.",
+              isHighlight: false,
+            },
+          ],
+          [
+            {
+              id: "1",
+              content:
+                "I like to bring a proactive attitude, empathy and excellent time management skills to all my projects.",
+              isHighlight: false,
+            },
+          ],
+        ],
+      },
+      design: {
+        heading: "Design Skills",
+        skillsList: [
           {
             id: "1",
-            content: "I'm a",
-            isHighlight: false,
+            name: "Figma",
           },
           {
             id: "2",
-            content: "Web Designer",
-            isHighlight: true,
-          },
-          {
-            id: "3",
-            content: "and",
-            isHighlight: false,
-          },
-          {
-            id: "4",
-            content: "Developer",
-            isHighlight: true,
-          },
-          {
-            id: "5",
-            content: "with 1.5 years of experience building web applications.",
-            isHighlight: false,
-          },
-        ],
-        [
-          {
-            id: "1",
-            content: "Being a part of a team that welcomes",
-            isHighlight: false,
-          },
-          {
-            id: "2",
-            content: "diversity",
-            isHighlight: true,
-          },
-          {
-            id: "3",
-            content:
-              "and encourages me to learn and to improve my skills keeps me motivated.",
-            isHighlight: false,
-          },
-        ],
-        [
-          {
-            id: "1",
-            content: "I like to bring a",
-            isHighlight: false,
-          },
-          {
-            id: "comma",
-            content: "proactive attitude",
-            isHighlight: true,
-          },
-          {
-            id: "3",
-            content: ",",
-            isHighlight: false,
-          },
-          {
-            id: "4",
-            content: "empathy",
-            isHighlight: true,
-          },
-          {
-            id: "5",
-            content: "and excellent",
-            isHighlight: false,
+            name: "Adobe CC",
           },
           {
             id: "6",
-            content: "time management skills",
-            isHighlight: true,
+            name: "Graphic Design",
+          },
+          {
+            id: "7",
+            name: "User Research",
+          },
+          {
+            id: "8",
+            name: "User Testing",
+          },
+        ],
+      },
+      development: {
+        heading: "Development Skills",
+        skillsList: [
+          {
+            id: "1",
+            name: "HTML",
+          },
+          {
+            id: "2",
+            name: "CSS",
+          },
+          {
+            id: "3",
+            name: "Tailwind CSS",
+          },
+          {
+            id: "4",
+            name: "Javascript",
           },
           {
             id: "5",
-            content: "to all my projects.",
-            isHighlight: false,
+            name: "React.js",
+          },
+          {
+            id: "6",
+            name: "React Native",
+          },
+          {
+            id: "7",
+            name: "SQL",
+          },
+          {
+            id: "8",
+            name: "Git",
           },
         ],
-      ],
-      ul: {
-        title: "When I'm not working, you'll find me:",
-        listItems: [
+      },
+      hobbies: {
+        heading: "When I'm not working, you'll find me:",
+        hobbiesList: [
           "Baking something sweet",
           "Reading novels and manga",
           "Drinking lots of chai lattes",
         ],
       },
       cta: {
-        title: "Say hi before you go!",
+        heading: "Say hi before you go!",
         p: ["Find me on", "or send me an"],
       },
     },

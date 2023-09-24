@@ -42,11 +42,11 @@ export default function Intro() {
                 <RevealElement>
                     <div className="flex flex-col justify-center items-center max-auto mb-8 sm:mb-0 lg:justify-end">
                         <Image alt="monica zarate" src={monicaProfilePhoto} className="rounded-full w-1/2 max-w-[250px] sm:w-full shadow-md"/>
-                        {isMobile && <h1 className={`${caveat.className} text-lime-950 text-h2 mt-4`}>{copy.h1}</h1>}
+                        {isMobile && <h1 className={`${caveat.className} text-lime-950 text-h1Light mt-4`}>{copy.h1}</h1>}
                     </div>
                 </RevealElement>
-                <div className="max-w-md sm:ml-8 mx-auto">
-                    {!isMobile && <h1 className={`${caveat.className} text-lime-950 text-h1Light`}>{copy.h1}</h1>}
+                <div className="max-w-md sm:ml-4 lg:ml-8 mx-auto">
+                    {!isMobile && <h1 className={`${caveat.className} text-lime-950 text-h1Light lg:text-sabe`}>{copy.h1}</h1>}
                     <ul>
                         {copy.p.map((paragraph, i, {length}) => (
                         <RevealElement key={i}>
@@ -55,7 +55,7 @@ export default function Intro() {
                                 ? 
                                 paragraph.map((__) => ( 
                                     <div key={__.id} className="flex items-center mb-4">
-                                    <FontAwesomeIcon icon={faSeedling} style={{color: '#64a30d'}}/>
+                                    <FontAwesomeIcon icon={faSeedling} style={{color: '#64a30d'}} className="h-[18px] w-auto"/>
                                     <p className="text-lime-950 text-bodyLarge ml-2">{__.content}</p>
                                     </div>)) 
                                 :
