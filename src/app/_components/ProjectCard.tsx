@@ -38,7 +38,7 @@ export default function ProjectCard(props: any) {
                 <div className="">
                     <Image src={props.images.thumb} alt={props.images.thumbAlt} className="" />
                 </div>
-                <div className="p-4 flex flex-col sm:h-[26rem] md:h-[22rem] lg:h-[20rem] xl:min-h-[19rem] justify-between">
+                <div className="p-4 flex flex-col justify-between">
                     <div className="flex flex-col">
                         <h2 className="text-lime-950 text-h3 mb-2">{props.title}</h2>
                         <span className={`${props.discipline === disciplines.design ? "text-fuchsia-700 bg-fuchsia-50 ring-fuchsia-700/10" : "text-lime-700 bg-lime-50 ring-lime-700/10"} inline-flex items-center rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset mb-4 w-fit capitalize`}>{props.discipline}</span>

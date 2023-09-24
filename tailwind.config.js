@@ -65,42 +65,42 @@ module.exports = {
           },
         ],
         body: [
-          "16",
+          "18px",
           {
             lineHeight: "24px",
             fontWeight: "300",
           },
         ],
         bodyLight: [
-          "16",
+          "18px",
           {
             lineHeight: "30px",
             fontWeight: "100",
           },
         ],
         bodyBold: [
-          "16",
+          "18px",
           {
             lineHeight: "30px",
             fontWeight: "500",
           },
         ],
         bodyLarge: [
-          "20",
+          "20px",
           {
             lineHeight: "30px",
             fontWeight: "500",
           },
         ],
         bodyLargeLight: [
-          "20",
+          "20px",
           {
             lineHeight: "30px",
             fontWeight: "300",
           },
         ],
         bodyLargeBold: [
-          "20",
+          "20px",
           {
             lineHeight: "30px",
             fontWeight: "700",

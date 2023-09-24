@@ -50,10 +50,10 @@ export default function Navbar() {
                 {isMobile && <MobileMenu/>}
                 {!isMobile && <ul className="flex">
                     <li key={routes[0].id}>
-                        <Link href="/projects" className={`${pathname === routes[0].id ? "text-fuchsia-700" : "text-lime-950"} text-bodyLargeBold ml-4 hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase`}>{routes[0].title}</Link>
+                        <Link href="/projects" className={`${pathname === routes[0].id ? "text-fuchsia-700" : "text-lime-950"} text-bodyBold ml-4 hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase`}>{routes[0].title}</Link>
                     </li>
                     <li key={routes[1].id}>
-                        <Link href="/about" className={`${pathname === routes[1].id ? "text-fuchsia-700" : "text-lime-950"} text-bodyLargeBold ml-4 hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase`}>{routes[1].title}</Link>
+                        <Link href="/about" className={`${pathname === routes[1].id ? "text-fuchsia-700" : "text-lime-950"} text-bodyBold ml-4 hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase`}>{routes[1].title}</Link>
                     </li>
                 </ul>}
             </div>
