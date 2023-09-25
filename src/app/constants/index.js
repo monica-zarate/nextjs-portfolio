@@ -215,6 +215,35 @@ export const pagesContent = {
           },
         ],
       },
+      timeline: {
+        heading: "Education",
+        events: [
+          {
+            id: "1",
+            name: "Web Development",
+            institution: "BrainStation Diploma",
+            description:
+              "This full-time Bootcamp unlocked the ability to build interactive web applications through JavaScript and React.js, using SASS and BEM notation. Learned how to use APIs, MySQL and Git.",
+            date: "June, 2020",
+          },
+          {
+            id: "2",
+            name: "UX Design",
+            institution: "BrainStation - Course",
+            description:
+              "Discovered the UX Design process, best practices, how to conduct user research, create wireframes, and how to apply user-centred design principles to create digital solutions.",
+            date: "September, 2021",
+          },
+          {
+            id: "3",
+            name: "New Media Design & Web Development",
+            institution: "BCIT - Diploma with Distinction",
+            description:
+              "Acquired knowledge and hands-on experience in Web and App Development, Graphic Design, UI/UX Design, Project Management and QA.",
+            date: "July, 2023",
+          },
+        ],
+      },
       hobbies: {
         heading: "When I'm not working, you'll find me:",
         hobbiesList: [
