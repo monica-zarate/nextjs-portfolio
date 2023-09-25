@@ -74,8 +74,8 @@ export default function About() {
                             <span className="text-lime-950 text-h2 mb-4 sm:mb-4 block">{copy.timeline.heading}</span>
                             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-16 overflow-hidden lg:mx-0 lg:max-w-none lg:grid-cols-3">
                                 {copy.timeline.events.map((item) => (
-                                    <RevealElement>
-                                    <div key={item.id}>
+                                    <RevealElement key={item.id}>
+                                    <div>
                                         <time
                                         dateTime={item.date}
                                         className="flex items-center text-base font-semibold leading-6 text-lime-700"
