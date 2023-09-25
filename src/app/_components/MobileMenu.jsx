@@ -59,7 +59,6 @@ const Path = props => (
   <m.path
     fill="transparent"
     strokeWidth="2.5"
-    stroke="#1A2E3A"
     strokeLinecap="round"
     {...props}
   />
@@ -70,22 +69,22 @@ const IconToggle = ({ toggle }) => (
     <svg width="32" height="32" viewBox="0 0 24 24">
       <Path
         variants={{
-          hidden: { d: "M 2 2.5 L 20 2.5" },
-          visible: { d: "M 3 16.5 L 17 2.5" }
+          hidden: { d: "M 2 2.5 L 20 2.5", stroke: "#1A2E3A" },
+          visible: { d: "M 3 16.5 L 17 2.5", stroke: "#ffffff" }
         }}
       />
       <Path
         d="M 2 9.423 L 20 9.423"
         variants={{
-          hidden: { opacity: 1 },
-          visible: { opacity: 0 }
+          hidden: { opacity: 1, stroke: "#1A2E3A" },
+          visible: { opacity: 0, stroke: "#ffffff" }
         }}
         transition={{ duration: 0.1 }}
       />
       <Path
         variants={{
-          hidden: { d: "M 2 16.346 L 20 16.346" },
-          visible: { d: "M 3 2.5 L 17 16.346" }
+          hidden: { d: "M 2 16.346 L 20 16.346", stroke: "#1A2E3A" },
+          visible: { d: "M 3 2.5 L 17 16.346", stroke: "#ffffff" }
         }}
       />
     </svg>
@@ -111,11 +110,11 @@ export const MobileMenu = () => {
       ref={containerRef}
       className="absolute top-0 right-0 bottom-0 w-1/2"
     >
-        <m.div variants={sidebarVariants} className={`${isMenuOpen ? "top-0 right-0 w-full h-screen" : "top-4 right-6 rounded-full"} absolute bottom-0 w-12 h-12 bg-white`}/>
+        <m.div variants={sidebarVariants} className={`${isMenuOpen ? "top-0 right-0 w-full h-screen bg-lime-950" : "top-4 right-6 rounded-full bg-white"} absolute bottom-0 w-12 h-12`}/>
         {isMenuOpen && <m.ul variants={listVariants} className="absolute top-32 right-8">
             {routes.map((__) => (
                     <m.li variants={listItemVariants} whileTap={{ scale: 0.95 }} key={__.id} className="text-right mb-8">
-                        <Link href={`/${__.id}`} className="text-lime-950 text-h3" onClick={() => showMenu()}>{__.title}</Link>
+                        <Link href={`/${__.id}`} className="text-white text-h3" onClick={() => showMenu()}>{__.title}</Link>
                     </m.li>
                 )
             )}
