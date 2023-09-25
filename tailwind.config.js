@@ -82,7 +82,7 @@ module.exports = {
           "18px",
           {
             lineHeight: "30px",
-            fontWeight: "500",
+            fontWeight: "600",
           },
         ],
         bodyLarge: [
