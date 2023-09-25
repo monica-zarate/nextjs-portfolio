@@ -7,7 +7,7 @@ import { faSeedling } from "@fortawesome/free-solid-svg-icons";
 import { AnimatePresence, motion as m } from "framer-motion";
 
 //Project imports
-import { monicaAboutPhoto, sunflowerLandscape } from "../../../assets/";
+import { monicaAboutPhoto } from "../../../assets/";
 import { pagesContent, social } from "@/app/constants";
 import RevealElement from "@/app/_components/RevealElement";
 
