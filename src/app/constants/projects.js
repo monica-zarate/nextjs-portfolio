@@ -442,6 +442,9 @@ export const projects = [
       xdPrototypeTitle: "Travel Compass Prototype: Add New Trip",
       site: "",
       siteTitle: "",
+      internalLink:
+        "https://www.monicazarate.com/projects/travel-compass-phase2",
+      internalLinkTitle: "Travel Compass Phase 2: Development",
     },
     tools: [{ name: "Adobe Xd", icon: xd }],
     featuredTools: [{ name: "Adobe Xd", icon: xd }],
@@ -643,6 +646,9 @@ export const projects = [
       xdPrototypeTitle: "",
       site: "",
       siteTitle: "",
+      internalLink:
+        "https://www.monicazarate.com/projects/travel-compass-phase1",
+      internalLinkTitle: "Travel Compass Phase 1: UI Design",
     },
     tools: [
       { name: "React Native", icon: react },

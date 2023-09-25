@@ -221,7 +221,7 @@ export const pagesContent = {
           {
             id: "1",
             name: "Web Development",
-            institution: "BrainStation Diploma",
+            institution: "BrainStation - Diploma",
             description:
               "This full-time Bootcamp unlocked the ability to build interactive web applications through JavaScript and React.js, using SASS and BEM notation. Learned how to use APIs, MySQL and Git.",
             date: "June, 2020",
@@ -261,11 +261,14 @@ export const pagesContent = {
   projects: {
     copy: {
       h1: "Projects",
+      p: "Disciplines:",
+      span: "Reset",
     },
   },
   featured: {
     copy: {
       h2: "Featured Projects",
+      cta: "All Projects",
     },
   },
   projectDetails: {

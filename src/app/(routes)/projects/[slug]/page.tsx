@@ -19,11 +19,12 @@ const getCTAs = (project: any) => {
     const { links } = pagesContent.projectDetails.copy;
 
     return (
-    <div className="">
+    <div>
         {project.links.repo && <Link href={project.links.repo} title={project.links.repoTitle} target="_blank" rel="noreferrer" className="text-lime-950 text-bodyLargeBold hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase block mb-2 w-fit">{links.github}</Link>}
         {project.links.figmaPrototype && <Link href={project.links.figmaPrototype} title={project.links.figmaPrototypeTitle} target="_blank" rel="noreferrer" className="text-lime-950 text-bodyLargeBold hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase block mb-2 w-fit">{links.figma}</Link>}
         {project.links.xdPrototype && <Link href={project.links.xdPrototype} title={project.links.xdPrototypeTitle} target="_blank" rel="noreferrer" className="text-lime-950 text-bodyLargeBold hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase block mb-2 w-fit">{links.adobeXd}</Link>}
         {project.links.site && <Link href={project.links.site} title={project.links.siteTitle} target="_blank" rel="noreferrer" className="text-lime-950 text-bodyLargeBold hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase block mb-2 w-fit">{links.website}</Link>}
+        {project.links.internalLink && <Link href={project.links.internalLink} title={project.links.internalLinkTitle} className="text-lime-950 text-bodyLargeBold hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase block mb-2 w-fit">{project.links.internalLinkTitle}</Link>}
     </div>
     );
 };
@@ -91,19 +92,19 @@ export default function ProjectDetails() {
                         <ul className="hidden md:block md:basis-1/4 sticky top-24">
                             <RevealElement>
                                 <li>
-                                    <p onClick={() => stepScroll(ids.intro)} className={`${selectedStep === ids.intro ? "text-lime-700" : "text-neutral-400"} text-bodyLargeBold hover:text-lime-700 delay-200 duration-200 ease-in-out uppercase block mb-2 w-fit cursor-pointer`}>{copy.steps.h3}</p>
+                                    <p onClick={() => stepScroll(ids.intro)} className={`${selectedStep === ids.intro ? "text-lime-700" : "text-neutral-400"} text-bodyLarge hover:text-lime-700 delay-200 duration-200 ease-in-out uppercase block mb-2 w-fit cursor-pointer`}>{copy.steps.h3}</p>
                                 </li>
                             </RevealElement>
                             {sectionIds.map((section, i) => (
                                 <RevealElement key={i}>
                                     <li>
-                                        <p onClick={() => stepScroll(lowercaseString(section))} className={`${selectedStep === lowercaseString(section) ? "text-lime-700" : "text-neutral-400"} text-bodyLargeBold hover:text-lime-700 delay-200 duration-200 ease-in-out uppercase block mb-2 w-fit cursor-pointer`}>{section}</p>
+                                        <p onClick={() => stepScroll(lowercaseString(section))} className={`${selectedStep === lowercaseString(section) ? "text-lime-700" : "text-neutral-400"} text-bodyLarge hover:text-lime-700 delay-200 duration-200 ease-in-out uppercase block mb-2 w-fit cursor-pointer`}>{section}</p>
                                     </li>
                                 </RevealElement>
                             ))}
                             {project.path !== ids.guavaPunch && <RevealElement>
                                 <li>
-                                    <p onClick={() => stepScroll(ids.learnMore)} className={`${selectedStep === ids.learnMore ? "text-lime-700" : "text-neutral-400"} text-bodyLargeBold hover:text-lime-700 delay-200 duration-200 ease-in-out uppercase block mb-2 w-fit cursor-pointer`}>{copy.ctas.h3}</p>
+                                    <p onClick={() => stepScroll(ids.learnMore)} className={`${selectedStep === ids.learnMore ? "text-lime-700" : "text-neutral-400"} text-bodyLarge hover:text-lime-700 delay-200 duration-200 ease-in-out uppercase block mb-2 w-fit cursor-pointer`}>{copy.ctas.h3}</p>
                                 </li>
                             </RevealElement>}
                         </ul>
