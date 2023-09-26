@@ -1,17 +1,20 @@
 // Vendor imports
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion as m } from "framer-motion";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 // Project imports
 import { projects } from "../../../constants/projects";
-import { pagesContent } from "@/app/constants";
+import { pagesContent, routes } from "@/app/constants";
 import RevealElement from "@/app/_components/RevealElement";
 import Modal from "../../../_components/Modal";
 import { disciplines } from "@/app/constants";
+import Loading from "@/app/loading";
 
 
 const getCTAs = (project: any) => {
@@ -20,11 +23,11 @@ const getCTAs = (project: any) => {
 
     return (
     <div>
-        {project.links.repo && <Link href={project.links.repo} title={project.links.repoTitle} target="_blank" rel="noreferrer" className="text-lime-950 text-bodyLargeBold hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase block mb-2 w-fit">{links.github}</Link>}
-        {project.links.figmaPrototype && <Link href={project.links.figmaPrototype} title={project.links.figmaPrototypeTitle} target="_blank" rel="noreferrer" className="text-lime-950 text-bodyLargeBold hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase block mb-2 w-fit">{links.figma}</Link>}
-        {project.links.xdPrototype && <Link href={project.links.xdPrototype} title={project.links.xdPrototypeTitle} target="_blank" rel="noreferrer" className="text-lime-950 text-bodyLargeBold hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase block mb-2 w-fit">{links.adobeXd}</Link>}
-        {project.links.site && <Link href={project.links.site} title={project.links.siteTitle} target="_blank" rel="noreferrer" className="text-lime-950 text-bodyLargeBold hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase block mb-2 w-fit">{links.website}</Link>}
-        {project.links.internalLink && <Link href={project.links.internalLink} title={project.links.internalLinkTitle} className="text-lime-950 text-bodyLargeBold hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase block mb-2 w-fit">{project.links.internalLinkTitle}</Link>}
+        {project.links.repo && <Link href={project.links.repo} title={project.links.repoTitle} target="_blank" rel="noreferrer" className="text-lime-950 text-bodyLarge hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase block mb-2 w-fit">{links.github}</Link>}
+        {project.links.figmaPrototype && <Link href={project.links.figmaPrototype} title={project.links.figmaPrototypeTitle} target="_blank" rel="noreferrer" className="text-lime-950 text-bodyLarge hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase block mb-2 w-fit">{links.figma}</Link>}
+        {project.links.xdPrototype && <Link href={project.links.xdPrototype} title={project.links.xdPrototypeTitle} target="_blank" rel="noreferrer" className="text-lime-950 text-bodyLarge hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase block mb-2 w-fit">{links.adobeXd}</Link>}
+        {project.links.site && <Link href={project.links.site} title={project.links.siteTitle} target="_blank" rel="noreferrer" className="text-lime-950 text-bodyLarge hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase block mb-2 w-fit">{links.website}</Link>}
+        {project.links.internalLink && <Link href={project.links.internalLink} title={project.links.internalLinkTitle} className="text-lime-950 text-bodyLarge hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase block mb-2 w-fit">{project.links.internalLinkTitle}</Link>}
     </div>
     );
 };
@@ -42,6 +45,7 @@ export default function ProjectDetails() {
     const project = projects.filter((__) => __.path === projectPath[2])[0];
     const sectionIds = project.steps.map((__) => __.name);
     const {copy, ids} = pagesContent.projectDetails;
+    const { cta } = pagesContent.featured.copy;
 
     const stepScroll = (id: string) => {
         const section = document.querySelector(`#${id}`);
@@ -57,6 +61,7 @@ export default function ProjectDetails() {
     return (
         <AnimatePresence mode="wait">
             <m.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 0.3, ease: 'easeInOut'}} exit={{opacity: 0}}>
+                <Suspense fallback={<Loading/>}>
                 <div className="px-8 py-4 sm:p-8 2xl:px-0 2xl:py-12 max-w-7xl mx-auto">
                     <div className="mb-4">
                         <h1 className="text-lime-700 text-h1Light">{project.title}</h1>
@@ -145,8 +150,17 @@ export default function ProjectDetails() {
                             </div>}
                         </div>
                     </div>
+                    <div className="block mt-16 mb-8 w-fit mx-auto">
+                        <RevealElement>
+                            <Link href={`/${routes[0].id}`} className="flex items-center">
+                                <span className="text-lime-950 text-bodyLarge hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase block">{cta}</span>
+                                <FontAwesomeIcon icon={faChevronRight} style={{color: "#1A2E3A"}} className="w-5 h-5 delay-200 duration-200 ease-in-out"/>
+                            </Link>
+                        </RevealElement>
+                    </div>
                     <Modal selected={selected} setSelected={setSelected} />
                 </div>
+                </Suspense>
             </m.div>
         </AnimatePresence>
     )
