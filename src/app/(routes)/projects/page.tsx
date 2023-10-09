@@ -27,9 +27,9 @@ export default function Projects() {
 
     useEffect(() => {
         if(selectedTag === disciplines.design) {
-            setFilteredProjects(projects.filter((project) => project.discipline === disciplines.design));
+            setFilteredProjects(projects.filter((project) => project.disciplines.includes(disciplines.design)));
         } else if(selectedTag === disciplines.development) {
-            setFilteredProjects(projects.filter((project) => project.discipline === disciplines.development));
+            setFilteredProjects(projects.filter((project) => project.disciplines.includes(disciplines.development)));
         } else {
             setFilteredProjects(projects);
         }
