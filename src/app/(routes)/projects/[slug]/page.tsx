@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion as m } from "framer-motion";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
 // Project imports
 import { projects } from "../../../constants/projects";
@@ -66,7 +66,9 @@ export default function ProjectDetails() {
                     <div className="mb-4">
                         <h1 className="text-lime-700 text-h1Light">{project.title}</h1>
                         <p className="text-lime-950 text-bodyLargeLight mb-4">{project.subtitle}</p>
-                        <span className={`${project.discipline === disciplines.design ? "text-fuchsia-700 bg-fuchsia-50 ring-fuchsia-700/10" : "text-lime-700 bg-lime-50 ring-lime-700/10"} inline-flex items-center rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset mb-4 w-fit capitalize`}>{project.discipline}</span>
+                        {project.disciplines.map((discipline, i) => (
+                            <span key={i} className={`${discipline === disciplines.design ? "text-fuchsia-700 bg-fuchsia-50 ring-fuchsia-700/10" : "text-lime-700 bg-lime-50 ring-lime-700/10"} inline-flex items-center rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset mb-4 w-fit capitalize mr-2`}>{discipline}</span>
+                        ))}
                         <RevealElement>
                             <Image src={project.images.featuredImg} alt={project.images.featuredImgAlt}/>
                         </RevealElement>
@@ -118,7 +120,7 @@ export default function ProjectDetails() {
                                 <RevealElement>
                                     <h3 className="text-lime-700 text-h3 mb-2">{copy.steps.h3}</h3>
                                     {project.intro.map((p, i) => (
-                                        <p key={i} className="text-lime-950 text-body">{p}</p>
+                                        <p key={i} className="text-lime-950 text-body mb-4">{p}</p>
                                     ))}
                                 </RevealElement>
                             </div>
@@ -153,8 +155,8 @@ export default function ProjectDetails() {
                     <div className="block mt-16 mb-8 w-fit mx-auto">
                         <RevealElement>
                             <Link href={`/${routes[0].id}`} className="flex items-center">
+                                <FontAwesomeIcon icon={faChevronLeft} style={{color: "#1A2E3A"}} className="w-5 h-5 delay-200 duration-200 ease-in-out"/>
                                 <span className="text-lime-950 text-bodyLarge hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase block">{cta}</span>
-                                <FontAwesomeIcon icon={faChevronRight} style={{color: "#1A2E3A"}} className="w-5 h-5 delay-200 duration-200 ease-in-out"/>
                             </Link>
                         </RevealElement>
                     </div>

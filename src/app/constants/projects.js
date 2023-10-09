@@ -47,6 +47,10 @@ import {
   tc,
   tcDesignThumb,
   tcDevThumb,
+  mz,
+  mz1,
+  mz2,
+  mzThumb,
   ps,
   ai,
   dn,
@@ -63,6 +67,8 @@ import {
   react,
   expo,
   android,
+  typescript,
+  tailwind,
 } from "../../assets";
 
 export const projects = [
@@ -79,7 +85,7 @@ export const projects = [
     description:
       "Developed a fictional beverage company profile and designed a logo and a promotional poster that would attract their target audience.",
     chip: "Graphic Design",
-    discipline: "design",
+    disciplines: ["design"],
     path: "guava-punch",
     isFeatured: false,
     links: {
@@ -93,11 +99,6 @@ export const projects = [
       siteTitle: "",
     },
     tools: [
-      { name: "Adobe Illustrator", icon: ai },
-      { name: "Adobe Photoshop", icon: ps },
-      { name: "Adobe Dimension", icon: dn },
-    ],
-    featuredTools: [
       { name: "Adobe Illustrator", icon: ai },
       { name: "Adobe Photoshop", icon: ps },
       { name: "Adobe Dimension", icon: dn },
@@ -172,7 +173,7 @@ export const projects = [
     description:
       "Designed and tested a prototype for a fictitious bookstore. The project includes a website and a mobile interface.",
     chip: "UX Design",
-    discipline: "design",
+    disciplines: ["design"],
     path: "paper-lantern",
     isFeatured: false,
     links: {
@@ -193,10 +194,6 @@ export const projects = [
       { name: "Figma", icon: figma },
       { name: "Useberry", icon: useberry },
       { name: "Maze", icon: maze },
-    ],
-    featuredTools: [
-      { name: "Adobe Xd", icon: xd },
-      { name: "Figma", icon: figma },
     ],
     intro: [
       "To achieve the prototypes, I based my design decisions on User Personas, User Scenarios and User Flows. The interfaces started with low-fidelity wireframes, which evolved into high-fidelity mockups. The project's final stage consisted of testing our prototypes and applying revisions after users' feedback and data analysis.",
@@ -273,7 +270,7 @@ export const projects = [
     description:
       "Designed and developed a site listing a collection of Animal Crossing villagers. The project includes classes and constructor methods and knowledge of arrays loops and functions in PHP.",
     chip: "Development",
-    discipline: "development",
+    disciplines: ["development"],
     path: "acnh",
     isFeatured: false,
     links: {
@@ -292,7 +289,6 @@ export const projects = [
       { name: "PHP", icon: php },
       { name: "MAMP", icon: mamp },
     ],
-    featuredTools: [{ name: "PHP", icon: php }],
     intro: [
       "Using Animal Crossing (a popular video game I like to play) characters as a starting point, this project shows the current residents I have on my island. All items in this collection have shared properties, and I'm looping through them so that I can create a card per character that displays its information.",
       "I created two types of residents: villagers and NPCs (non-playable characters). The project makes use of a parent class, that's used to create two child classes, allowing for variations amongst the displayed data. The page was built making use of partials for its different sections.",
@@ -355,7 +351,7 @@ export const projects = [
     description:
       "Designed and developed a site that consumes the NASA APOD API to display the Astronomy Picture of the Day. The project uses the Fetch API to make a request to an endpoint.",
     chip: "Development",
-    discipline: "development",
+    disciplines: ["development"],
     path: "apod",
     isFeatured: false,
     links: {
@@ -374,7 +370,6 @@ export const projects = [
       { name: "Javascript", icon: js },
       { name: "Postman", icon: postman },
     ],
-    featuredTools: [{ name: "Javascript", icon: js }],
     intro: [
       "To practice my Javascript skills, I decided to build my own version of NASA's Astronomy Picture of the Day. This project heavily focuses on the map() array method, writing DRY code and the ability to request data from a third-party API.",
     ],
@@ -429,7 +424,7 @@ export const projects = [
     description:
       "Designed the interface of a travel management application. A mobile interface, from sketching to a prototype.",
     chip: "UX Design",
-    discipline: "design",
+    disciplines: ["design"],
     path: "travel-compass-phase1",
     isFeatured: false,
     links: {
@@ -447,7 +442,6 @@ export const projects = [
       internalLinkTitle: "Travel Compass Phase 2: Development",
     },
     tools: [{ name: "Adobe Xd", icon: xd }],
-    featuredTools: [{ name: "Adobe Xd", icon: xd }],
     intro: [
       "The Travel Compass prototype is presented as the first iteration of a travel management tool, it shows an example of how an existing user would create a new trip. The application's functionality would allow users to have all the information related to a trip in one place, you would be able to read the trip's itinerary through a daily breakdown.",
     ],
@@ -528,9 +522,9 @@ export const projects = [
     description:
       "Designed the interface of an expense-tracking application. An interface for a desktop environment, from sketching to a prototype.",
     chip: "UX Design",
-    discipline: "design",
+    disciplines: ["design"],
     path: "billy",
-    isFeatured: true,
+    isFeatured: false,
     links: {
       repo: "",
       repoTitle: "",
@@ -543,7 +537,6 @@ export const projects = [
       siteTitle: "",
     },
     tools: [{ name: "Figma", icon: figma }],
-    featuredTools: [{ name: "Figma", icon: figma }],
     intro: [
       "Billy's prototype is presented as the first iteration of an expense tracker tool that helps users manage their expenses and income, it shows an example of how an existing user would add a new expense. The application's functionality would offer users an easy-to-read overview of all the information related to their personal finances in one place. Billy is targeted at people who are new to expense tracking and budgeting.",
     ],
@@ -634,7 +627,7 @@ export const projects = [
     description:
       "Developed an Android application using React Native. The goal was to build the front end based on the Design from Phase 1.",
     chip: "Development",
-    discipline: "development",
+    disciplines: ["development"],
     path: "travel-compass-phase2",
     isFeatured: true,
     links: {
@@ -655,7 +648,6 @@ export const projects = [
       { name: "Expo", icon: expo },
       { name: "Android Studio", icon: android },
     ],
-    featuredTools: [{ name: "React Native", icon: react }],
     intro: [
       "After the Design Phase was completed, I wanted to expand the Travel Compass Project by taking the high-fidelity mockups into a native application. I developed an Android application using React Native, Expo and Android Studio as a mobile emulator.",
       "Travel Compass is a travel management application. Its main purpose is to serve as an information hub where users can store all the information related to a given trip, like flight information, accommodation check-in and check-out dates and times, and other activities users might want to do during a holiday. It's intended for 20- to 50-year-old individuals who explicitly plan to travel for leisure at least once a year.",
@@ -707,6 +699,90 @@ export const projects = [
           "I had fun building this project, it was the first time I worked with React Native and I appreciate having the experience of stepping outside of my comfort zone in terms of developing a website or application for the web. For future iterations, I would like to include a back-end integration, so the app can get tested with real data.",
         ],
         imgs: [tc],
+      },
+    ],
+  },
+  {
+    id: "8",
+    title: "My Portfolio Website",
+    subtitle: "A responsive portfolio to showcase my skills",
+    images: {
+      thumb: mzThumb,
+      thumbAlt: "Monica Zarate's Website Home Page",
+      featuredImg: mz,
+      featuredImgAlt: "Monica Zarate's Website Home Page",
+    },
+    description:
+      "Designed and Developed this website to demonstrate my skills in crafting user-friendly interfaces, responsive designs, and seamless user experiences.",
+    chip: "Development",
+    disciplines: ["design", "development"],
+    path: "my-portfolio",
+    isFeatured: true,
+    links: {
+      repo: "https://github.com/monica-zarate/nextjs-portfolio",
+      repoTitle: "My Portfolio Website's Repository",
+      figmaPrototype:
+        "https://www.figma.com/proto/nEUgRjRJDVeGHPf6E5pnXV/Portfolio-Mockup?page-id=0%3A1&type=design&node-id=6-93&viewport=316%2C302%2C0.13&t=Xp1jaAISVY5EJzfZ-1&scaling=scale-down&starting-point-node-id=6%3A93&mode=design",
+      figmaPrototypeTitle: "My Portfolio Website's Prototype",
+      xdPrototype: "",
+      xdPrototypeTitle: "",
+      site: "",
+      siteTitle: "",
+      internalLink: "",
+      internalLinkTitle: "",
+    },
+    tools: [
+      { name: "Figma", icon: figma },
+      { name: "React.js", icon: react },
+      { name: "Typescript", icon: typescript },
+      { name: "Tailwind", icon: tailwind },
+    ],
+    intro: [
+      "The site's current version was built using React with Next.js, Typescript and Tailwind CSS.",
+      "This project is a work in progress, and I'm constantly looking to improve both the design and the codebase.",
+      "Feel free to explore the website's repository and get in touch if you have any feedback or comments that could help me improve it or make it more efficient.",
+    ],
+    steps: [
+      {
+        name: "Conception",
+        description: [
+          "As part of the BCIT curriculum, we started working on a portfolio website during our third term.",
+          "The first phase of the project consisted of defining our personal brand. We had a comprehensive assignment that helped us identify our values,  goals and skills as New Media professionals.",
+          "This was the foundation to start developing all the necessary assets for my portfolio website, like creating my own logo, selecting an intentional colour palette, finding an adequate typeface and other digital elements.",
+          "All these components are meant to resonate with my goals so that I can showcase my skills by integrating all elements seamlessly.",
+        ],
+        imgs: [],
+      },
+      {
+        name: "Design",
+        description: [
+          "In order to achieve a high-fidelity mockup, I started out by drawing sketches of the basic ideas I had for the layout, this helped me identify how I wanted to divide the page's content.",
+          "I then created a lo-fi wireframe, which was particularly helpful in order to identify the hierarchy of information and to make sure the site had enough contrast and a good balance between text and images.",
+          "The general layout and sections have remained the same, but I've been fine-tuning the details to make the website the best it can be. Mainly by introducing colour in a mindful way, to aid in the navigation experience by pairing a colour with a discipline and to highlight the interactive elements of the interface.",
+          "I've also worked on improving the copy and leveraging different font weights and sizes to improve readability and information hierarchy.",
+          "This is what the first mock-up looked like:",
+        ],
+        imgs: [mz1],
+      },
+      {
+        name: "Development",
+        description: [
+          "The first version of this site was built out of CRA and SASS. It was a great way for me to get back into React.js since I'd spent a few months without coding properly because school had been focusing on different subject matters.",
+          "Some of the libraries I used for the project were React Router, Helmet for SEO purposes and Framer Motion to add animations. The project was deployed through GitHub Pages.",
+          "When I joined Cavallo Technologies as an Intern, I wanted to learn better ways of creating React applications, which led me to learn more about Vite and Next.js.",
+          "Since we started working with Vite for the Cavallo projects, I was also curious to try out Next.js on a side project, as a way to experiment with Client and Server Side Rendering, having routing and SEO integrations already built in was a big selling point, compared to using external libraries.",
+          "After some time, I decided to try to improve the design and codebase of my portfolio website, so I took it upon re-building the project, this time using React with Next.js, Typescript and Tailwind CSS, the website's now deployed with Vercel.",
+          "This is a code snippet of the first version of the project:",
+        ],
+        imgs: [mz2],
+      },
+      {
+        name: "Final Result",
+        description: [
+          "This website's current design showcases my brand as a professional in a cohesive way while keeping functionality as the main priority. Project Cards use labels and colour to identify different disciplines and scan content and tools used. Inside the Project Details Page, there's a way to navigate to each section, which helps the user know what to expect.",
+          "In terms of development, I've kept the React Components as reusable as possible, passing down props and using React Hooks to create different versions of a single element if needed. The Components were written using Typescript, which has helped in error prevention and to keep a better data structure across the project. I've also implemented 404 and Loading screens, which are a part of Next.js' features.",
+        ],
+        imgs: [mz],
       },
     ],
   },

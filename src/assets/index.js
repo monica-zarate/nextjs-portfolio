@@ -52,6 +52,10 @@ import tcDev3 from "./images/projects/tc-dev-3.png";
 import tc from "./images/projects/tc.png";
 import tcDesignThumb from "./images/projects/tc-design-thumb.png";
 import tcDevThumb from "./images/projects/tc-dev-thumb.png";
+import mz from "./images/projects/mz.png";
+import mz1 from "./images/projects/mz-1.png";
+import mz2 from "./images/projects/mz-2.png";
+import mzThumb from "./images/projects/mz-thumb.png";
 
 // Icons
 import ps from "./icons/tools/photoshop.png";
@@ -70,6 +74,8 @@ import postman from "./icons/tools/postman.png";
 import react from "./icons/tools/react.png";
 import expo from "./icons/tools/expo.png";
 import android from "./icons/tools/android.png";
+import typescript from "./icons/tools/ts.png";
+import tailwind from "./icons/tools/tailwind.png";
 
 export {
   monicaProfilePhoto,
@@ -123,6 +129,10 @@ export {
   tc,
   tcDesignThumb,
   tcDevThumb,
+  mz,
+  mz1,
+  mz2,
+  mzThumb,
   ps,
   ai,
   dn,
@@ -139,4 +149,6 @@ export {
   react,
   expo,
   android,
+  typescript,
+  tailwind,
 };

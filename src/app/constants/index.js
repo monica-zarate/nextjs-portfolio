@@ -310,6 +310,11 @@ export const pagesContent = {
       cta: "Home Page",
     },
   },
+  footer: {
+    acknowledgement: {
+      span: "I would like to acknowledge that I'm fortunate to live and work on the traditional, ancestral, and unceded territory of the Coast Salish Peoples, including the territories of the xʷməθkʷəy̓əm (Musqueam), Sḵwx̱wú7mesh (Squamish), and səlilwətaɬ (Tsleil- Waututh) Nations.",
+    },
+  },
 };
 
 export const variants = {
