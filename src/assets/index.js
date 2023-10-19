@@ -54,7 +54,6 @@ import tcDesignThumb from "./images/projects/tc-design-thumb.png";
 import tcDevThumb from "./images/projects/tc-dev-thumb.png";
 import mz from "./images/projects/mz.png";
 import mz1 from "./images/projects/mz-1.png";
-import mz2 from "./images/projects/mz-2.png";
 import mzThumb from "./images/projects/mz-thumb.png";
 
 // Icons
@@ -131,7 +130,6 @@ export {
   tcDevThumb,
   mz,
   mz1,
-  mz2,
   mzThumb,
   ps,
   ai,

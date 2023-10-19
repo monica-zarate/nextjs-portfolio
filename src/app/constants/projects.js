@@ -49,7 +49,6 @@ import {
   tcDevThumb,
   mz,
   mz1,
-  mz2,
   mzThumb,
   ps,
   ai,
@@ -740,7 +739,6 @@ export const projects = [
     intro: [
       "The site's current version was built using React with Next.js, Typescript and Tailwind CSS.",
       "This project is a work in progress, and I'm constantly looking to improve both the design and the codebase.",
-      "Feel free to explore the website's repository and get in touch if you have any feedback or comments that could help me improve it or make it more efficient.",
     ],
     steps: [
       {
@@ -758,9 +756,9 @@ export const projects = [
         description: [
           "In order to achieve a high-fidelity mockup, I started out by drawing sketches of the basic ideas I had for the layout, this helped me identify how I wanted to divide the page's content.",
           "I then created a lo-fi wireframe, which was particularly helpful in order to identify the hierarchy of information and to make sure the site had enough contrast and a good balance between text and images.",
-          "The general layout and sections have remained the same, but I've been fine-tuning the details to make the website the best it can be. Mainly by introducing colour in a mindful way, to aid in the navigation experience by pairing a colour with a discipline and to highlight the interactive elements of the interface.",
+          "The general layout and sections have remained the same, but I've been fine-tuning the details to make the website the best it can be. One of my main goals was introducing colour in a mindful way. I want to support the navigation experience by pairing a colour with a discipline and to highlight the interactive elements of the interface.",
           "I've also worked on improving the copy and leveraging different font weights and sizes to improve readability and information hierarchy.",
-          "This is what the first mock-up looked like:",
+          "For reference, this is what the V1 mock-up looked like:",
         ],
         imgs: [mz1],
       },
@@ -768,19 +766,23 @@ export const projects = [
         name: "Development",
         description: [
           "The first version of this site was built out of CRA and SASS. It was a great way for me to get back into React.js since I'd spent a few months without coding properly because school had been focusing on different subject matters.",
-          "Some of the libraries I used for the project were React Router, Helmet for SEO purposes and Framer Motion to add animations. The project was deployed through GitHub Pages.",
-          "When I joined Cavallo Technologies as an Intern, I wanted to learn better ways of creating React applications, which led me to learn more about Vite and Next.js.",
-          "Since we started working with Vite for the Cavallo projects, I was also curious to try out Next.js on a side project, as a way to experiment with Client and Server Side Rendering, having routing and SEO integrations already built in was a big selling point, compared to using external libraries.",
-          "After some time, I decided to try to improve the design and codebase of my portfolio website, so I took it upon re-building the project, this time using React with Next.js, Typescript and Tailwind CSS, the website's now deployed with Vercel.",
-          "This is a code snippet of the first version of the project:",
+          "Some of the libraries I used for the first version of this project were React Router, Helmet for SEO purposes and Framer Motion to add animations. The deployment was done through GitHub Pages.",
+          "When I graduated from BCIT, I kept studying on my own to keep improving my React.js skills, and one of the first things I learned was that the cool kids don't use CRA anymore, mainly because it adds many unnecessary and sometimes outdated dependencies to the project, resulting in a website with slow compilation time.",
+          "One of the frameworks that kept popping up on my YouTube feed was Next.js, so I followed a few small tutorials to try out an alternative to CRA. Initially, what drew me in was the possibility of experimenting with both Client and Server Side Rendering, to speed up the loading time of the application by leveraging the fact that Server Side Components are pre-rendered when the page first loads, making it faster to display static content. I also learned more features Next.js has, like routing and SEO integrations already built in, which I consider a big improvement, compared to using external libraries if starting a project with CRA.",
+          "There's also the possibility of implementing a Loading Component, which Next.js handles behind the scenes, I didn't have to write any of the logic; simply included the component in the right folder and it gets displayed as the route gets fetched. Finally, I also appreciated the fact that while setting up a new Next.js project, you have the option to set up Tailwind at the same time; which is nothing complicated to accomplish, but again, just very convenient.",
+          "What better way to learn than by doing? Since I wanted to keep improving my portfolio website's interface design and the codebase, I decided to build this new version using Next.js this time with the added layer of type safety by implementing Typescript, to build a more reliable and easy-to-maintain codebase.",
+          "For this new version of the project, I decided to use Tailwind for styling, as opposed to SASS which is what I used in V1. I've found my workflow to be much more efficient and fast with Tailwind. I find it extremely convenient, reliable and easy to implement, since one of the main drawbacks I see now for SASS is the amount of initial setup that's required to start implementing any styling. Tailwind also removes the need for an external stylesheet, (for the most part, since you can also create custom classes but I didn't find the need for them for this project.)",
+          "The website's now deployed with Vercel, which is Next.js' default deployment platform. After some research I discovered Vercel's one of the fastest ways to release the application, again with the added benefit of no extra configuration.",
+          "",
         ],
-        imgs: [mz2],
+        imgs: [],
       },
       {
         name: "Final Result",
         description: [
-          "This website's current design showcases my brand as a professional in a cohesive way while keeping functionality as the main priority. Project Cards use labels and colour to identify different disciplines and scan content and tools used. Inside the Project Details Page, there's a way to navigate to each section, which helps the user know what to expect.",
+          "This website's current design showcases my brand as a professional in a cohesive way while keeping functionality as the main priority. The Project Cards use labels and colour to identify different disciplines and scan content and tools used. Inside the Project Details Page, there's a way to navigate to each section, which helps the user know what to expect.",
           "In terms of development, I've kept the React Components as reusable as possible, passing down props and using React Hooks to create different versions of a single element if needed. The Components were written using Typescript, which has helped in error prevention and to keep a better data structure across the project. I've also implemented 404 and Loading screens, which are a part of Next.js' features.",
+          "Feel free to explore the website's repository and get in touch if you have any feedback or comments that could help me improve it or make it more efficient.",
         ],
         imgs: [mz],
       },
