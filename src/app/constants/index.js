@@ -8,11 +8,11 @@ import {
 export const routes = [
   {
     id: "projects",
-    title: "Projects",
+    name: "Projects",
   },
   {
     id: "about",
-    title: "About",
+    name: "About",
   },
 ];
 

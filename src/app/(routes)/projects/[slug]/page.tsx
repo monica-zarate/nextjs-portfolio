@@ -75,6 +75,10 @@ export default function ProjectDetails() {
                     </div>
                     <div className="md:flex">
                         <div className="mb-16 basis-1/4">
+                            
+
+                        </div>
+                        <div className="mb-16 basis-1/4">
                             <h3 className="text-lime-700 text-h3 mb-2">{copy.tools.h3}</h3>
                             <RevealElement>
                                 <ul>
