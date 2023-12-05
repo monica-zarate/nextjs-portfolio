@@ -56,6 +56,7 @@ export const pagesContent = {
   intro: {
     copy: {
       h1: "Hola! I'm Monica",
+      imgAlt: "monica zarate",
       p: [
         [
           {
@@ -65,7 +66,7 @@ export const pagesContent = {
           },
           {
             id: 2,
-            content: "Web Designer",
+            content: "Front-end Developer",
             isHighlight: true,
           },
           {
@@ -75,7 +76,7 @@ export const pagesContent = {
           },
           {
             id: 4,
-            content: "Developer",
+            content: "Web Designer",
             isHighlight: true,
           },
           {

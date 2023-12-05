@@ -9,17 +9,19 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 // Project imports
 import { routes } from "../constants";
 import { sunflower } from "@/assets";
+import { pagesContent } from "../constants";
 
 export default function Navbar() {
     const [isMobile, setIsMobile] = useState(false);
+    const { copy } = pagesContent.navbar;
 
     return (
         <header className="bg-white">
             <Suspense>
                 <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-                    <Link href="/" className="-m-1.5 p-1.5">
-                        <span className="sr-only">Monica Zarate</span>
-                        <Image className="h-8 w-auto" src={sunflower} alt="sunflower icon" />
+                    <Link href="/">
+                        <span className="sr-only">{copy.title}</span>
+                        <Image className="h-12 w-auto" src={sunflower} alt="sunflower icon" />
                     </Link>
                     <div className="flex lg:hidden">
                     <button
@@ -49,8 +51,8 @@ export default function Navbar() {
                     <div className="fixed inset-0 z-10" />
                     <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
-                        <Link href="/" className="-m-1.5 p-1.5">
-                            <span className="sr-only">Monica Zarate</span>
+                        <Link href="/">
+                            <span className="sr-only">{copy.title}</span>
                             <Image
                                 className="h-8 w-auto"
                                 src={sunflower}
@@ -82,7 +84,7 @@ export default function Navbar() {
                         <div className="py-6">
                             <Link
                                 href="/contact"
-                                className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                className="rounded-md bg-lime-700 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-lime-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-600"
                             >
                                 Contact
                             </Link>
