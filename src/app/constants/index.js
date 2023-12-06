@@ -1,4 +1,9 @@
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEnvelope,
+  faLaptopCode,
+  faPersonChalkboard,
+  faComments,
+} from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
   faLinkedin,
@@ -100,6 +105,31 @@ export const pagesContent = {
             isHighlight: false,
           },
         ],
+      ],
+    },
+  },
+  highlights: {
+    copy: {
+      h2: "The big picture",
+      skills: [
+        {
+          name: "Adaptability",
+          img: faLaptopCode,
+          description:
+            "In the ever-evolving technology landscape, my approach is marked by embracing the dynamic nature of digital tools and trends.",
+        },
+        {
+          name: "User-Centric",
+          img: faPersonChalkboard,
+          description:
+            "I aim to deliver digital experiences that not only align with the company's goals but also resonate seamlessly with the expectations of the end-users.",
+        },
+        {
+          name: "Collaboration",
+          img: faComments,
+          description:
+            "My strong communication skills enable seamless collaboration with diverse roles, which allows me to adapt to cross-functional teams.",
+        },
       ],
     },
   },
