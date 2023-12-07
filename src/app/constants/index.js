@@ -19,6 +19,10 @@ export const routes = [
     id: "about",
     name: "About",
   },
+  {
+    id: "contact",
+    name: "Contact",
+  },
 ];
 
 export const social = [
@@ -110,7 +114,7 @@ export const pagesContent = {
   },
   highlights: {
     copy: {
-      h2: "The big picture",
+      h2: "Crafting Successful Projects",
       skills: [
         {
           name: "Adaptability",
@@ -131,6 +135,78 @@ export const pagesContent = {
             "My strong communication skills enable seamless collaboration with diverse roles, which allows me to adapt to cross-functional teams.",
         },
       ],
+    },
+  },
+  testimonials: {
+    copy: {
+      h2: "Recommendations and Testimonials",
+      p: "What other industry professionals have said about my work",
+    },
+    testimonials: [
+      {
+        body: "Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.",
+        author: {
+          name: "Leslie Alexander",
+          handle: "lesliealexander",
+          imageUrl:
+            "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        },
+      },
+      {
+        body: "Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.",
+        author: {
+          name: "Leslie Alexander",
+          handle: "lesliealexander",
+          imageUrl:
+            "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        },
+      },
+      {
+        body: "Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.",
+        author: {
+          name: "Leslie Alexander",
+          handle: "lesliealexander",
+          imageUrl:
+            "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        },
+      },
+      {
+        body: "Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.",
+        author: {
+          name: "Leslie Alexander",
+          handle: "lesliealexander",
+          imageUrl:
+            "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        },
+      },
+      {
+        body: "Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.",
+        author: {
+          name: "Leslie Alexander",
+          handle: "lesliealexander",
+          imageUrl:
+            "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        },
+      },
+      {
+        body: "Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.",
+        author: {
+          name: "Leslie Alexander",
+          handle: "lesliealexander",
+          imageUrl:
+            "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+        },
+      },
+    ],
+  },
+  cta: {
+    copy: {
+      h2: "Explore my previous work and",
+      h22: "let's build something amazing together!",
+      main: "Projects",
+      mainHref: "/projects",
+      secondary: "Contact Me",
+      secondaryHref: "/contact",
     },
   },
   about: {
@@ -291,9 +367,8 @@ export const pagesContent = {
   },
   projects: {
     copy: {
-      h1: "Projects",
-      p: "Disciplines:",
-      span: "Reset",
+      h2: "Featured Projects",
+      p: "Each project has offered me valuable experiences and insights, shaping my skills and deepening my understanding of effective and innovative web development practices.",
     },
   },
   featured: {
@@ -330,9 +405,7 @@ export const pagesContent = {
     },
   },
   projectCard: {
-    copy: {
-      span: "Built with",
-    },
+    copy: {},
   },
   notFound: {
     copy: {
