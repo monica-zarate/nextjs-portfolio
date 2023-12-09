@@ -6,7 +6,7 @@ import Link from "next/link";
 import { AnimatePresence, motion as m } from "framer-motion";
 
 //Project imports
-import { pagesContent, routes, disciplines } from "@/app/constants";
+import { pagesContent, routes } from "@/app/constants";
 import { projects } from "../../constants/projects";
 import Loading from "@/app/loading";
 import RevealElement from "@/app/_components/RevealElement";

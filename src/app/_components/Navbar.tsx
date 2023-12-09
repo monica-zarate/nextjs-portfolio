@@ -2,6 +2,7 @@
 "use client";
 import { useState, Suspense } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -14,6 +15,9 @@ import { pagesContent } from "../constants";
 export default function Navbar() {
     const [isMobile, setIsMobile] = useState(false);
     const { copy } = pagesContent.navbar;
+    const pathname = usePathname();
+
+    console.log(pathname)
 
     return (
         <header className="bg-white">
@@ -35,7 +39,7 @@ export default function Navbar() {
                     </div>
                     <div className="hidden lg:flex lg:gap-x-12 items-center">
                     {routes.map((route) => (
-                        <Link key={route.name} href={route.id} className={`${route.name === routes[2].name ? "rounded-md bg-amber-700 px-3 py-2 text-white shadow-sm hover:bg-amber-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600" : "leading-6 text-gray-900"} text-sm font-semibold`}>
+                        <Link key={route.name} href={`/${route.id}`} className={`${route.name === routes[routes.length - 1].name ? "rounded-md bg-amber-700 px-3 py-2 text-white shadow-sm hover:bg-amber-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600" : "leading-6"} text-sm font-semibold ${`/${route.id}` === pathname ? "text-amber-700" : "text-gray-900"}`}>
                         {route.name}
                         </Link>
                     ))}
@@ -45,7 +49,7 @@ export default function Navbar() {
                     <div className="fixed inset-0 z-10" />
                     <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
-                        <Link href="/">
+                        <Link href="/" onClick={() => setIsMobile(false)}>
                             <span className="sr-only">{copy.title}</span>
                             <Image
                                 className="h-12 w-auto"
@@ -63,26 +67,17 @@ export default function Navbar() {
                         </button>
                     </div>
                     <div className="mt-6 flow-root">
-                        <div className="-my-6 divide-y divide-gray-500/10">
                         <div className="space-y-2 py-6">
                             {routes.map((route) => (
                             <Link
                                 key={route.name}
-                                href={route.id}
-                                className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                href={`/${route.id}`}
+                                onClick={() => setIsMobile(false)}
+                                className={`-mx-3 block px-3 py-2 text-base font-semibold leading-7 w-fit ${`/${route.id}` === pathname ? "text-amber-700" : "text-gray-900"} ${route.name === routes[routes.length - 1].name ? "rounded-md bg-amber-700 px-3 py-2 text-sm text-white shadow-sm hover:bg-amber-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600" : "rounded-lg hover:bg-gray-50"}`}
                             >
                                 {route.name}
                             </Link>
                             ))}
-                        </div>
-                        <div className="py-6">
-                            <Link
-                                href="/contact"
-                                className="rounded-md bg-amber-700 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-amber-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600"
-                            >
-                                Contact
-                            </Link>
-                        </div>
                         </div>
                     </div>
                     </Dialog.Panel>

@@ -19,24 +19,6 @@ import {
   billy6,
   billyThumb,
   billy,
-  guavaPunch1,
-  guavaPunch2,
-  guavaPunch3,
-  guavaPunch4,
-  guavaPunch5,
-  guavaPunch6,
-  guavaPunchThumb,
-  guavaPunch,
-  paperLantern1,
-  paperLantern2,
-  paperLantern3,
-  paperLantern4,
-  paperLantern5,
-  paperLantern6,
-  paperLantern7,
-  paperLantern8,
-  paperLanternThumb,
-  paperLantern,
   tcDesign1,
   tcDesign2,
   tcDesign3,
@@ -50,13 +32,8 @@ import {
   mz,
   mz1,
   mzThumb,
-  ps,
-  ai,
-  dn,
   xd,
   figma,
-  maze,
-  useberry,
   html,
   css,
   php,
@@ -72,192 +49,167 @@ import {
 
 export const projects = [
   {
-    id: "1",
-    title: "Guava Punch: Logo & Poster",
-    subtitle: "Logo and promotional Poster",
+    id: "portfolio",
+    title: "My Portfolio Website",
+    subtitle: "A responsive portfolio to showcase my skills",
     images: {
-      thumb: guavaPunchThumb,
-      thumbAlt: "guava punch poster mockup",
-      featuredImg: guavaPunch,
-      featuredImgAlt: "guava punch poster mockup",
+      thumb: mzThumb,
+      thumbAlt: "Monica Zarate's Website Home Page",
+      featuredImg: mz,
+      featuredImgAlt: "Monica Zarate's Website Home Page",
     },
     description:
-      "Developed a fictional beverage company profile and designed a logo and a promotional poster that would attract their target audience.",
-    chip: "Graphic Design",
-    disciplines: ["design"],
-    path: "guava-punch",
-    isFeatured: false,
+      "Designed and Developed this website to demonstrate my skills in crafting user-friendly interfaces, responsive designs, and seamless user experiences.",
+    chip: "Development",
+    disciplines: ["design", "development"],
+    path: "my-portfolio",
+    isFeatured: true,
     links: {
-      repo: "",
-      repoTitle: "",
-      figmaPrototype: "",
-      figmaPrototypeTitle: "",
+      repo: "https://github.com/monica-zarate/nextjs-portfolio",
+      repoTitle: "My Portfolio Website's Repository",
+      figmaPrototype:
+        "https://www.figma.com/proto/nEUgRjRJDVeGHPf6E5pnXV/Portfolio-Mockup?page-id=0%3A1&type=design&node-id=6-93&viewport=316%2C302%2C0.13&t=Xp1jaAISVY5EJzfZ-1&scaling=scale-down&starting-point-node-id=6%3A93&mode=design",
+      figmaPrototypeTitle: "My Portfolio Website's Prototype",
       xdPrototype: "",
       xdPrototypeTitle: "",
       site: "",
       siteTitle: "",
+      internalLink: "",
+      internalLinkTitle: "",
     },
     tools: [
-      { name: "Adobe Illustrator", icon: ai },
-      { name: "Adobe Photoshop", icon: ps },
-      { name: "Adobe Dimension", icon: dn },
+      { name: "Figma", icon: figma },
+      { name: "React.js", icon: react },
+      { name: "Typescript", icon: typescript },
+      { name: "Tailwind", icon: tailwind },
     ],
     intro: [
-      "This project started by developing a logo using shapes and the pen tool in Adobe Illustrator, arranging the components in an orderly manner using layers. Text components were meant to be outlined, to make sure the logo was scalable. A black and white version was requested, to make sure the logo was colour-independent.",
-      "In order to create the promotional poster, we had to include a background image and at least one 3D element that was placed on a realistic scene, blending in with the background image. Lighting and perspective were important elements of this project. As I had previously created a logo for a fictitious beverage company called Guava Punch, I decided to use that company as a foundation for this project and develop a promotional poster that included a beverage container.",
+      "The site's current version was built using React with Next.js, Typescript and Tailwind CSS.",
+      "This project is a work in progress, and I'm constantly looking to improve both the design and the codebase.",
     ],
     steps: [
       {
-        name: "Beverage Company Conception",
+        name: "Conception",
         description: [
-          "I got inspired by a drink I used to enjoy in my childhood which was guava nectar and decided to add sparkling water as a twist, to make it more interesting. I wanted to create a casual beverage that could be enjoyed by everyone, as a soft drink.",
-        ],
-        imgs: [guavaPunch1],
-      },
-      {
-        name: "Mind Map and Sketching",
-        description: [
-          "A mind map was created to start defining the brand. Having certain keywords in mind, I then moved on to a sketching phase, where ideas started to flow by hand drawing the main components I wanted to include on the logo.",
-        ],
-        imgs: [guavaPunch2],
-      },
-      {
-        name: "Creative Process",
-        description: [
-          "The colour palette was decided based on the beverage's main ingredient: the guava fruit, which has a pink vibrant colour, as well as some green from its leaves. The logo gravitates towards round shapes, to reference the bubbles the sparkling water will add to the mix.",
-        ],
-        imgs: [guavaPunch3],
-      },
-      {
-        name: "Black and White Version",
-        description: [
-          "The selected sketches were translated into Adobe Illustrator in a black and white version. The guava fruit was traced using the pen tool. Balance and hierarchy were applied to create harmony and emphasize the more important information.",
-        ],
-        imgs: [guavaPunch4],
-      },
-      {
-        name: "Poster Brainstorming",
-        description: [
-          "Since this is a casual soft drink that is targeted at the general public and is a carbonated beverage, a can would be the most likely container to be used for it. The beverage is meant to be fun, refreshing and energizing, and we tend to associate these adjectives with the summertime when people are spending more time outdoors and the weather is hotter.",
+          "As part of the BCIT curriculum, we started working on a portfolio website during our third term.",
+          "The first phase of the project consisted of defining our personal brand. We had a comprehensive assignment that helped us identify our values,  goals and skills as New Media professionals.",
+          "This was the foundation to start developing all the necessary assets for my portfolio website, like creating my own logo, selecting an intentional colour palette, finding an adequate typeface and other digital elements.",
+          "All these components are meant to resonate with my goals so that I can showcase my skills by integrating all elements seamlessly.",
         ],
         imgs: [],
       },
       {
-        name: "Adobe Dimension",
+        name: "Design",
         description: [
-          "The park photo was placed as a background image, then the container was brought in using a fill colour and the label as a decal, to wrap around the can for a realistic effect. The 3D model perspective was matched to the background image. The most challenging part of the project was the lighting. This was my first time using Adobe Dimension, so it took some time to figure out the lighting options and settings.",
-          "The final result was built with two light sources, one considered as “natural lighting” recreating the outdoor lighting the background image has, and because the natural light is hitting the can from behind/ to one side, an ambient light was added to help with the illumination of the front of the container, where the label is placed.",
+          "In order to achieve a high-fidelity mockup, I started out by drawing sketches of the basic ideas I had for the layout, this helped me identify how I wanted to divide the page's content.",
+          "I then created a lo-fi wireframe, which was particularly helpful in order to identify the hierarchy of information and to make sure the site had enough contrast and a good balance between text and images.",
+          "The general layout and sections have remained the same, but I've been fine-tuning the details to make the website the best it can be. One of my main goals was introducing colour in a mindful way. I want to support the navigation experience by pairing a colour with a discipline and to highlight the interactive elements of the interface.",
+          "I've also worked on improving the copy and leveraging different font weights and sizes to improve readability and information hierarchy.",
+          "For reference, this is what the V1 mock-up looked like:",
         ],
-        imgs: [guavaPunch5, guavaPunch6],
+        imgs: [mz1],
       },
       {
-        name: "Adobe Photoshop",
+        name: "Development",
         description: [
-          "Once the poster was rendered, it was then exported to Adobe Photoshop, where the slogan text and certification logos were added. Typography and text colours were chosen to complement the container and provide enough contrast to be readable.",
+          "The first version of this site was built out of CRA and SASS. It was a great way for me to get back into React.js since I'd spent a few months without coding properly because school had been focusing on different subject matters.",
+          "Some of the libraries I used for the first version of this project were React Router, Helmet for SEO purposes and Framer Motion to add animations. The deployment was done through GitHub Pages.",
+          "When I graduated from BCIT, I kept studying on my own to keep improving my React.js skills, and one of the first things I learned was that the cool kids don't use CRA anymore, mainly because it adds many unnecessary and sometimes outdated dependencies to the project, resulting in a website with slow compilation time.",
+          "One of the frameworks that kept popping up on my YouTube feed was Next.js, so I followed a few small tutorials to try out an alternative to CRA. Initially, what drew me in was the possibility of experimenting with both Client and Server Side Rendering, to speed up the loading time of the application by leveraging the fact that Server Side Components are pre-rendered when the page first loads, making it faster to display static content. I also learned more features Next.js has, like routing and SEO integrations already built in, which I consider a big improvement, compared to using external libraries if starting a project with CRA.",
+          "There's also the possibility of implementing a Loading Component, which Next.js handles behind the scenes, I didn't have to write any of the logic; simply included the component in the right folder and it gets displayed as the route gets fetched. Finally, I also appreciated the fact that while setting up a new Next.js project, you have the option to set up Tailwind at the same time; which is nothing complicated to accomplish, but again, just very convenient.",
+          "What better way to learn than by doing? Since I wanted to keep improving my portfolio website's interface design and the codebase, I decided to build this new version using Next.js this time with the added layer of type safety by implementing Typescript, to build a more reliable and easy-to-maintain codebase.",
+          "For this new version of the project, I decided to use Tailwind for styling, as opposed to SASS which is what I used in V1. I've found my workflow to be much more efficient and fast with Tailwind. I find it extremely convenient, reliable and easy to implement, since one of the main drawbacks I see now for SASS is the amount of initial setup that's required to start implementing any styling. Tailwind also removes the need for an external stylesheet, (for the most part, since you can also create custom classes but I didn't find the need for them for this project.)",
+          "The website's now deployed with Vercel, which is Next.js' default deployment platform. After some research I discovered Vercel's one of the fastest ways to release the application, again with the added benefit of no extra configuration.",
+          "",
         ],
-        imgs: [guavaPunch],
+        imgs: [],
+      },
+      {
+        name: "Final Result",
+        description: [
+          "This website's current design showcases my brand as a professional in a cohesive way while keeping functionality as the main priority. The Project Cards use labels and colour to identify different disciplines and scan content and tools used. Inside the Project Details Page, there's a way to navigate to each section, which helps the user know what to expect.",
+          "In terms of development, I've kept the React Components as reusable as possible, passing down props and using React Hooks to create different versions of a single element if needed. The Components were written using Typescript, which has helped in error prevention and to keep a better data structure across the project. I've also implemented 404 and Loading screens, which are a part of Next.js' features.",
+          "Feel free to explore the website's repository and get in touch if you have any feedback or comments that could help me improve it or make it more efficient.",
+        ],
+        imgs: [mz],
       },
     ],
   },
   {
-    id: "2",
-    title: "Paper Lantern: Web & App Prototype",
-    subtitle: "Website and mobile app prototype and testing",
+    id: "apod",
+    title: "NASA's APOD: Website",
+    subtitle: "Third party data request using the Fetch API",
     images: {
-      thumb: paperLanternThumb,
-      thumbAlt: "paper lantern mobile interface preview",
-      featuredImg: paperLantern,
-      featuredImgAlt: "paper lantern interface preview",
+      thumb: apodThumb,
+      thumbAlt: "astronomy picture of the day mockup website",
+      featuredImg: apod,
+      featuredImgAlt: "astronomy picture of the day mockup website",
     },
     description:
-      "Designed and tested a prototype for a fictitious bookstore. The project includes a website and a mobile interface.",
-    chip: "UX Design",
-    disciplines: ["design"],
-    path: "paper-lantern",
+      "Designed and developed a site that consumes the NASA APOD API to display the Astronomy Picture of the Day. The project uses the Fetch API to make a request to an endpoint.",
+    chip: "Development",
+    disciplines: ["development"],
+    path: "apod",
     isFeatured: false,
     links: {
-      repo: "",
-      repoTitle: "",
-      figmaPrototype:
-        "https://www.figma.com/proto/31WcXdZsapuWQgdD1O0C1k/Paper-Lantern-Phase-2?page-id=2%3A3&node-id=21%3A498&viewport=77%2C424%2C0.25&scaling=scale-down&starting-point-node-id=21%3A498",
-      figmaPrototypeTitle:
-        "Paper Lantern Prototype: Add Payment Method Process",
-      xdPrototype:
-        "https://xd.adobe.com/view/25880ba9-718b-436e-b3b4-04ce7bf95b87-70db/?fullscreen",
-      xdPrototypeTitle: "Paper Lantern Prototype: Search and Checkout Process",
-      site: "",
-      siteTitle: "",
+      repo: "https://github.com/monica-zarate/nasa-apod",
+      repoTitle: "APOD Project Repository",
+      figmaPrototype: "",
+      figmaPrototypeTitle: "",
+      xdPrototype: "",
+      xdPrototypeTitle: "",
+      site: "http://apod.monicazarate.com",
+      siteTitle: "Monica's APOD Website",
     },
     tools: [
-      { name: "Adobe Xd", icon: xd },
-      { name: "Figma", icon: figma },
-      { name: "Useberry", icon: useberry },
-      { name: "Maze", icon: maze },
+      { name: "HTML", icon: html },
+      { name: "CSS", icon: css },
+      { name: "Javascript", icon: js },
+      { name: "Postman", icon: postman },
     ],
     intro: [
-      "To achieve the prototypes, I based my design decisions on User Personas, User Scenarios and User Flows. The interfaces started with low-fidelity wireframes, which evolved into high-fidelity mockups. The project's final stage consisted of testing our prototypes and applying revisions after users' feedback and data analysis.",
+      "To practice my Javascript skills, I decided to build my own version of NASA's Astronomy Picture of the Day. This project heavily focuses on the map() array method, writing DRY code and the ability to request data from a third-party API.",
     ],
     steps: [
       {
-        name: "Company Conception",
+        name: "API Endpoints",
         description: [
-          "With e-commerce websites' functionalities in mind, I created a website and mobile application for a bookstore that I called Paper Lantern.",
+          "For the Picture of the Day and a specific date, the endpoint must include a date string as yyyy-mm-dd. I.e: &date=2022-11-01. For the pictures of the month, I'm using a start date. I.e: &start_date=2022-11-01. If no end date is included, this query will retrieve pictures from the start date to the present day. I'm including &thumbs=true at the end of all endpoints, this is for when the APOD is a video, to display the thumbnail images of the video instead.",
         ],
         imgs: [],
       },
       {
-        name: "Website",
+        name: "Postman Tests",
         description: [
-          "User Persona: Benjamin is a pet owner who likes to explore new hobbies. Scenario: He's looking for a reference book that can introduce him to indoor gardening while keeping his cat safe. User Flow: Ben browses the Paper Lantern website looking for a specific book and successfully goes through the checkout process.",
+          "After registering to obtain an API key, I performed some test calls on Postman, to make sure the query parameters were being used properly and check the data I was receiving back.",
         ],
-        imgs: [paperLantern1, paperLantern2],
+        imgs: [apod1],
       },
       {
-        name: "Mobile App",
+        name: "fetch",
         description: [
-          "User Persona: Taylor's a young professional that works at a creative agency. Scenario: They're looking to update their credit card information on the Paper Lantern app, so they can check out faster whenever they need to place an order. User Flow: Taylor launches the Paper Lantern App and successfully adds a new payment method.",
+          "The fetch() method gets invoked when there's a call to the APOD API, passing the query as a parameter. A then() method follows, which transforms the response from the API into a JSON format. A second then() method is called to pass the received data to a function that's in charge of displaying it in the DOM. A ctach() method is chained, to catch any errors from the API call, and display them in the browser's console. The finally() method closes this code block, which is removing a spinner from the DOM once all the data has loaded and it's ready to populate the page.",
         ],
-        imgs: [paperLantern3, paperLantern4],
+        imgs: [apod2],
       },
       {
-        name: "Wireframes",
+        name: "Content Template Element",
         description: [
-          "I did some research on e-commerce websites and apps from Paper Lantern's main competitors and I sketched out the lo-fi wireframes keeping the personas' main goal and usability in mind.",
+          "In order to display the received data, I created a card component that will include the picture, its title, date and explanation, making use of the <template> HTML tag. This allowed me to have the card's skeleton already placed on the page's code, and use it to render the received data programmatically.",
         ],
-        imgs: [],
+        imgs: [apod3],
       },
       {
-        name: "Mockups and Prototypes",
+        name: "Final Result",
         description: [
-          "When translating the Website and App Interfaces to their high-fidelity version, I kept in mind principles of design like balance, patterns and unity to create a useful and aesthetically pleasing experience for the users.",
+          "This project offers three different ways to call the APOD API. On page load, the Picture of the Day gets displayed. Users also have the option to display all the pictures of the current month, or they can also find a specific date. For future iterations, I would like to re-work the page's layout, especially when having more than one card, to better align the content, as each picture's explanation varies in length.",
         ],
-        imgs: [paperLantern5, paperLantern6],
-      },
-      {
-        name: "Website User Testing",
-        description: [
-          "The website prototype was tested using Useberry. All six participants completed the three tasks they were presented with, however, thanks to their feedback and Useberry heat maps I found the users had some difficulties completing one of the tasks given. The search functionality could be improved, as well as the wording of the task. A second iteration of the prototype was completed, with updated labels and navigation options.",
-        ],
-        imgs: [paperLantern7],
-      },
-      {
-        name: "App User Testing",
-        description: [
-          "The app prototype was tested using Maze. All nine participants completed the three tasks they were presented with. The test has a Usability Score of 76, placing it on a Medium level of usability, which is a sign that there's room for improvement. Similar to the website prototype, users had difficulties with the search functionality. A revised version includes adding placeholder text on the search bar and increased contrast of the interface icons.",
-        ],
-        imgs: [paperLantern8],
-      },
-      {
-        name: "Final Thoughts",
-        description: [
-          "For future iterations, it would be interesting to test the search functionality again and add a questionnaire or another opinion scale to enquire how the users would improve this experience, what was the specific part they struggled with, etc.",
-        ],
-        imgs: [],
+        imgs: [apod],
       },
     ],
   },
   {
-    id: "3",
+    id: "acnh",
     title: "ACNH Villagers: Website",
     subtitle: "PHP classes, constructors and associative arrays",
     images: {
@@ -338,80 +290,7 @@ export const projects = [
     ],
   },
   {
-    id: "4",
-    title: "NASA's APOD: Website",
-    subtitle: "Third party data request using the Fetch API",
-    images: {
-      thumb: apodThumb,
-      thumbAlt: "astronomy picture of the day mockup website",
-      featuredImg: apod,
-      featuredImgAlt: "astronomy picture of the day mockup website",
-    },
-    description:
-      "Designed and developed a site that consumes the NASA APOD API to display the Astronomy Picture of the Day. The project uses the Fetch API to make a request to an endpoint.",
-    chip: "Development",
-    disciplines: ["development"],
-    path: "apod",
-    isFeatured: false,
-    links: {
-      repo: "https://github.com/monica-zarate/nasa-apod",
-      repoTitle: "APOD Project Repository",
-      figmaPrototype: "",
-      figmaPrototypeTitle: "",
-      xdPrototype: "",
-      xdPrototypeTitle: "",
-      site: "http://apod.monicazarate.com",
-      siteTitle: "Monica's APOD Website",
-    },
-    tools: [
-      { name: "HTML", icon: html },
-      { name: "CSS", icon: css },
-      { name: "Javascript", icon: js },
-      { name: "Postman", icon: postman },
-    ],
-    intro: [
-      "To practice my Javascript skills, I decided to build my own version of NASA's Astronomy Picture of the Day. This project heavily focuses on the map() array method, writing DRY code and the ability to request data from a third-party API.",
-    ],
-    steps: [
-      {
-        name: "API Endpoints",
-        description: [
-          "For the Picture of the Day and a specific date, the endpoint must include a date string as yyyy-mm-dd. I.e: &date=2022-11-01. For the pictures of the month, I'm using a start date. I.e: &start_date=2022-11-01. If no end date is included, this query will retrieve pictures from the start date to the present day. I'm including &thumbs=true at the end of all endpoints, this is for when the APOD is a video, to display the thumbnail images of the video instead.",
-        ],
-        imgs: [],
-      },
-      {
-        name: "Postman Tests",
-        description: [
-          "After registering to obtain an API key, I performed some test calls on Postman, to make sure the query parameters were being used properly and check the data I was receiving back.",
-        ],
-        imgs: [apod1],
-      },
-      {
-        name: "fetch",
-        description: [
-          "The fetch() method gets invoked when there's a call to the APOD API, passing the query as a parameter. A then() method follows, which transforms the response from the API into a JSON format. A second then() method is called to pass the received data to a function that's in charge of displaying it in the DOM. A ctach() method is chained, to catch any errors from the API call, and display them in the browser's console. The finally() method closes this code block, which is removing a spinner from the DOM once all the data has loaded and it's ready to populate the page.",
-        ],
-        imgs: [apod2],
-      },
-      {
-        name: "Content Template Element",
-        description: [
-          "In order to display the received data, I created a card component that will include the picture, its title, date and explanation, making use of the <template> HTML tag. This allowed me to have the card's skeleton already placed on the page's code, and use it to render the received data programmatically.",
-        ],
-        imgs: [apod3],
-      },
-      {
-        name: "Final Result",
-        description: [
-          "This project offers three different ways to call the APOD API. On page load, the Picture of the Day gets displayed. Users also have the option to display all the pictures of the current month, or they can also find a specific date. For future iterations, I would like to re-work the page's layout, especially when having more than one card, to better align the content, as each picture's explanation varies in length.",
-        ],
-        imgs: [apod],
-      },
-    ],
-  },
-  {
-    id: "5",
+    id: "tcdesign",
     title: "Travel Compass: Phase 1 App Prototype",
     subtitle: "Travel Management Mobile App Interface Design",
     images: {
@@ -509,7 +388,95 @@ export const projects = [
     ],
   },
   {
-    id: "6",
+    id: "tcdev",
+    title: "Travel Compass: Phase 2 Development",
+    subtitle: "React Native Application for Android devices",
+    images: {
+      thumb: tcDevThumb,
+      thumbAlt: "travel compass mobile interface preview",
+      featuredImg: tc,
+      featuredImgAlt: "travel compass mobile interface preview",
+    },
+    description:
+      "Developed an Android application using React Native. The goal was to build the front end based on the Design from Phase 1.",
+    chip: "Development",
+    disciplines: ["development"],
+    path: "travel-compass-phase2",
+    isFeatured: true,
+    links: {
+      repo: "https://github.com/monica-zarate/travel-compass",
+      repoTitle: "Travel Compass Project Repository",
+      figmaPrototype: "",
+      figmaPrototypeTitle: "",
+      xdPrototype: "",
+      xdPrototypeTitle: "",
+      site: "",
+      siteTitle: "",
+      internalLink:
+        "https://www.monicazarate.com/projects/travel-compass-phase1",
+      internalLinkTitle: "Travel Compass Phase 1: UI Design",
+    },
+    tools: [
+      { name: "React Native", icon: react },
+      { name: "Expo", icon: expo },
+      { name: "Android Studio", icon: android },
+    ],
+    intro: [
+      "After the Design Phase was completed, I wanted to expand the Travel Compass Project by taking the high-fidelity mockups into a native application. I developed an Android application using React Native, Expo and Android Studio as a mobile emulator.",
+      "Travel Compass is a travel management application. Its main purpose is to serve as an information hub where users can store all the information related to a given trip, like flight information, accommodation check-in and check-out dates and times, and other activities users might want to do during a holiday. It's intended for 20- to 50-year-old individuals who explicitly plan to travel for leisure at least once a year.",
+      "As a hypothetical existing user, on the Home Screen, we can see how the app would look like if we had a trip happening today and a list of any upcoming trips. By clicking on one of the Trip Overview Cards, we have access to the Trip Schedule Details.",
+    ],
+    steps: [
+      {
+        name: "Navigation Set-up and Screens",
+        description: [
+          'This app uses bottom tabs navigation for its four main sections: Home, Discover, Notifications and Account. The Home Screen is making use of stacked navigation for the Add New Trip and Trip Details Screens. In order to achieve the desired navigation patterns, I\'m using the "React Navigation" library, in particular the Stack and the Bottom Tabs navigators.',
+          "In order to set up the navigation patterns, I started with the Bottom Tabs navigation, to define the four main sections the application has. I created a file per screen and placed the <Navigation Container> in App.js as the root element to manage the linking of the app.",
+          "As an immediate child element, I'm placing an instance of the Bottom Tab Navigator that was assigned to a variable. Finally, the Screens are placed inside the <Tab.Navigator>, linking to the correct component. The same approach was taken for the Stacked Navigation, which takes place on the Home Screen.",
+        ],
+        imgs: [tcDev1],
+      },
+      {
+        name: "Data File",
+        description: [
+          "One of the most important aspects of this project was deciding how the data should be structured. For this first iteration, I've created two data objects, one containing the information the user sees on the preview cards, and the second one containing an example of a trip's schedule, this information is accessed via the Current Trip Screen, to see which activities are happening on which days.",
+          "For future iterations of this project, when a back-end integration takes place, I'd most likely re-structure the data architecture to have one single array of trips and each trip would have its own schedule. For the purposes of mocking up the app's functionality, I approached the data this way, because of time constraints.",
+        ],
+        imgs: [],
+      },
+      {
+        name: "Screens Content",
+        description: [
+          "Once the data was in place, I started populating each Screen with the appropriate content. I'm making use of Native Components like View, Flat List and Style Sheet. I'm also integrating the \"React Native Elements\" library, in order to access more UI elements that I could further customize and implement theming.",
+        ],
+        imgs: [tcDev2],
+      },
+      {
+        name: "Theme and Styles",
+        description: [
+          "The app's design started to come together once I started implementing the RNE Theming. In order to help style components that will be used across different Screens, I've applied the styling that was defined during Phase 1 of this project to the Button, Text and Icon Components, I'm also making use of a Theme Colour Palette to have the app's palette available as a constant.",
+          "Further styling is applied using the Native Style Sheet Component on each screen according to its particular design.",
+        ],
+        imgs: [tcDev3],
+      },
+      {
+        name: "Splash Screen and Icons",
+        description: [
+          "The application logo was implemented on a splash screen image and together with an app icon was added to the app.json file to help with branding and make for a more genuine experience when launching the app.",
+        ],
+        imgs: [],
+      },
+      {
+        name: "Final Result",
+        description: [
+          "I had fun building this project, it was the first time I worked with React Native and I appreciate having the experience of stepping outside of my comfort zone in terms of developing a website or application for the web. For future iterations, I would like to include a back-end integration, so the app can get tested with real data.",
+        ],
+        imgs: [tc],
+      },
+    ],
+  },
+  {
+    id: "billy",
     title: "Billy Expense Tracker: SPA Prototype",
     subtitle: "Expense Tracker Single Page Application Interface Design",
     images: {
@@ -613,267 +580,4 @@ export const projects = [
       },
     ],
   },
-  {
-    id: "7",
-    title: "Travel Compass: Phase 2 Development",
-    subtitle: "React Native Application for Android devices",
-    images: {
-      thumb: tcDevThumb,
-      thumbAlt: "travel compass mobile interface preview",
-      featuredImg: tc,
-      featuredImgAlt: "travel compass mobile interface preview",
-    },
-    description:
-      "Developed an Android application using React Native. The goal was to build the front end based on the Design from Phase 1.",
-    chip: "Development",
-    disciplines: ["development"],
-    path: "travel-compass-phase2",
-    isFeatured: true,
-    links: {
-      repo: "https://github.com/monica-zarate/travel-compass",
-      repoTitle: "Travel Compass Project Repository",
-      figmaPrototype: "",
-      figmaPrototypeTitle: "",
-      xdPrototype: "",
-      xdPrototypeTitle: "",
-      site: "",
-      siteTitle: "",
-      internalLink:
-        "https://www.monicazarate.com/projects/travel-compass-phase1",
-      internalLinkTitle: "Travel Compass Phase 1: UI Design",
-    },
-    tools: [
-      { name: "React Native", icon: react },
-      { name: "Expo", icon: expo },
-      { name: "Android Studio", icon: android },
-    ],
-    intro: [
-      "After the Design Phase was completed, I wanted to expand the Travel Compass Project by taking the high-fidelity mockups into a native application. I developed an Android application using React Native, Expo and Android Studio as a mobile emulator.",
-      "Travel Compass is a travel management application. Its main purpose is to serve as an information hub where users can store all the information related to a given trip, like flight information, accommodation check-in and check-out dates and times, and other activities users might want to do during a holiday. It's intended for 20- to 50-year-old individuals who explicitly plan to travel for leisure at least once a year.",
-      "As a hypothetical existing user, on the Home Screen, we can see how the app would look like if we had a trip happening today and a list of any upcoming trips. By clicking on one of the Trip Overview Cards, we have access to the Trip Schedule Details.",
-    ],
-    steps: [
-      {
-        name: "Navigation Set-up and Screens",
-        description: [
-          'This app uses bottom tabs navigation for its four main sections: Home, Discover, Notifications and Account. The Home Screen is making use of stacked navigation for the Add New Trip and Trip Details Screens. In order to achieve the desired navigation patterns, I\'m using the "React Navigation" library, in particular the Stack and the Bottom Tabs navigators.',
-          "In order to set up the navigation patterns, I started with the Bottom Tabs navigation, to define the four main sections the application has. I created a file per screen and placed the <Navigation Container> in App.js as the root element to manage the linking of the app.",
-          "As an immediate child element, I'm placing an instance of the Bottom Tab Navigator that was assigned to a variable. Finally, the Screens are placed inside the <Tab.Navigator>, linking to the correct component. The same approach was taken for the Stacked Navigation, which takes place on the Home Screen.",
-        ],
-        imgs: [tcDev1],
-      },
-      {
-        name: "Data File",
-        description: [
-          "One of the most important aspects of this project was deciding how the data should be structured. For this first iteration, I've created two data objects, one containing the information the user sees on the preview cards, and the second one containing an example of a trip's schedule, this information is accessed via the Current Trip Screen, to see which activities are happening on which days.",
-          "For future iterations of this project, when a back-end integration takes place, I'd most likely re-structure the data architecture to have one single array of trips and each trip would have its own schedule. For the purposes of mocking up the app's functionality, I approached the data this way, because of time constraints.",
-        ],
-        imgs: [],
-      },
-      {
-        name: "Screens Content",
-        description: [
-          "Once the data was in place, I started populating each Screen with the appropriate content. I'm making use of Native Components like View, Flat List and Style Sheet. I'm also integrating the \"React Native Elements\" library, in order to access more UI elements that I could further customize and implement theming.",
-        ],
-        imgs: [tcDev2],
-      },
-      {
-        name: "Theme and Styles",
-        description: [
-          "The app's design started to come together once I started implementing the RNE Theming. In order to help style components that will be used across different Screens, I've applied the styling that was defined during Phase 1 of this project to the Button, Text and Icon Components, I'm also making use of a Theme Colour Palette to have the app's palette available as a constant.",
-          "Further styling is applied using the Native Style Sheet Component on each screen according to its particular design.",
-        ],
-        imgs: [tcDev3],
-      },
-      {
-        name: "Splash Screen and Icons",
-        description: [
-          "The application logo was implemented on a splash screen image and together with an app icon was added to the app.json file to help with branding and make for a more genuine experience when launching the app.",
-        ],
-        imgs: [],
-      },
-      {
-        name: "Final Result",
-        description: [
-          "I had fun building this project, it was the first time I worked with React Native and I appreciate having the experience of stepping outside of my comfort zone in terms of developing a website or application for the web. For future iterations, I would like to include a back-end integration, so the app can get tested with real data.",
-        ],
-        imgs: [tc],
-      },
-    ],
-  },
-  {
-    id: "8",
-    title: "My Portfolio Website",
-    subtitle: "A responsive portfolio to showcase my skills",
-    images: {
-      thumb: mzThumb,
-      thumbAlt: "Monica Zarate's Website Home Page",
-      featuredImg: mz,
-      featuredImgAlt: "Monica Zarate's Website Home Page",
-    },
-    description:
-      "Designed and Developed this website to demonstrate my skills in crafting user-friendly interfaces, responsive designs, and seamless user experiences.",
-    chip: "Development",
-    disciplines: ["design", "development"],
-    path: "my-portfolio",
-    isFeatured: true,
-    links: {
-      repo: "https://github.com/monica-zarate/nextjs-portfolio",
-      repoTitle: "My Portfolio Website's Repository",
-      figmaPrototype:
-        "https://www.figma.com/proto/nEUgRjRJDVeGHPf6E5pnXV/Portfolio-Mockup?page-id=0%3A1&type=design&node-id=6-93&viewport=316%2C302%2C0.13&t=Xp1jaAISVY5EJzfZ-1&scaling=scale-down&starting-point-node-id=6%3A93&mode=design",
-      figmaPrototypeTitle: "My Portfolio Website's Prototype",
-      xdPrototype: "",
-      xdPrototypeTitle: "",
-      site: "",
-      siteTitle: "",
-      internalLink: "",
-      internalLinkTitle: "",
-    },
-    tools: [
-      { name: "Figma", icon: figma },
-      { name: "React.js", icon: react },
-      { name: "Typescript", icon: typescript },
-      { name: "Tailwind", icon: tailwind },
-    ],
-    intro: [
-      "The site's current version was built using React with Next.js, Typescript and Tailwind CSS.",
-      "This project is a work in progress, and I'm constantly looking to improve both the design and the codebase.",
-    ],
-    steps: [
-      {
-        name: "Conception",
-        description: [
-          "As part of the BCIT curriculum, we started working on a portfolio website during our third term.",
-          "The first phase of the project consisted of defining our personal brand. We had a comprehensive assignment that helped us identify our values,  goals and skills as New Media professionals.",
-          "This was the foundation to start developing all the necessary assets for my portfolio website, like creating my own logo, selecting an intentional colour palette, finding an adequate typeface and other digital elements.",
-          "All these components are meant to resonate with my goals so that I can showcase my skills by integrating all elements seamlessly.",
-        ],
-        imgs: [],
-      },
-      {
-        name: "Design",
-        description: [
-          "In order to achieve a high-fidelity mockup, I started out by drawing sketches of the basic ideas I had for the layout, this helped me identify how I wanted to divide the page's content.",
-          "I then created a lo-fi wireframe, which was particularly helpful in order to identify the hierarchy of information and to make sure the site had enough contrast and a good balance between text and images.",
-          "The general layout and sections have remained the same, but I've been fine-tuning the details to make the website the best it can be. One of my main goals was introducing colour in a mindful way. I want to support the navigation experience by pairing a colour with a discipline and to highlight the interactive elements of the interface.",
-          "I've also worked on improving the copy and leveraging different font weights and sizes to improve readability and information hierarchy.",
-          "For reference, this is what the V1 mock-up looked like:",
-        ],
-        imgs: [mz1],
-      },
-      {
-        name: "Development",
-        description: [
-          "The first version of this site was built out of CRA and SASS. It was a great way for me to get back into React.js since I'd spent a few months without coding properly because school had been focusing on different subject matters.",
-          "Some of the libraries I used for the first version of this project were React Router, Helmet for SEO purposes and Framer Motion to add animations. The deployment was done through GitHub Pages.",
-          "When I graduated from BCIT, I kept studying on my own to keep improving my React.js skills, and one of the first things I learned was that the cool kids don't use CRA anymore, mainly because it adds many unnecessary and sometimes outdated dependencies to the project, resulting in a website with slow compilation time.",
-          "One of the frameworks that kept popping up on my YouTube feed was Next.js, so I followed a few small tutorials to try out an alternative to CRA. Initially, what drew me in was the possibility of experimenting with both Client and Server Side Rendering, to speed up the loading time of the application by leveraging the fact that Server Side Components are pre-rendered when the page first loads, making it faster to display static content. I also learned more features Next.js has, like routing and SEO integrations already built in, which I consider a big improvement, compared to using external libraries if starting a project with CRA.",
-          "There's also the possibility of implementing a Loading Component, which Next.js handles behind the scenes, I didn't have to write any of the logic; simply included the component in the right folder and it gets displayed as the route gets fetched. Finally, I also appreciated the fact that while setting up a new Next.js project, you have the option to set up Tailwind at the same time; which is nothing complicated to accomplish, but again, just very convenient.",
-          "What better way to learn than by doing? Since I wanted to keep improving my portfolio website's interface design and the codebase, I decided to build this new version using Next.js this time with the added layer of type safety by implementing Typescript, to build a more reliable and easy-to-maintain codebase.",
-          "For this new version of the project, I decided to use Tailwind for styling, as opposed to SASS which is what I used in V1. I've found my workflow to be much more efficient and fast with Tailwind. I find it extremely convenient, reliable and easy to implement, since one of the main drawbacks I see now for SASS is the amount of initial setup that's required to start implementing any styling. Tailwind also removes the need for an external stylesheet, (for the most part, since you can also create custom classes but I didn't find the need for them for this project.)",
-          "The website's now deployed with Vercel, which is Next.js' default deployment platform. After some research I discovered Vercel's one of the fastest ways to release the application, again with the added benefit of no extra configuration.",
-          "",
-        ],
-        imgs: [],
-      },
-      {
-        name: "Final Result",
-        description: [
-          "This website's current design showcases my brand as a professional in a cohesive way while keeping functionality as the main priority. The Project Cards use labels and colour to identify different disciplines and scan content and tools used. Inside the Project Details Page, there's a way to navigate to each section, which helps the user know what to expect.",
-          "In terms of development, I've kept the React Components as reusable as possible, passing down props and using React Hooks to create different versions of a single element if needed. The Components were written using Typescript, which has helped in error prevention and to keep a better data structure across the project. I've also implemented 404 and Loading screens, which are a part of Next.js' features.",
-          "Feel free to explore the website's repository and get in touch if you have any feedback or comments that could help me improve it or make it more efficient.",
-        ],
-        imgs: [mz],
-      },
-    ],
-  },
-  // {
-  //   id: "9",
-  //   title: "Cavallo Technologies Branding and Website",
-  //   subtitle:
-  //     "Brand identity digital assets and Website Design and Development",
-  //   images: {
-  //     thumb: mzThumb,
-  //     thumbAlt: "Cavallo Technologies's Website Home Page",
-  //     featuredImg: mz,
-  //     featuredImgAlt: "Cavallo Technologies's Website Home Page",
-  //   },
-  //   description:
-  //     "Designed and Developed this website to demonstrate my skills in crafting user-friendly interfaces, responsive designs, and seamless user experiences.",
-  //   chip: "Development",
-  //   disciplines: ["design", "development"],
-  //   path: "my-portfolio",
-  //   isFeatured: true,
-  //   links: {
-  //     repo: "https://github.com/monica-zarate/nextjs-portfolio",
-  //     repoTitle: "My Portfolio Website's Repository",
-  //     figmaPrototype:
-  //       "https://www.figma.com/proto/nEUgRjRJDVeGHPf6E5pnXV/Portfolio-Mockup?page-id=0%3A1&type=design&node-id=6-93&viewport=316%2C302%2C0.13&t=Xp1jaAISVY5EJzfZ-1&scaling=scale-down&starting-point-node-id=6%3A93&mode=design",
-  //     figmaPrototypeTitle: "My Portfolio Website's Prototype",
-  //     xdPrototype: "",
-  //     xdPrototypeTitle: "",
-  //     site: "",
-  //     siteTitle: "",
-  //     internalLink: "",
-  //     internalLinkTitle: "",
-  //   },
-  //   tools: [
-  //     { name: "Figma", icon: figma },
-  //     { name: "React.js", icon: react },
-  //     { name: "Typescript", icon: typescript },
-  //     { name: "Tailwind", icon: tailwind },
-  //   ],
-  //   intro: [
-  //     "The site's current version was built using React with Next.js, Typescript and Tailwind CSS.",
-  //     "This project is a work in progress, and I'm constantly looking to improve both the design and the codebase.",
-  //   ],
-  //   steps: [
-  //     {
-  //       name: "Conception",
-  //       description: [
-  //         "As part of the BCIT curriculum, we started working on a portfolio website during our third term.",
-  //         "The first phase of the project consisted of defining our personal brand. We had a comprehensive assignment that helped us identify our values,  goals and skills as New Media professionals.",
-  //         "This was the foundation to start developing all the necessary assets for my portfolio website, like creating my own logo, selecting an intentional colour palette, finding an adequate typeface and other digital elements.",
-  //         "All these components are meant to resonate with my goals so that I can showcase my skills by integrating all elements seamlessly.",
-  //       ],
-  //       imgs: [],
-  //     },
-  //     {
-  //       name: "Design",
-  //       description: [
-  //         "In order to achieve a high-fidelity mockup, I started out by drawing sketches of the basic ideas I had for the layout, this helped me identify how I wanted to divide the page's content.",
-  //         "I then created a lo-fi wireframe, which was particularly helpful in order to identify the hierarchy of information and to make sure the site had enough contrast and a good balance between text and images.",
-  //         "The general layout and sections have remained the same, but I've been fine-tuning the details to make the website the best it can be. One of my main goals was introducing colour in a mindful way. I want to support the navigation experience by pairing a colour with a discipline and to highlight the interactive elements of the interface.",
-  //         "I've also worked on improving the copy and leveraging different font weights and sizes to improve readability and information hierarchy.",
-  //         "For reference, this is what the V1 mock-up looked like:",
-  //       ],
-  //       imgs: [mz1],
-  //     },
-  //     {
-  //       name: "Development",
-  //       description: [
-  //         "The first version of this site was built out of CRA and SASS. It was a great way for me to get back into React.js since I'd spent a few months without coding properly because school had been focusing on different subject matters.",
-  //         "Some of the libraries I used for the first version of this project were React Router, Helmet for SEO purposes and Framer Motion to add animations. The deployment was done through GitHub Pages.",
-  //         "When I graduated from BCIT, I kept studying on my own to keep improving my React.js skills, and one of the first things I learned was that the cool kids don't use CRA anymore, mainly because it adds many unnecessary and sometimes outdated dependencies to the project, resulting in a website with slow compilation time.",
-  //         "One of the frameworks that kept popping up on my YouTube feed was Next.js, so I followed a few small tutorials to try out an alternative to CRA. Initially, what drew me in was the possibility of experimenting with both Client and Server Side Rendering, to speed up the loading time of the application by leveraging the fact that Server Side Components are pre-rendered when the page first loads, making it faster to display static content. I also learned more features Next.js has, like routing and SEO integrations already built in, which I consider a big improvement, compared to using external libraries if starting a project with CRA.",
-  //         "There's also the possibility of implementing a Loading Component, which Next.js handles behind the scenes, I didn't have to write any of the logic; simply included the component in the right folder and it gets displayed as the route gets fetched. Finally, I also appreciated the fact that while setting up a new Next.js project, you have the option to set up Tailwind at the same time; which is nothing complicated to accomplish, but again, just very convenient.",
-  //         "What better way to learn than by doing? Since I wanted to keep improving my portfolio website's interface design and the codebase, I decided to build this new version using Next.js this time with the added layer of type safety by implementing Typescript, to build a more reliable and easy-to-maintain codebase.",
-  //         "For this new version of the project, I decided to use Tailwind for styling, as opposed to SASS which is what I used in V1. I've found my workflow to be much more efficient and fast with Tailwind. I find it extremely convenient, reliable and easy to implement, since one of the main drawbacks I see now for SASS is the amount of initial setup that's required to start implementing any styling. Tailwind also removes the need for an external stylesheet, (for the most part, since you can also create custom classes but I didn't find the need for them for this project.)",
-  //         "The website's now deployed with Vercel, which is Next.js' default deployment platform. After some research I discovered Vercel's one of the fastest ways to release the application, again with the added benefit of no extra configuration.",
-  //         "",
-  //       ],
-  //       imgs: [],
-  //     },
-  //     {
-  //       name: "Final Result",
-  //       description: [
-  //         "This website's current design showcases my brand as a professional in a cohesive way while keeping functionality as the main priority. The Project Cards use labels and colour to identify different disciplines and scan content and tools used. Inside the Project Details Page, there's a way to navigate to each section, which helps the user know what to expect.",
-  //         "In terms of development, I've kept the React Components as reusable as possible, passing down props and using React Hooks to create different versions of a single element if needed. The Components were written using Typescript, which has helped in error prevention and to keep a better data structure across the project. I've also implemented 404 and Loading screens, which are a part of Next.js' features.",
-  //         "Feel free to explore the website's repository and get in touch if you have any feedback or comments that could help me improve it or make it more efficient.",
-  //       ],
-  //       imgs: [mz],
-  //     },
-  //   ],
-  // },
 ];

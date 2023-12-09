@@ -1,7 +1,5 @@
 // Vendor imports
 import Link from "next/link";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 // Project imports
 import { routes } from "../constants";
@@ -17,7 +15,7 @@ export default function Footer() {
                 <nav className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
                 {routes.map((route) => (
                     <div key={route.name} className="pb-6">
-                    <Link href={route.id} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
+                    <Link href={`/${route.id}`} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
                         {route.name}
                     </Link>
                     </div>
