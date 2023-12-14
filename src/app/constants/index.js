@@ -9,6 +9,12 @@ import {
   faLinkedin,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+import {
+  CakeIcon,
+  SparklesIcon,
+  PhotoIcon,
+  MapPinIcon,
+} from "@heroicons/react/24/outline";
 
 export const routes = [
   {
@@ -211,130 +217,40 @@ export const pagesContent = {
   },
   about: {
     copy: {
-      intro: {
-        heading: "Hello there!",
-        p: [
-          [
-            {
-              id: "1",
-              content: "I'm a",
-              isHighlight: false,
-            },
-            {
-              id: "2",
-              content: "Web Designer",
-              isHighlight: true,
-            },
-            {
-              id: "3",
-              content: "and",
-              isHighlight: false,
-            },
-            {
-              id: "4",
-              content: "Developer",
-              isHighlight: true,
-            },
-            {
-              id: "5",
-              content:
-                "with 1.5 years of experience building web applications.",
-              isHighlight: false,
-            },
-          ],
-          [
-            {
-              id: "1",
-              content:
-                "Being a part of a team that welcomes diversity and encourages me to learn and to improve my skills keeps me motivated.",
-              isHighlight: false,
-            },
-          ],
-          [
-            {
-              id: "1",
-              content:
-                "I like to bring a proactive attitude, empathy and excellent time management skills to all my projects.",
-              isHighlight: false,
-            },
-          ],
-        ],
-      },
-      design: {
-        heading: "Design Skills",
-        skillsList: [
-          {
-            id: "1",
-            name: "Figma",
-          },
-          {
-            id: "2",
-            name: "Adobe CC",
-          },
-          {
-            id: "6",
-            name: "Graphic Design",
-          },
-          {
-            id: "7",
-            name: "User Research",
-          },
-          {
-            id: "8",
-            name: "User Testing",
-          },
-        ],
-      },
-      development: {
-        heading: "Development Skills",
-        skillsList: [
-          {
-            id: "1",
-            name: "HTML",
-          },
-          {
-            id: "2",
-            name: "CSS",
-          },
-          {
-            id: "3",
-            name: "Tailwind CSS",
-          },
-          {
-            id: "4",
-            name: "Javascript",
-          },
-          {
-            id: "5",
-            name: "React.js",
-          },
-          {
-            id: "6",
-            name: "React Native",
-          },
-          {
-            id: "7",
-            name: "SQL",
-          },
-          {
-            id: "8",
-            name: "Git",
-          },
+      imgAlt: "monica zarate",
+      bgAlt: "sunflower landscape",
+      h1: "Hello there!",
+      p: "I'm an enthusiastic Web Designer and Developer with 1.5 years of hands-on experience crafting engaging and dynamic web applications. Driven by a proactive mindset, I am looking forward to embracing new challenges and technologies.",
+      skills: {
+        h2: "Skills",
+        list: [
+          "HTML",
+          "CSS",
+          "Tailwind CSS",
+          "Javascript",
+          "TypeScript",
+          "React.js",
+          "Next.js",
+          "React Native",
+          "SQL",
+          "Git",
+          "Figma",
+          "Adobe CC",
         ],
       },
       timeline: {
         heading: "Education",
         events: [
           {
-            id: "1",
-            name: "Web Development",
-            institution: "BrainStation - Diploma",
+            id: "bcit",
+            name: "New Media Design & Web Development",
+            institution: "BCIT - Diploma with Distinction",
             description:
-              "This full-time Bootcamp unlocked the ability to build interactive web applications through JavaScript and React.js, using SASS and BEM notation. Learned how to use APIs, MySQL and Git.",
-            date: "June, 2020",
+              "Acquired knowledge and hands-on experience in Web and App Development, Graphic Design, UI/UX Design, Project Management and QA.",
+            date: "July, 2023",
           },
           {
-            id: "2",
+            id: "brainstation-ux",
             name: "UX Design",
             institution: "BrainStation - Course",
             description:
@@ -342,26 +258,50 @@ export const pagesContent = {
             date: "September, 2021",
           },
           {
-            id: "3",
-            name: "New Media Design & Web Development",
-            institution: "BCIT - Diploma with Distinction",
+            id: "brainstation-webdev",
+            name: "Web Development",
+            institution: "BrainStation - Diploma",
             description:
-              "Acquired knowledge and hands-on experience in Web and App Development, Graphic Design, UI/UX Design, Project Management and QA.",
-            date: "July, 2023",
+              "This full-time Bootcamp unlocked the ability to build interactive web applications through JavaScript and React.js, using SASS and BEM notation. Learned how to use APIs, MySQL and Git.",
+            date: "June, 2020",
           },
         ],
       },
       hobbies: {
-        heading: "When I'm not working, you'll find me:",
+        h2: "When I'm not working, you'll find me:",
         hobbiesList: [
-          "Baking something sweet",
-          "Reading novels and manga",
-          "Drinking lots of chai lattes",
+          {
+            name: "Baking something sweet",
+            description:
+              "There's something incredibly magical about turning a bunch of seemingly random ingredients into a delicious treat.",
+            icon: CakeIcon,
+          },
+          {
+            name: "Reading novels and manga",
+            description:
+              "I grew up reading fantasy, like Harry Potter and manga by CLAMP. One of my favourite books is 1Q84 by Haruki Murakami.",
+            icon: SparklesIcon,
+          },
+          {
+            name: "Snapping photos",
+            description:
+              "Maintaining a visual diary to document my daily life is a great way for me to cherish the little moments.",
+            icon: PhotoIcon,
+          },
+          {
+            name: "Planning my next adventure",
+            description:
+              "Always looking for a chance to break free from the routine, embrace spontaneity, and collect stories.",
+            icon: MapPinIcon,
+          },
         ],
       },
       cta: {
-        heading: "Say hi before you go!",
-        p: ["Find me on", "or send me an"],
+        h2: "Say hi before you go!",
+        main: "Contact Me",
+        mainHref: "/contact",
+        secondary: "Projects",
+        secondaryHref: "/projects",
       },
     },
   },

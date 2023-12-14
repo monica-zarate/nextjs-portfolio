@@ -17,8 +17,7 @@ export default function Navbar() {
     const { copy } = pagesContent.navbar;
     const pathname = usePathname();
 
-    console.log(pathname)
-
+    
     return (
         <header className="bg-white">
             <Suspense>
@@ -39,7 +38,7 @@ export default function Navbar() {
                     </div>
                     <div className="hidden lg:flex lg:gap-x-12 items-center">
                     {routes.map((route) => (
-                        <Link key={route.name} href={`/${route.id}`} className={`${route.name === routes[routes.length - 1].name ? "rounded-md bg-amber-700 px-3 py-2 text-white shadow-sm hover:bg-amber-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600" : "leading-6"} text-sm font-semibold ${`/${route.id}` === pathname ? "text-amber-700" : "text-gray-900"}`}>
+                        <Link key={route.name} href={`/${route.id}`} className={`${route.name === routes[routes.length - 1].name ? "rounded-md bg-amber-700 px-3 py-2 text-white shadow-sm hover:bg-amber-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600" : "leading-6 hover:text-amber-700"} text-sm font-semibold ${`/${route.id}` === pathname ? "text-amber-700" : "text-gray-900"}`}>
                         {route.name}
                         </Link>
                     ))}
