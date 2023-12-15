@@ -8,10 +8,10 @@ import { social } from "../constants"
 export default function Social(props: any) {
     return (
         <ul className="flex">
-            {social.map((__, i) => (
-                <li key={__.id} className={`${i === social.length - 1 ? "" : "mr-4"} duration-75 ease-in-out`}>
-                    <a href={__.url} target="__blank" rel="noreferrer" title={__.title}>
-                        <FontAwesomeIcon icon={__.icon} className={`${props.isSmall ? "h-6 text-gray-400 hover:text-gray-500" : "h-8 text-gray-600 hover:text-gray-900"} w-auto`}/>
+            {social.map((link, i) => (
+                <li key={link.id} className={`${i === social.length - 1 ? "" : "mr-4"} duration-75 ease-in-out`}>
+                    <a href={link.url} target="_blank" rel="noreferrer" title={link.title}>
+                        <FontAwesomeIcon icon={link.icon} className={`${props.isSmall ? "h-6 text-gray-400 hover:text-gray-500" : "h-8 text-gray-600 hover:text-gray-900"} w-auto`}/>
                     </a>
                 </li>
             ))}

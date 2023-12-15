@@ -1,3 +1,5 @@
+import { mascopolys, cavallo } from "@/assets";
+
 import {
   faEnvelope,
   faLaptopCode,
@@ -25,26 +27,30 @@ export const routes = [
     id: "about",
     name: "About",
   },
+];
+
+export const footerRoutes = [
   {
-    id: "contact",
-    name: "Contact",
+    id: "",
+    name: "Home",
   },
+  ...routes,
 ];
 
 export const social = [
-  {
-    id: "github",
-    network: "GitHub",
-    title: "Monica Zarate's Github Profile",
-    url: "https://github.com/monica-zarate",
-    icon: faGithub,
-  },
   {
     id: "linkedin",
     network: "LinkedIn",
     title: "Monica Zarate's LinkedIn Profile",
     url: "https://www.linkedin.com/in/monica-zarate/",
     icon: faLinkedin,
+  },
+  {
+    id: "github",
+    network: "GitHub",
+    title: "Monica Zarate's Github Profile",
+    url: "https://github.com/monica-zarate",
+    icon: faGithub,
   },
   {
     id: "instagram",
@@ -150,57 +156,33 @@ export const pagesContent = {
     },
     testimonials: [
       {
-        body: "Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.",
+        body: "She taught me industry standards or best practices while developing websites/applications.",
         author: {
-          name: "Leslie Alexander",
-          handle: "lesliealexander",
-          imageUrl:
-            "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+          name: "Rikki Soriano",
+          relationship:
+            "Classmate at BCIT and co-worker at Cavallo Technologies",
         },
       },
       {
-        body: "Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.",
+        body: "Monica was able to transform all the UI/UX wireframes into a well-design, fast website for Mascopolys business partners.",
         author: {
-          name: "Leslie Alexander",
-          handle: "lesliealexander",
-          imageUrl:
-            "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+          name: "Ytalo Borja",
+          relationship: "Mascopolys CEO",
         },
       },
       {
-        body: "Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.",
+        body: "She shows commitment to the work and has no trouble adapting to sudden changes in business processes or web technologies.",
         author: {
-          name: "Leslie Alexander",
-          handle: "lesliealexander",
-          imageUrl:
-            "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+          name: "Daniel Villaverde",
+          relationship:
+            "Supervisor at Moe's Home and classmate at BrainStation",
         },
       },
       {
-        body: "Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.",
+        body: "Monica brings a diverse skill set to the table, seamlessly blending both design and development expertise.",
         author: {
-          name: "Leslie Alexander",
-          handle: "lesliealexander",
-          imageUrl:
-            "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-        },
-      },
-      {
-        body: "Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.",
-        author: {
-          name: "Leslie Alexander",
-          handle: "lesliealexander",
-          imageUrl:
-            "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-        },
-      },
-      {
-        body: "Laborum quis quam. Dolorum et ut quod quia. Voluptas numquam delectus nihil. Aut enim doloremque et ipsam.",
-        author: {
-          name: "Leslie Alexander",
-          handle: "lesliealexander",
-          imageUrl:
-            "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+          name: "Karina Song",
+          relationship: "Classmate at BCIT",
         },
       },
     ],
@@ -211,8 +193,8 @@ export const pagesContent = {
       h22: "let's build something amazing together!",
       main: "Projects",
       mainHref: "/projects",
-      secondary: "Contact Me",
-      secondaryHref: "/contact",
+      secondary: "About Me",
+      secondaryHref: "/about",
     },
   },
   about: {
@@ -238,7 +220,7 @@ export const pagesContent = {
           "Adobe CC",
         ],
       },
-      timeline: {
+      educationTimeline: {
         heading: "Education",
         events: [
           {
@@ -267,8 +249,34 @@ export const pagesContent = {
           },
         ],
       },
+      workTimeline: {
+        heading: "Work experience",
+        events: [
+          {
+            company: "Cavallo Technologies Inc.",
+            title: "Web Design and Development Intern",
+            date: "May, 2023 - Present",
+            description:
+              "Implemented the company's branding and digital presence. Designed and Developed their live site. Currently participating in internal projects.",
+          },
+          {
+            company: "Mascopolys",
+            title: "Front-end Developer",
+            date: "Mar, 2021 - Dec, 2021",
+            description:
+              "Completed the MVP for a web application and provided continuos support for the company's site.",
+          },
+          {
+            company: "Moe's Home Collection",
+            title: "Customer Service Representative",
+            date: "Oct, 2019 - Mar, 2020",
+            description:
+              "Followed daily queries while answering phone calls and emails with orders or product inquiries.",
+          },
+        ],
+      },
       hobbies: {
-        h2: "When I'm not working, you'll find me:",
+        h2: "In my spare time, you will find me",
         hobbiesList: [
           {
             name: "Baking something sweet",
@@ -297,11 +305,8 @@ export const pagesContent = {
         ],
       },
       cta: {
-        h2: "Say hi before you go!",
-        main: "Contact Me",
-        mainHref: "/contact",
-        secondary: "Projects",
-        secondaryHref: "/projects",
+        h2: "Let's connect!",
+        p: "Interested in working together, grab a coffee or just want to say hi?",
       },
     },
   },
@@ -356,7 +361,7 @@ export const pagesContent = {
   },
   footer: {
     acknowledgement: {
-      span: "I would like to acknowledge that I'm fortunate to live and work on the traditional, ancestral, and unceded territory of the Coast Salish Peoples, including the territories of the xʷməθkʷəy̓əm (Musqueam), Sḵwx̱wú7mesh (Squamish), and səlilwətaɬ (Tsleil- Waututh) Nations.",
+      p: "I would like to acknowledge that I'm fortunate to live and work on the traditional, ancestral, and unceded territory of the Coast Salish Peoples, including the territories of the xʷməθkʷəy̓əm (Musqueam), Sḵwx̱wú7mesh (Squamish), and səlilwətaɬ (Tsleil- Waututh) Nations.",
     },
   },
 };

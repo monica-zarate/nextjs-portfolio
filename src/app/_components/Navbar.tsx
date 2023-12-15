@@ -4,17 +4,19 @@ import { useState, Suspense } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 // Project imports
 import { routes } from "../constants";
 import { sunflower } from "@/assets";
-import { pagesContent } from "../constants";
+import { pagesContent, social } from "../constants";
 
 export default function Navbar() {
     const [isMobile, setIsMobile] = useState(false);
     const { copy } = pagesContent.navbar;
+    const linkedIn = social[0];
     const pathname = usePathname();
 
     
@@ -38,10 +40,13 @@ export default function Navbar() {
                     </div>
                     <div className="hidden lg:flex lg:gap-x-12 items-center">
                     {routes.map((route) => (
-                        <Link key={route.name} href={`/${route.id}`} className={`${route.name === routes[routes.length - 1].name ? "rounded-md bg-amber-700 px-3 py-2 text-white shadow-sm hover:bg-amber-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600" : "leading-6 hover:text-amber-700"} text-sm font-semibold ${`/${route.id}` === pathname ? "text-amber-700" : "text-gray-900"}`}>
+                        <Link key={route.name} href={`/${route.id}`} className={`leading-6 hover:text-amber-700 text-sm font-semibold ${`/${route.id}` === pathname ? "text-amber-700" : "text-gray-900"}`}>
                         {route.name}
                         </Link>
                     ))}
+                    <a href={linkedIn.url} target="__blank" rel="noreferrer" title={linkedIn.title}>
+                        <FontAwesomeIcon icon={linkedIn.icon} className="text-amber-700 h-8 w-auto hover:text-amber-600"/>
+                    </a>
                     </div>
                 </nav>
                 <Dialog as="div" className="lg:hidden" open={isMobile} onClose={setIsMobile}>
@@ -66,18 +71,26 @@ export default function Navbar() {
                         </button>
                     </div>
                     <div className="mt-6 flow-root">
-                        <div className="space-y-2 py-6">
+                        <div className="-my-6 divide-y divide-gray-500/10">
+                            <div className="space-y-2 py-6">
                             {routes.map((route) => (
-                            <Link
-                                key={route.name}
-                                href={`/${route.id}`}
-                                onClick={() => setIsMobile(false)}
-                                className={`-mx-3 block px-3 py-2 text-base font-semibold leading-7 w-fit ${`/${route.id}` === pathname ? "text-amber-700" : "text-gray-900"} ${route.name === routes[routes.length - 1].name ? "rounded-md bg-amber-700 px-3 py-2 text-sm text-white shadow-sm hover:bg-amber-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600" : "rounded-lg hover:bg-gray-50"}`}
-                            >
-                                {route.name}
-                            </Link>
-                            ))}
+                                <Link
+                                    key={route.name}
+                                    href={`/${route.id}`}
+                                    onClick={() => setIsMobile(false)}
+                                    className={`-mx-3 block px-3 py-2 text-base font-semibold leading-7 w-fit ${`/${route.id}` === pathname ? "text-amber-700" : "text-gray-900"} rounded-lg hover:bg-gray-50`}
+                                >
+                                    {route.name}
+                                </Link>
+                                ))}
+                            </div>
+                            <div className="py-6">
+                                <a href={linkedIn.url} target="__blank" rel="noreferrer" title={linkedIn.title}>
+                                    <FontAwesomeIcon icon={linkedIn.icon} className="text-amber-700 h-8 w-auto hover:text-amber-600"/>
+                                </a>
+                            </div>
                         </div>
+                        
                     </div>
                     </Dialog.Panel>
                 </Dialog>
