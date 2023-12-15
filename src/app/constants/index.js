@@ -1,35 +1,56 @@
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { mascopolys, cavallo } from "@/assets";
+
+import {
+  faEnvelope,
+  faLaptopCode,
+  faPersonChalkboard,
+  faComments,
+} from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
   faLinkedin,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+import {
+  CakeIcon,
+  SparklesIcon,
+  PhotoIcon,
+  MapPinIcon,
+} from "@heroicons/react/24/outline";
 
 export const routes = [
   {
     id: "projects",
-    title: "Projects",
+    name: "Projects",
   },
   {
     id: "about",
-    title: "About",
+    name: "About",
   },
 ];
 
-export const social = [
+export const footerRoutes = [
   {
-    id: "github",
-    network: "GitHub",
-    title: "Monica Zarate's Github Profile",
-    url: "https://github.com/monica-zarate",
-    icon: faGithub,
+    id: "",
+    name: "Home",
   },
+  ...routes,
+];
+
+export const social = [
   {
     id: "linkedin",
     network: "LinkedIn",
     title: "Monica Zarate's LinkedIn Profile",
     url: "https://www.linkedin.com/in/monica-zarate/",
     icon: faLinkedin,
+  },
+  {
+    id: "github",
+    network: "GitHub",
+    title: "Monica Zarate's Github Profile",
+    url: "https://github.com/monica-zarate",
+    icon: faGithub,
   },
   {
     id: "instagram",
@@ -56,6 +77,7 @@ export const pagesContent = {
   intro: {
     copy: {
       h1: "Hola! I'm Monica",
+      imgAlt: "monica zarate",
       p: [
         [
           {
@@ -65,7 +87,7 @@ export const pagesContent = {
           },
           {
             id: 2,
-            content: "Web Designer",
+            content: "Front-end Developer",
             isHighlight: true,
           },
           {
@@ -75,7 +97,7 @@ export const pagesContent = {
           },
           {
             id: 4,
-            content: "Developer",
+            content: "Web Designer",
             isHighlight: true,
           },
           {
@@ -102,132 +124,115 @@ export const pagesContent = {
       ],
     },
   },
+  highlights: {
+    copy: {
+      h2: "Crafting Successful Projects",
+      skills: [
+        {
+          name: "Adaptability",
+          img: faLaptopCode,
+          description:
+            "In the ever-evolving technology landscape, my approach is marked by embracing the dynamic nature of digital tools and trends.",
+        },
+        {
+          name: "User-Centric",
+          img: faPersonChalkboard,
+          description:
+            "I aim to deliver digital experiences that not only align with the company's goals but also resonate seamlessly with the expectations of the end-users.",
+        },
+        {
+          name: "Collaboration",
+          img: faComments,
+          description:
+            "My strong communication skills enable seamless collaboration with diverse roles, which allows me to adapt to cross-functional teams.",
+        },
+      ],
+    },
+  },
+  testimonials: {
+    copy: {
+      h2: "Recommendations and Testimonials",
+      p: "What other industry professionals have said about my work",
+    },
+    testimonials: [
+      {
+        body: "She taught me industry standards or best practices while developing websites/applications.",
+        author: {
+          name: "Rikki Soriano",
+          relationship:
+            "Classmate at BCIT and co-worker at Cavallo Technologies",
+        },
+      },
+      {
+        body: "Monica was able to transform all the UI/UX wireframes into a well-design, fast website for Mascopolys business partners.",
+        author: {
+          name: "Ytalo Borja",
+          relationship: "Mascopolys CEO",
+        },
+      },
+      {
+        body: "She shows commitment to the work and has no trouble adapting to sudden changes in business processes or web technologies.",
+        author: {
+          name: "Daniel Villaverde",
+          relationship:
+            "Supervisor at Moe's Home and classmate at BrainStation",
+        },
+      },
+      {
+        body: "Monica brings a diverse skill set to the table, seamlessly blending both design and development expertise.",
+        author: {
+          name: "Karina Song",
+          relationship: "Classmate at BCIT",
+        },
+      },
+    ],
+  },
+  cta: {
+    copy: {
+      h2: "Explore my previous work and",
+      h22: "let's build something amazing together!",
+      main: "Projects",
+      mainHref: "/projects",
+      secondary: "About Me",
+      secondaryHref: "/about",
+    },
+  },
   about: {
     copy: {
-      intro: {
-        heading: "Hello there!",
-        p: [
-          [
-            {
-              id: "1",
-              content: "I'm a",
-              isHighlight: false,
-            },
-            {
-              id: "2",
-              content: "Web Designer",
-              isHighlight: true,
-            },
-            {
-              id: "3",
-              content: "and",
-              isHighlight: false,
-            },
-            {
-              id: "4",
-              content: "Developer",
-              isHighlight: true,
-            },
-            {
-              id: "5",
-              content:
-                "with 1.5 years of experience building web applications.",
-              isHighlight: false,
-            },
-          ],
-          [
-            {
-              id: "1",
-              content:
-                "Being a part of a team that welcomes diversity and encourages me to learn and to improve my skills keeps me motivated.",
-              isHighlight: false,
-            },
-          ],
-          [
-            {
-              id: "1",
-              content:
-                "I like to bring a proactive attitude, empathy and excellent time management skills to all my projects.",
-              isHighlight: false,
-            },
-          ],
+      imgAlt: "monica zarate",
+      bgAlt: "sunflower landscape",
+      h1: "Hello there!",
+      p: "I'm an enthusiastic Web Designer and Developer with 1.5 years of hands-on experience crafting engaging and dynamic web applications. Driven by a proactive mindset, I am looking forward to embracing new challenges and technologies.",
+      skills: {
+        h2: "Skills",
+        list: [
+          "HTML",
+          "CSS",
+          "Tailwind CSS",
+          "Javascript",
+          "TypeScript",
+          "React.js",
+          "Next.js",
+          "React Native",
+          "SQL",
+          "Git",
+          "Figma",
+          "Adobe CC",
         ],
       },
-      design: {
-        heading: "Design Skills",
-        skillsList: [
-          {
-            id: "1",
-            name: "Figma",
-          },
-          {
-            id: "2",
-            name: "Adobe CC",
-          },
-          {
-            id: "6",
-            name: "Graphic Design",
-          },
-          {
-            id: "7",
-            name: "User Research",
-          },
-          {
-            id: "8",
-            name: "User Testing",
-          },
-        ],
-      },
-      development: {
-        heading: "Development Skills",
-        skillsList: [
-          {
-            id: "1",
-            name: "HTML",
-          },
-          {
-            id: "2",
-            name: "CSS",
-          },
-          {
-            id: "3",
-            name: "Tailwind CSS",
-          },
-          {
-            id: "4",
-            name: "Javascript",
-          },
-          {
-            id: "5",
-            name: "React.js",
-          },
-          {
-            id: "6",
-            name: "React Native",
-          },
-          {
-            id: "7",
-            name: "SQL",
-          },
-          {
-            id: "8",
-            name: "Git",
-          },
-        ],
-      },
-      timeline: {
+      educationTimeline: {
         heading: "Education",
         events: [
           {
-            id: "1",
-            name: "Web Development",
-            institution: "BrainStation - Diploma",
+            id: "bcit",
+            name: "New Media Design & Web Development",
+            institution: "BCIT - Diploma with Distinction",
             description:
-              "This full-time Bootcamp unlocked the ability to build interactive web applications through JavaScript and React.js, using SASS and BEM notation. Learned how to use APIs, MySQL and Git.",
-            date: "June, 2020",
+              "Acquired knowledge and hands-on experience in Web and App Development, Graphic Design, UI/UX Design, Project Management and QA.",
+            date: "July, 2023",
           },
           {
-            id: "2",
+            id: "brainstation-ux",
             name: "UX Design",
             institution: "BrainStation - Course",
             description:
@@ -235,34 +240,80 @@ export const pagesContent = {
             date: "September, 2021",
           },
           {
-            id: "3",
-            name: "New Media Design & Web Development",
-            institution: "BCIT - Diploma with Distinction",
+            id: "brainstation-webdev",
+            name: "Web Development",
+            institution: "BrainStation - Diploma",
             description:
-              "Acquired knowledge and hands-on experience in Web and App Development, Graphic Design, UI/UX Design, Project Management and QA.",
-            date: "July, 2023",
+              "This full-time Bootcamp unlocked the ability to build interactive web applications through JavaScript and React.js, using SASS and BEM notation. Learned how to use APIs, MySQL and Git.",
+            date: "June, 2020",
+          },
+        ],
+      },
+      workTimeline: {
+        heading: "Work experience",
+        events: [
+          {
+            company: "Cavallo Technologies Inc.",
+            title: "Web Design and Development Intern",
+            date: "May, 2023 - Present",
+            description:
+              "Implemented the company's branding and digital presence. Designed and Developed their live site. Currently participating in internal projects.",
+          },
+          {
+            company: "Mascopolys",
+            title: "Front-end Developer",
+            date: "Mar, 2021 - Dec, 2021",
+            description:
+              "Completed the MVP for a web application and provided continuos support for the company's site.",
+          },
+          {
+            company: "Moe's Home Collection",
+            title: "Customer Service Representative",
+            date: "Oct, 2019 - Mar, 2020",
+            description:
+              "Followed daily queries while answering phone calls and emails with orders or product inquiries.",
           },
         ],
       },
       hobbies: {
-        heading: "When I'm not working, you'll find me:",
+        h2: "In my spare time, you will find me",
         hobbiesList: [
-          "Baking something sweet",
-          "Reading novels and manga",
-          "Drinking lots of chai lattes",
+          {
+            name: "Baking something sweet",
+            description:
+              "There's something incredibly magical about turning a bunch of seemingly random ingredients into a delicious treat.",
+            icon: CakeIcon,
+          },
+          {
+            name: "Reading novels and manga",
+            description:
+              "I grew up reading fantasy, like Harry Potter and manga by CLAMP. One of my favourite books is 1Q84 by Haruki Murakami.",
+            icon: SparklesIcon,
+          },
+          {
+            name: "Snapping photos",
+            description:
+              "Maintaining a visual diary to document my daily life is a great way for me to cherish the little moments.",
+            icon: PhotoIcon,
+          },
+          {
+            name: "Planning my next adventure",
+            description:
+              "Always looking for a chance to break free from the routine, embrace spontaneity, and collect stories.",
+            icon: MapPinIcon,
+          },
         ],
       },
       cta: {
-        heading: "Say hi before you go!",
-        p: ["Find me on", "or send me an"],
+        h2: "Let's connect!",
+        p: "Interested in working together, grab a coffee or just want to say hi?",
       },
     },
   },
   projects: {
     copy: {
-      h1: "Projects",
-      p: "Disciplines:",
-      span: "Reset",
+      h2: "Featured Projects",
+      p: "Each project has offered me valuable experiences and insights, shaping my skills and deepening my understanding of effective and innovative web development practices.",
     },
   },
   featured: {
@@ -299,9 +350,7 @@ export const pagesContent = {
     },
   },
   projectCard: {
-    copy: {
-      span: "Built with",
-    },
+    copy: {},
   },
   notFound: {
     copy: {
@@ -312,7 +361,7 @@ export const pagesContent = {
   },
   footer: {
     acknowledgement: {
-      span: "I would like to acknowledge that I'm fortunate to live and work on the traditional, ancestral, and unceded territory of the Coast Salish Peoples, including the territories of the xʷməθkʷəy̓əm (Musqueam), Sḵwx̱wú7mesh (Squamish), and səlilwətaɬ (Tsleil- Waututh) Nations.",
+      p: "I would like to acknowledge that I'm fortunate to live and work on the traditional, ancestral, and unceded territory of the Coast Salish Peoples, including the territories of the xʷməθkʷəy̓əm (Musqueam), Sḵwx̱wú7mesh (Squamish), and səlilwətaɬ (Tsleil- Waututh) Nations.",
     },
   },
 };

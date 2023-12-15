@@ -2,152 +2,192 @@
 "use client";
 import Image from "next/image";
 import { caveat } from "../../fonts";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSeedling } from "@fortawesome/free-solid-svg-icons";
 import { AnimatePresence, motion as m } from "framer-motion";
 
 //Project imports
-import { monicaAboutPhoto } from "../../../assets/";
-import { pagesContent, social } from "@/app/constants";
+import { monicaAboutPhoto, sunflowerBG } from "../../../assets/";
+import { pagesContent } from "@/app/constants";
 import RevealElement from "@/app/_components/RevealElement";
+import Social from "@/app/_components/Social";
 
-const linkedInData = social[1];
-const emailData = social[3];
 
 export default function About() {
 
     const { copy } = pagesContent.about;
     const { acknowledgement } = pagesContent.footer;
 
+
     return (
         <AnimatePresence mode="wait">
             <m.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 0.3, ease: 'easeInOut'}} exit={{opacity: 0}}>
-                <div className="bg-white p-8 pb-16 w-fit mx-auto"> 
-                    <div className="max-w-5xl mx-auto">
-                        <div className="flex flex-col-reverse sm:flex-row sm:items-center sm:justify-between">
-                            <div className="basis-2/3 sm:mr-4">
-                                <span className={`${caveat.className} text-lime-950 text-h1Light lg:text-sabe mb-4 block`}>{copy.intro.heading}</span>
-                                <ul>
-                                    {copy.intro.p.map((paragraph, i) => (
-                                        <RevealElement key={i}>
-                                            <li className={i === 0 ? "" : "mt-4"}>
-                                            {paragraph.map((__, i) => (   
-                                                <span key={i} className={`${__.isHighlight ? "text-fuchsia-700 text-bodyBold" : "text-lime-950 text-body"}`}>{`${__.content} `}</span>
-                                            ))}
-                                            </li>
-                                        </RevealElement>
-                                    ))}
-                                </ul>
-                            </div>
-                            <div className="basis-1/3 mb-4 md:ml-4 lg:ml-0 sm:mb-0">
-                                <RevealElement>
-                                    <Image alt="monica zarate" src={monicaAboutPhoto} className="w-full h-auto max-w-lg mx-auto drop-shadow-md rounded-lg"/>
-                                </RevealElement>
-                            </div>
+                <main className="isolate">
+                    {/* Hero section */}
+                    <div className="relative isolate -z-10 overflow-hidden bg-gradient-to-b from-lime-100/20">
+                        <div
+                            className="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-white shadow-xl shadow-lime-600/10 ring-1 ring-lime-50 sm:-mr-80 lg:-mr-96"
+                            aria-hidden="true"
+                        />
+                        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
+                            <RevealElement>
+                                <div className="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
+                                <h1 className={`${caveat.className} max-w-2xl text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:col-span-2 xl:col-auto`}>
+                                    {copy.h1}
+                                </h1>
+                                <div className="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
+                                    <p className="text-lg leading-8 text-gray-600">
+                                    {copy.p}
+                                    </p>
+                                </div>
+                                <Image
+                                    src={monicaAboutPhoto}
+                                    alt={copy.imgAlt}
+                                    className="mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2"
+                                />
+                                </div>
+                        </RevealElement>
                         </div>
-                        <div className="mt-16 sm:flex sm:items-start sm:justify-between">
-                            <div className="sm:basis-1/2 sm:pr-2">
-                                <span className="text-lime-950 text-h2 mb-4 sm:mb-4 block">{copy.development.heading}</span>
-                                <ul className="flex flex-wrap">
-                                    {copy.development.skillsList.map((li, i) => (
-                                        <RevealElement key={i}>
-                                            <li className="">
-                                                <span className="text-lime-700 bg-lime-50 ring-lime-700/10 inline-flex items-center rounded-md px-2 py-1 text-sm font-medium ring-1 ring-inset mb-2 mr-2 w-fit capitalize">{`${li.name} `}</span>
-                                            </li>
-                                        </RevealElement>
-                                    ))}
-                                </ul>
-                            </div>
-                            <div className="mt-8 sm:mt-0 sm:basis-1/2">
-                                <span className="text-lime-950 text-h2 mb-4 sm:mb-4 block">{copy.design.heading}</span>
-                                <ul className="flex flex-wrap">
-                                        {copy.design.skillsList.map((li, i) => (
-                                            <RevealElement key={i}>
-                                                <li className="">
-                                                    <span className="text-fuchsia-700 bg-fuchsia-50 ring-fuchsia-700/10 inline-flex items-center rounded-md px-2 py-1 text-sm font-medium ring-1 ring-inset mb-2 mr-2 w-fit capitalize">{`${li.name} `}</span>
-                                                </li>
-                                            </RevealElement>
-                                        ))}
-                                    </ul>
-                            </div>
-                        </div>
-                        <div className="mt-16">
-                            <span className="text-lime-950 text-h2 mb-4 sm:mb-4 block">{copy.timeline.heading}</span>
-                            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-16 overflow-hidden lg:mx-0 lg:max-w-none lg:grid-cols-3">
-                                {copy.timeline.events.map((item) => (
-                                <RevealElement key={item.id}>
-                                    <div>
+                    <div className="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32" />
+                    </div>
+
+                    {/* Work timeline section */}
+                    <div className="mx-auto mt-16 max-w-7xl px-6 lg:px-8">
+                        <RevealElement>
+                            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{copy.workTimeline.heading}</h2>
+                            <div className="mx-auto mt-6 grid max-w-2xl grid-cols-1 gap-8 overflow-hidden lg:mx-0 lg:max-w-none lg:grid-cols-3">
+                                {copy.workTimeline.events.map((role) => (
+                                    <div key={role.title}>
                                         <time
-                                        dateTime={item.date}
-                                        className="flex items-center text-base font-semibold leading-6 text-lime-700"
+                                        dateTime={role.date}
+                                        className="flex items-center text-sm font-semibold leading-6 text-lime-700"
                                         >
                                         <svg viewBox="0 0 4 4" className="mr-4 h-1 w-1 flex-none" aria-hidden="true">
                                             <circle cx={2} cy={2} r={2} fill="currentColor" />
                                         </svg>
-                                        {item.date}
+                                        {role.date}
                                         <div
                                             className="absolute -ml-2 h-px w-screen -translate-x-full bg-gray-900/10 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0"
                                             aria-hidden="true"
                                         />
                                         </time>
-                                        <p className="ml-5 mt-6 text-base font-semibold leading-6 text-lime-950">{item.institution}</p>
-                                        <p className="ml-5 mt-2 text-bodyLarge leading-8 tracking-tight text-fuchsia-700">{item.name}</p>
-                                        <p className="ml-5 mt-2 text-body leading-7 text-lime-950">{item.description}</p>
+                                        <p className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">{role.title}</p>
+                                        <p className="mt-6 text-sm font-semibold leading-8 tracking-tight text-gray-700">{role.company}</p>
+                                        <p className="mt-1 text-base leading-7 text-gray-600">{role.description}</p>
                                     </div>
-                                </RevealElement>
                                 ))}
-                            </div>
-                        </div>
-                        <RevealElement>
-                            <div className="mt-16 w-full h-48 lg:h-64 rounded-lg bg-center bg-cover drop-shadow-md" style={{backgroundImage: `url(/sunflower-landscape.png)`}}>
                             </div>
                         </RevealElement>
-                        <div className="mt-16 md:w-3/4">
-                            <RevealElement>
-                            <span className="text-lime-950 text-h4 mb-4 sm:mb-4 block">{copy.hobbies.heading}</span>
-                            </RevealElement>
-                            <ul>
-                                {copy.hobbies.hobbiesList.map((li, i) => (
-                                    <RevealElement key={i}>
-                                        <li className="text-lime-950 text-body mt-4 flex items-center">
-                                            <FontAwesomeIcon icon={faSeedling} style={{color: '#64a30d'}}/>
-                                            <p className="ml-2">{li}</p>
-                                        </li>
-                                    </RevealElement>
-                                ))}
-                            </ul>
-                        </div>
-                        <div className="mt-16">
-                            <RevealElement>
-                            <span className="text-lime-950 text-h4 mb-4 sm:mb-4 block">{copy.cta.heading}</span>
-                            </RevealElement>
-                            <ul>
-                                <RevealElement>
-                                    <li className="mt-4">
-                                        {copy.cta.p.slice(0,1).map((__, i) => (
-                                            <span key={i}>
-                                                <span className="text-lime-950 text-body">{__}</span>
-                                                <a href={linkedInData.url} target="_blank" title={linkedInData.title} className="text-lime-950 text-bodyBold hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase">{` ${linkedInData.network}`}</a>
-                                            </span>
-                                        ))}
-                                        {copy.cta.p.slice(1,2).map((__, i) => (
-                                            <span key={i}>
-                                                <span className="text-lime-950 text-body">{` ${__} `}</span>
-                                                <a href={emailData.url} target="_blank" title={emailData.title} className="text-lime-950 text-bodyBold hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase">{emailData.network}</a>
-                                                <span className="text-lime-950 text-body">.</span>
-                                            </span>
-                                        ))}
+                    </div>
+
+                    {/* Skills section */}
+                    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-32">
+                        <RevealElement>
+                        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{copy.skills.h2}</h2>
+                        <ul className="mx-auto mt-6 lg:mx-0 lg:max-w-none flex flex-wrap">
+                            {copy.skills.list.map((item, i) => (
+                                <RevealElement key={i}>
+                                    <li className="">
+                                        <span className="text-lime-700 bg-lime-50 ring-lime-700/10 inline-flex items-center rounded-md px-2 py-1 text-sm font-medium ring-1 ring-inset mb-2 mr-2 w-fit capitalize">{item}</span>
                                     </li>
                                 </RevealElement>
-                            </ul>
+                            ))}
+                        </ul>
+                        </RevealElement>
+                    </div>
+
+                    {/* Education timeline section */}
+                    <div className="mx-auto mt-32 max-w-7xl px-6 lg:px-8">
+                        <RevealElement>
+                        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{copy.educationTimeline.heading}</h2>
+                        <div className="mx-auto mt-6 grid max-w-2xl grid-cols-1 gap-8 overflow-hidden lg:mx-0 lg:max-w-none lg:grid-cols-3">
+                            {copy.educationTimeline.events.map((item) => (
+                            <div key={item.name}>
+                                <time
+                                dateTime={item.date}
+                                className="flex items-center text-sm font-semibold leading-6 text-lime-700"
+                                >
+                                <svg viewBox="0 0 4 4" className="mr-4 h-1 w-1 flex-none" aria-hidden="true">
+                                    <circle cx={2} cy={2} r={2} fill="currentColor" />
+                                </svg>
+                                {item.date}
+                                <div
+                                    className="absolute -ml-2 h-px w-screen -translate-x-full bg-gray-900/10 sm:-ml-4 lg:static lg:-mr-6 lg:ml-8 lg:w-auto lg:flex-auto lg:translate-x-0"
+                                    aria-hidden="true"
+                                />
+                                </time>
+                                <p className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">{item.name}</p>
+                                <p className="mt-6 text-sm font-semibold leading-8 tracking-tight text-gray-700">{item.institution}</p>
+                                <p className="mt-1 text-base leading-7 text-gray-600">{item.description}</p>
+                            </div>
+                            ))}
                         </div>
-                        <div className="mt-16">
+                        </RevealElement>
+                    </div>
+
+
+
+                    {/* Image section */}
+                    <div className="mt-32 xl:mx-auto xl:max-w-7xl xl:px-8">
+                        <RevealElement>
+                            <Image
+                                src={sunflowerBG}
+                                alt={copy.bgAlt}
+                                className="aspect-[5/2] w-full object-cover xl:rounded-3xl"
+                            />
+                        </RevealElement>
+                    </div>
+
+                    {/* {Hobbies section} */}
+                    <div className="mx-auto mt-32 max-w-7xl px-6 lg:px-8">
+                        <div className="mx-auto max-w-7xl px-6 lg:px-8">
                             <RevealElement>
-                                <p className="text-body text-lime-700">{acknowledgement.span}</p>
+                            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+                            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                                {copy.hobbies.h2}
+                            </h2>
+                            <dl className="col-span-2 grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2">
+                                {copy.hobbies.hobbiesList.map((feature) => (
+                                <div key={feature.name}>
+                                    <dt className="text-base font-semibold leading-7 text-gray-900">
+                                    <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-lime-50 ring-lime-700/10 ring-1 ring-inset">
+                                        <feature.icon className="h-6 w-6 text-lime-700" aria-hidden="true" />
+                                    </div>
+                                    {feature.name}
+                                    </dt>
+                                    <dd className="mt-1 text-base leading-7 text-gray-600">{feature.description}</dd>
+                                </div>
+                                ))}
+                            </dl>
+                            </div>
                             </RevealElement>
                         </div>
                     </div>
-                </div>
+
+                    {/* CTA Section */}
+                    <div className="bg-white">
+                        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
+                            <RevealElement>
+                                <h2 className="text-3xl font-bold tracking-tight text-lime-700 sm:text-4xl">
+                                {copy.cta.h2}
+                                </h2>
+                                <p className="mt-6 max-w-xl text-lg leading-8 text-gray-600">
+                                    {copy.cta.p}
+                                </p>
+                                <div className="mt-10 flex items-center gap-x-6">
+                                    <Social/>
+                                </div>
+                            </RevealElement>
+                        </div>
+                    </div>
+
+                    {/* Land Acknowledgement */}
+                    <div className="bg-white">
+                        <div className="mx-auto max-w-7xl px-6 pb-24 sm:pb-32 lg:px-8">
+                            <RevealElement>
+                                <p className="text-base leading-7 text-gray-500">{acknowledgement.p}</p>
+                            </RevealElement>
+                        </div>
+                    </div>
+                </main>
             </m.div>
         </AnimatePresence>
     )

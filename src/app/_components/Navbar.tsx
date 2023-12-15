@@ -1,63 +1,99 @@
 // Vendor imports
 "use client";
-import { useState, useEffect, Suspense } from "react";
+import { useState, Suspense } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { caveat } from "../fonts";
+import Image from "next/image";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Dialog } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 // Project imports
 import { routes } from "../constants";
-import { MobileMenu } from "./MobileMenu";
 import { sunflower } from "@/assets";
-import { pagesContent } from "../constants";
-
+import { pagesContent, social } from "../constants";
 
 export default function Navbar() {
-
     const [isMobile, setIsMobile] = useState(false);
-
-    const pathname = usePathname()?.slice(1);
-
     const { copy } = pagesContent.navbar;
+    const linkedIn = social[0];
+    const pathname = usePathname();
 
-    useEffect(() => {
-
-        window.scrollTo(0,0);
-
-        const mobileMediaQuery = window.matchMedia("(max-width: 639px)");
-        setIsMobile(mobileMediaQuery.matches);
     
-        const handleMobileMediaQueryChange = (event: any) => {
-            setIsMobile(event.matches)
-        }
-    
-        mobileMediaQuery.addEventListener("change", handleMobileMediaQueryChange);
-  
-        return ()=> {
-            mobileMediaQuery.removeEventListener("change", handleMobileMediaQueryChange);
-        }
-    }, []);
-
-
     return (
-        <header className="bg-white border-b border-solid border-neutral-100 drop-shadow sticky top-0 z-[1]">
+        <header className="bg-white">
             <Suspense>
-                <div className="flex justify-between items-center px-8 2xl:px-2 py-4 mx-auto max-w-7xl">
-                    <Link href="/" className="flex items-center z-[5]">
-                        <Image src={sunflower} alt="sunflower icon" className="w-8 sm:w-10 h-8 sm:h-10 drop-shadow-md"/>
-                        <span className={`${caveat.className} text-lime-950 text-h2 sm:text-h1Light`}>{copy.title}</span>
+                <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+                    <Link href="/">
+                        <span className="sr-only">{copy.title}</span>
+                        <Image className="h-12 w-auto" src={sunflower} alt="sunflower icon" />
                     </Link>
-                    {isMobile && <MobileMenu/>}
-                    {!isMobile && <ul className="flex">
-                        <li key={routes[0].id}>
-                            <Link href={`/${routes[0].id}`} className={`${pathname === routes[0].id ? "text-fuchsia-700" : "text-lime-950"} text-bodyBold ml-4 hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase`}>{routes[0].title}</Link>
-                        </li>
-                        <li key={routes[1].id}>
-                            <Link href={`/${routes[1].id}`} className={`${pathname === routes[1].id ? "text-fuchsia-700" : "text-lime-950"} text-bodyBold ml-4 hover:text-fuchsia-700 delay-200 duration-200 ease-in-out uppercase`}>{routes[1].title}</Link>
-                        </li>
-                    </ul>}
-                </div>
+                    <div className="flex lg:hidden">
+                    <button
+                        type="button"
+                        className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                        onClick={() => setIsMobile(true)}
+                    >
+                        <span className="sr-only">Open main menu</span>
+                        <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                    </button>
+                    </div>
+                    <div className="hidden lg:flex lg:gap-x-12 items-center">
+                    {routes.map((route) => (
+                        <Link key={route.name} href={`/${route.id}`} className={`leading-6 hover:text-amber-700 text-sm font-semibold ${`/${route.id}` === pathname ? "text-amber-700" : "text-gray-900"}`}>
+                        {route.name}
+                        </Link>
+                    ))}
+                    <a href={linkedIn.url} target="__blank" rel="noreferrer" title={linkedIn.title}>
+                        <FontAwesomeIcon icon={linkedIn.icon} className="text-amber-700 h-8 w-auto hover:text-amber-600"/>
+                    </a>
+                    </div>
+                </nav>
+                <Dialog as="div" className="lg:hidden" open={isMobile} onClose={setIsMobile}>
+                    <div className="fixed inset-0 z-10" />
+                    <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                    <div className="flex items-center justify-between">
+                        <Link href="/" onClick={() => setIsMobile(false)}>
+                            <span className="sr-only">{copy.title}</span>
+                            <Image
+                                className="h-12 w-auto"
+                                src={sunflower}
+                                alt="sunflower icon"
+                            />
+                        </Link>
+                        <button
+                        type="button"
+                        className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                        onClick={() => setIsMobile(false)}
+                        >
+                        <span className="sr-only">Close menu</span>
+                        <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                        </button>
+                    </div>
+                    <div className="mt-6 flow-root">
+                        <div className="-my-6 divide-y divide-gray-500/10">
+                            <div className="space-y-2 py-6">
+                            {routes.map((route) => (
+                                <Link
+                                    key={route.name}
+                                    href={`/${route.id}`}
+                                    onClick={() => setIsMobile(false)}
+                                    className={`-mx-3 block px-3 py-2 text-base font-semibold leading-7 w-fit ${`/${route.id}` === pathname ? "text-amber-700" : "text-gray-900"} rounded-lg hover:bg-gray-50`}
+                                >
+                                    {route.name}
+                                </Link>
+                                ))}
+                            </div>
+                            <div className="py-6">
+                                <a href={linkedIn.url} target="__blank" rel="noreferrer" title={linkedIn.title}>
+                                    <FontAwesomeIcon icon={linkedIn.icon} className="text-amber-700 h-8 w-auto hover:text-amber-600"/>
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    </Dialog.Panel>
+                </Dialog>
             </Suspense>
         </header>
     )

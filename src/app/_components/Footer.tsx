@@ -1,25 +1,33 @@
 // Vendor imports
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 // Project imports
+import { footerRoutes } from "../constants";
 import Social from "./Social";
 
 export default function Footer() {
 
-    let year = new Date().getFullYear();
+    const year = new Date().getFullYear();
 
     return (
-        <div className="bg-lime-950">
-            <div className="px-8 py-16 2xl:px-2 mx-auto max-w-7xl flex flex-col items-center justify-center md:flex-row md:items-start md:justify-between">
-                <div className="mb-8">
-                    <p className="text-body">&copy; Monica Zarate {year}</p>
+        <footer className="bg-gray-50">
+            <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
+                <nav className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
+                {footerRoutes.map((route) => (
+                    <div key={route.name} className="pb-6">
+                    <Link href={`/${route.id}`} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
+                        {route.name}
+                    </Link>
+                    </div>
+                ))}
+                </nav>
+                <div className="mt-10 flex justify-center space-x-10">
+                    <Social isSmall/>
                 </div>
-                <div className="mb-8">
-                    <p className="text-body text-center">Designed and developed with <FontAwesomeIcon icon={faHeart}/> <br/> in Vancouver, BC</p>
-                </div>
-                <Social isLight />
+                <p className="mt-10 text-center text-xs leading-5 text-gray-500">
+                &copy; Monica Zarate {year}. All rights reserved.
+                </p>
             </div>
-        </div>
+        </footer>
     )
 }

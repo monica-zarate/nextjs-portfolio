@@ -2,6 +2,7 @@
 import monicaProfilePhoto from "./images/monica-zarate.png";
 import monicaAboutPhoto from "./images/monica-zarate-about.png";
 import sunflower from "./images/sunflower.png";
+import sunflowerBG from "./images/sunflower-landscape.png";
 
 // Projects
 import acnh1 from "./images/projects/acnh-1.png";
@@ -24,24 +25,6 @@ import billy5 from "./images/projects/billy-5.png";
 import billy6 from "./images/projects/billy-6.png";
 import billyThumb from "./images/projects/billy-thumb.png";
 import billy from "./images/projects/billy.png";
-import guavaPunch1 from "./images/projects/guava-punch-1.png";
-import guavaPunch2 from "./images/projects/guava-punch-2.png";
-import guavaPunch3 from "./images/projects/guava-punch-3.png";
-import guavaPunch4 from "./images/projects/guava-punch-4.png";
-import guavaPunch5 from "./images/projects/guava-punch-5.png";
-import guavaPunch6 from "./images/projects/guava-punch-6.png";
-import guavaPunchThumb from "./images/projects/guava-punch-thumb.png";
-import guavaPunch from "./images/projects/guava-punch.png";
-import paperLantern1 from "./images/projects/paper-lantern-1.png";
-import paperLantern2 from "./images/projects/paper-lantern-2.png";
-import paperLantern3 from "./images/projects/paper-lantern-3.png";
-import paperLantern4 from "./images/projects/paper-lantern-4.png";
-import paperLantern5 from "./images/projects/paper-lantern-5.png";
-import paperLantern6 from "./images/projects/paper-lantern-6.png";
-import paperLantern7 from "./images/projects/paper-lantern-7.png";
-import paperLantern8 from "./images/projects/paper-lantern-8.png";
-import paperLanternThumb from "./images/projects/paper-lantern-thumb.png";
-import paperLantern from "./images/projects/paper-lantern.png";
 import tcDesign1 from "./images/projects/tc-design-1.png";
 import tcDesign2 from "./images/projects/tc-design-2.png";
 import tcDesign3 from "./images/projects/tc-design-3.png";
@@ -57,13 +40,8 @@ import mz1 from "./images/projects/mz-1.png";
 import mzThumb from "./images/projects/mz-thumb.png";
 
 // Icons
-import ps from "./icons/tools/photoshop.png";
-import ai from "./icons/tools/illustrator.png";
-import dn from "./icons/tools/dimension.png";
 import xd from "./icons/tools/xd.png";
 import figma from "./icons/tools/figma.png";
-import maze from "./icons/tools/maze.png";
-import useberry from "./icons/tools/useberry.png";
 import html from "./icons/tools/html.png";
 import css from "./icons/tools/css.png";
 import php from "./icons/tools/php.png";
@@ -80,6 +58,7 @@ export {
   monicaProfilePhoto,
   monicaAboutPhoto,
   sunflower,
+  sunflowerBG,
   acnh1,
   acnh2,
   acnh3,
@@ -100,24 +79,6 @@ export {
   billy6,
   billyThumb,
   billy,
-  guavaPunch1,
-  guavaPunch2,
-  guavaPunch3,
-  guavaPunch4,
-  guavaPunch5,
-  guavaPunch6,
-  guavaPunchThumb,
-  guavaPunch,
-  paperLantern1,
-  paperLantern2,
-  paperLantern3,
-  paperLantern4,
-  paperLantern5,
-  paperLantern6,
-  paperLantern7,
-  paperLantern8,
-  paperLanternThumb,
-  paperLantern,
   tcDesign1,
   tcDesign2,
   tcDesign3,
@@ -131,13 +92,8 @@ export {
   mz,
   mz1,
   mzThumb,
-  ps,
-  ai,
-  dn,
   xd,
   figma,
-  maze,
-  useberry,
   html,
   css,
   php,
