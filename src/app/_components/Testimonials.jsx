@@ -17,7 +17,7 @@ export default function Testimonials() {
                 <div className="mx-auto mt-16 flow-root max-w-2xl sm:mt-20 lg:mx-0 lg:max-w-none">
                     <div className="-mt-8 sm:-mx-4 sm:columns-2 sm:text-[0]">
                         {testimonials.map((testimonial) => (
-                        <div key={testimonial.author.handle} className="pt-8 sm:inline-block sm:w-full sm:px-4">
+                        <div key={testimonial.author.name} className="pt-8 sm:inline-block sm:w-full sm:px-4">
                             <RevealElement>
                                 <figure className="rounded-2xl bg-gray-50 p-8 text-sm leading-6">
                                     <blockquote className="text-gray-900">
@@ -25,7 +25,7 @@ export default function Testimonials() {
                                     </blockquote>
                                     <figcaption className="mt-6 flex items-center gap-x-4">
                                         <div>
-                                        <div className="font-semibold text-gray-900">{testimonial.author.name}</div>
+                                        <div className="font-semibold text-gray-900">{testimonial.author.name}<span className="text-gray-500"></span> | <span className="font-semibold text-gray-900">{testimonial.author.role}</span></div>
                                         <div className="text-gray-600">{testimonial.author.relationship}</div>
                                         </div>
                                     </figcaption>

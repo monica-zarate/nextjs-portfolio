@@ -1,5 +1,3 @@
-import { mascopolys, cavallo } from "@/assets";
-
 import {
   faEnvelope,
   faLaptopCode,
@@ -110,7 +108,7 @@ export const pagesContent = {
           {
             id: 1,
             content:
-              "Some of the things I value in a project are inclusion, accessibility and agile work.",
+              "As a professional, some of the things I value in a project are inclusion, accessibility and agile work.",
             isHighlight: false,
           },
         ],
@@ -160,22 +158,26 @@ export const pagesContent = {
         author: {
           name: "Rikki Soriano",
           relationship:
-            "Classmate at BCIT and co-worker at Cavallo Technologies",
+            "Classmate at BCIT and Co-worker at Cavallo Technologies",
+          role: "Front-end Developer",
+        },
+      },
+
+      {
+        body: "She shows commitment to the work and has no trouble adapting to sudden changes in business processes or web technologies.",
+        author: {
+          name: "Daniel Villaverde",
+          relationship:
+            "Supervisor at Moe's Home and Classmate at BrainStation",
+          role: "Software Engineer",
         },
       },
       {
         body: "Monica was able to transform all the UI/UX wireframes into a well-design, fast website for Mascopolys business partners.",
         author: {
           name: "Ytalo Borja",
-          relationship: "Mascopolys CEO",
-        },
-      },
-      {
-        body: "She shows commitment to the work and has no trouble adapting to sudden changes in business processes or web technologies.",
-        author: {
-          name: "Daniel Villaverde",
-          relationship:
-            "Supervisor at Moe's Home and classmate at BrainStation",
+          relationship: "Technical Leader at Mascopolys",
+          role: "Cloud Application Architect",
         },
       },
       {
@@ -183,6 +185,7 @@ export const pagesContent = {
         author: {
           name: "Karina Song",
           relationship: "Classmate at BCIT",
+          role: "Front-end Developer",
         },
       },
     ],
@@ -201,8 +204,14 @@ export const pagesContent = {
     copy: {
       imgAlt: "monica zarate",
       bgAlt: "sunflower landscape",
-      h1: "Hello there!",
-      p: "I'm an enthusiastic Web Designer and Developer with 1.5 years of hands-on experience crafting engaging and dynamic web applications. Driven by a proactive mindset, I am looking forward to embracing new challenges and technologies.",
+      h2: "Hello there!",
+      h3: "My journey so far",
+      featured: [
+        "Early 2020 I found myself at a crossroads, contemplating the direction of my professional journey.",
+        "I decided to embark on a thrilling career pivot towards the dynamic world of front-end development.",
+        "Fueled by a desire to channel my creativity into tangible digital experiences, this shift has been full of professional evolution and personal growth.",
+        "I graduated with Distinction from BCIT in the Summer of 2023 and I'm looking forward to embracing new challenges as a Front-end Developer!",
+      ],
       skills: {
         h2: "Skills",
         list: [
@@ -314,12 +323,6 @@ export const pagesContent = {
     copy: {
       h2: "Featured Projects",
       p: "Each project has offered me valuable experiences and insights, shaping my skills and deepening my understanding of effective and innovative web development practices.",
-    },
-  },
-  featured: {
-    copy: {
-      h2: "Featured Projects",
-      cta: "All Projects",
     },
   },
   projectDetails: {
