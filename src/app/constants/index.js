@@ -325,6 +325,12 @@ export const pagesContent = {
       p: "Each project has offered me valuable experiences and insights, shaping my skills and deepening my understanding of effective and innovative web development practices.",
     },
   },
+  featured: {
+    copy: {
+      h2: "Featured Projects",
+      cta: "All Projects",
+    },
+  },
   projectDetails: {
     copy: {
       overview: {
