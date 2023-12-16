@@ -1,8 +1,9 @@
 // Vendor imports
 "use client";
 import Image from "next/image";
-import { caveat } from "../../fonts";
 import { AnimatePresence, motion as m } from "framer-motion";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSeedling } from "@fortawesome/free-solid-svg-icons";
 
 //Project imports
 import { monicaAboutPhoto, sunflowerBG } from "../../../assets/";
@@ -21,32 +22,34 @@ export default function About() {
         <AnimatePresence mode="wait">
             <m.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 0.3, ease: 'easeInOut'}} exit={{opacity: 0}}>
                 <main className="isolate">
-                    {/* Hero section */}
-                    <div className="relative isolate -z-10 overflow-hidden bg-gradient-to-b from-lime-100/20">
-                        <div
-                            className="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-white shadow-xl shadow-lime-600/10 ring-1 ring-lime-50 sm:-mr-80 lg:-mr-96"
-                            aria-hidden="true"
-                        />
-                        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
-                            <RevealElement>
-                                <div className="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
-                                <h1 className={`${caveat.className} max-w-2xl text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:col-span-2 xl:col-auto`}>
-                                    {copy.h1}
-                                </h1>
-                                <div className="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
-                                    <p className="text-lg leading-8 text-gray-600">
-                                    {copy.p}
-                                    </p>
-                                </div>
+                    <div className="bg-white py-24 sm:py-32">
+                        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                            <div className="mx-auto grid grid-rows-2 lg:grid-rows-none max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                                 <Image
                                     src={monicaAboutPhoto}
                                     alt={copy.imgAlt}
-                                    className="mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2"
+                                    className="rounded-xl shadow-xl ring-1 ring-gray-400/10 row-start-2 lg:row-start-auto h-auto w-[30rem]"
                                 />
+                                <div className="lg:ml-auto lg:pl-4 lg:pt-4">
+                                    <RevealElement>
+                                    <div className="lg:max-w-lg">
+                                        <h2 className="text-base font-semibold leading-7 text-lime-700">{copy.h2}</h2>
+                                        <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{copy.h3}</p>
+                                        <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
+                                        {copy.featured.map((feature, i) => (
+                                        <div key={i} className="relative pl-9">
+                                            <dt className={`inline ${i === copy.featured.length - 1 ? "text-gray-900 font-semibold" : "text-gray-600"}`}>
+                                            <FontAwesomeIcon icon={faSeedling} className="absolute left-1 top-1 h-5 w-auto text-lime-600"/>
+                                            {feature}
+                                            </dt>{' '}
+                                        </div>
+                                        ))}
+                                        </dl>
+                                    </div>
+                                    </RevealElement>
                                 </div>
-                        </RevealElement>
+                            </div>
                         </div>
-                    <div className="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32" />
                     </div>
 
                     {/* Work timeline section */}
@@ -138,7 +141,7 @@ export default function About() {
 
                     {/* {Hobbies section} */}
                     <div className="mx-auto mt-32 max-w-7xl px-6 lg:px-8">
-                        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                        <div className="mx-auto max-w-7xl">
                             <RevealElement>
                             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
                             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
