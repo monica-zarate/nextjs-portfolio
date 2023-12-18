@@ -39,21 +39,6 @@ import mz from "./images/projects/mz.png";
 import mz1 from "./images/projects/mz-1.png";
 import mzThumb from "./images/projects/mz-thumb.png";
 
-// Icons
-import xd from "./icons/tools/xd.png";
-import figma from "./icons/tools/figma.png";
-import html from "./icons/tools/html.png";
-import css from "./icons/tools/css.png";
-import php from "./icons/tools/php.png";
-import mamp from "./icons/tools/mamp.png";
-import js from "./icons/tools/javascript.png";
-import postman from "./icons/tools/postman.png";
-import react from "./icons/tools/react.png";
-import expo from "./icons/tools/expo.png";
-import android from "./icons/tools/android.png";
-import typescript from "./icons/tools/ts.png";
-import tailwind from "./icons/tools/tailwind.png";
-
 export {
   monicaProfilePhoto,
   monicaAboutPhoto,
@@ -92,17 +77,4 @@ export {
   mz,
   mz1,
   mzThumb,
-  xd,
-  figma,
-  html,
-  css,
-  php,
-  mamp,
-  js,
-  postman,
-  react,
-  expo,
-  android,
-  typescript,
-  tailwind,
 };

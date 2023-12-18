@@ -25,7 +25,7 @@ export default function CTA() {
             >
                 {copy.main}
             </Link>
-            <Link href={copy.secondaryHref} className="text-sm font-semibold leading-6 text-gray-900">
+            <Link href={copy.secondaryHref} className="text-sm font-semibold leading-6 text-gray-900 hover:text-amber-700">
                 {copy.secondary} <span aria-hidden="true">→</span>
             </Link>
             </div>
