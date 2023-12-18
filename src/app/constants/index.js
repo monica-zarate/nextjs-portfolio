@@ -358,14 +358,12 @@ export const pagesContent = {
       guavaPunch: "guava-punch",
     },
   },
-  projectCard: {
-    copy: {},
-  },
   notFound: {
     copy: {
       h1: "Page Not Found",
       p: "Oops! Looks like you've ventured into the Bermuda Triangle. Please return to safety.",
       cta: "Home Page",
+      imgAlt: "sunflower field",
     },
   },
   footer: {
@@ -378,9 +376,4 @@ export const pagesContent = {
 export const variants = {
   hidden: { opacity: 0, y: 75 },
   visible: { opacity: 1, y: 0 },
-};
-
-export const disciplines = {
-  design: "design",
-  development: "development",
 };

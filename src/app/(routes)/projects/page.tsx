@@ -53,12 +53,12 @@ export default function Projects() {
                                                         <div className="relative flex items-center gap-x-4">
                                                             <div className="text-sm leading-6">
                                                                 <ul className="flex items-center gap-x-4 text-xs">
-                                                                    {project.tools.map((tool) => (
+                                                                    {project.tools.map((tool, i) => (
                                                                         <li
-                                                                        key={tool.name}
+                                                                        key={i}
                                                                         className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600"
                                                                         >
-                                                                        {tool.name}
+                                                                        {tool}
                                                                         </li>
                                                                     ))}
                                                                 </ul>

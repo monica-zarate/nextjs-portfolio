@@ -32,20 +32,13 @@ import {
   mz,
   mz1,
   mzThumb,
-  xd,
-  figma,
-  html,
-  css,
-  php,
-  mamp,
-  js,
-  postman,
-  react,
-  expo,
-  android,
-  typescript,
-  tailwind,
 } from "../../assets";
+
+import {
+  BookmarkIcon,
+  BriefcaseIcon,
+  PaintBrushIcon,
+} from "@heroicons/react/24/solid";
 
 export const projects = [
   {
@@ -61,28 +54,39 @@ export const projects = [
     description:
       "Designed and Developed this website to demonstrate my skills in crafting user-friendly interfaces, responsive designs, and seamless user experiences.",
     chip: "Development",
-    disciplines: ["design", "development"],
     path: "my-portfolio",
     isFeatured: true,
-    links: {
-      repo: "https://github.com/monica-zarate/nextjs-portfolio",
-      repoTitle: "My Portfolio Website's Repository",
-      figmaPrototype:
-        "https://www.figma.com/proto/nEUgRjRJDVeGHPf6E5pnXV/Portfolio-Mockup?page-id=0%3A1&type=design&node-id=6-93&viewport=316%2C302%2C0.13&t=Xp1jaAISVY5EJzfZ-1&scaling=scale-down&starting-point-node-id=6%3A93&mode=design",
-      figmaPrototypeTitle: "My Portfolio Website's Prototype",
-      xdPrototype: "",
-      xdPrototypeTitle: "",
-      site: "",
-      siteTitle: "",
-      internalLink: "",
-      internalLinkTitle: "",
-    },
-    tools: [
-      { name: "Figma", icon: figma },
-      { name: "React.js", icon: react },
-      { name: "Typescript", icon: typescript },
-      { name: "Tailwind", icon: tailwind },
+    links: [
+      {
+        href: "https://github.com/monica-zarate/nextjs-portfolio",
+        title: "My Portfolio Website's Repository",
+        tag: "GitHub Repository",
+      },
+      {
+        href: "https://www.figma.com/proto/nEUgRjRJDVeGHPf6E5pnXV/Portfolio-Mockup?page-id=0%3A1&type=design&node-id=6-93&viewport=316%2C302%2C0.13&t=Xp1jaAISVY5EJzfZ-1&scaling=scale-down&starting-point-node-id=6%3A93&mode=design",
+        title: "My Portfolio Website's Prototype",
+        tag: "Figma Prototype",
+      },
     ],
+    details: [
+      {
+        name: "Deliverables:",
+        description: "Design prototype. Project's repository and live website.",
+        icon: BookmarkIcon,
+      },
+      {
+        name: "Role:",
+        description: "UI Designer and Front-end Developer.",
+        icon: BriefcaseIcon,
+      },
+      {
+        name: "Tools:",
+        description:
+          "Figma was used to build the prototype. The codebase was built in Next.js with React.js, Typescript, and Tailwind UI. Deployment was done using Vercel.",
+        icon: PaintBrushIcon,
+      },
+    ],
+    tools: ["Figma", "React.js", "Typescript", "Tailwind UI"],
     intro: [
       "The site's current version was built using React with Next.js, Typescript and Tailwind CSS.",
       "This project is a work in progress, and I'm constantly looking to improve both the design and the codebase.",
@@ -148,25 +152,39 @@ export const projects = [
     description:
       "Designed and developed a site that consumes the NASA APOD API to display the Astronomy Picture of the Day. The project uses the Fetch API to make a request to an endpoint.",
     chip: "Development",
-    disciplines: ["development"],
     path: "apod",
     isFeatured: false,
-    links: {
-      repo: "https://github.com/monica-zarate/nasa-apod",
-      repoTitle: "APOD Project Repository",
-      figmaPrototype: "",
-      figmaPrototypeTitle: "",
-      xdPrototype: "",
-      xdPrototypeTitle: "",
-      site: "http://apod.monicazarate.com",
-      siteTitle: "Monica's APOD Website",
-    },
-    tools: [
-      { name: "HTML", icon: html },
-      { name: "CSS", icon: css },
-      { name: "Javascript", icon: js },
-      { name: "Postman", icon: postman },
+    links: [
+      {
+        href: "https://github.com/monica-zarate/nasa-apod",
+        title: "APOD Project Repository",
+        tag: "GitHub Repository",
+      },
+      {
+        href: "http://apod.monicazarate.com",
+        title: "Monica's APOD Website",
+        tag: "Project's Website",
+      },
     ],
+    details: [
+      {
+        name: "Deliverables:",
+        description: "Project's repository and live website.",
+        icon: BookmarkIcon,
+      },
+      {
+        name: "Role:",
+        description: "UI Designer and Front-end Developer.",
+        icon: BriefcaseIcon,
+      },
+      {
+        name: "Tools:",
+        description:
+          "The codebase was built with Javascript and CSS. Postman was used to test the API Key. Deployment was done using GitHub Pages.",
+        icon: PaintBrushIcon,
+      },
+    ],
+    tools: ["HTML", "CSS", "Javascript", "Postman"],
     intro: [
       "To practice my Javascript skills, I decided to build my own version of NASA's Astronomy Picture of the Day. This project heavily focuses on the map() array method, writing DRY code and the ability to request data from a third-party API.",
     ],
@@ -221,25 +239,34 @@ export const projects = [
     description:
       "Designed and developed a site listing a collection of Animal Crossing villagers. The project includes classes and constructor methods and knowledge of arrays loops and functions in PHP.",
     chip: "Development",
-    disciplines: ["development"],
     path: "acnh",
     isFeatured: false,
-    links: {
-      repo: "https://github.com/monica-zarate/acnh_residents",
-      repoTitle: "ACNH PHP Project Repository",
-      figmaPrototype: "",
-      figmaPrototypeTitle: "",
-      xdPrototype: "",
-      xdPrototypeTitle: "",
-      site: "",
-      siteTitle: "",
-    },
-    tools: [
-      { name: "HTML", icon: html },
-      { name: "CSS", icon: css },
-      { name: "PHP", icon: php },
-      { name: "MAMP", icon: mamp },
+    links: [
+      {
+        href: "https://github.com/monica-zarate/acnh_residents",
+        title: "ACNH PHP Project Repository",
+        tag: "GitHub Repository",
+      },
     ],
+    details: [
+      {
+        name: "Deliverables:",
+        description: "Project's repository and database.",
+        icon: BookmarkIcon,
+      },
+      {
+        name: "Role:",
+        description: "UI Designer and Front-end Developer.",
+        icon: BriefcaseIcon,
+      },
+      {
+        name: "Tools:",
+        description:
+          "The codebase was built with PHP and CSS. The database was built with MySQL.",
+        icon: PaintBrushIcon,
+      },
+    ],
+    tools: ["HTML", "CSS", "PHP", "MAMP"],
     intro: [
       "Using Animal Crossing (a popular video game I like to play) characters as a starting point, this project shows the current residents I have on my island. All items in this collection have shared properties, and I'm looping through them so that I can create a card per character that displays its information.",
       "I created two types of residents: villagers and NPCs (non-playable characters). The project makes use of a parent class, that's used to create two child classes, allowing for variations amongst the displayed data. The page was built making use of partials for its different sections.",
@@ -302,24 +329,38 @@ export const projects = [
     description:
       "Designed the interface of a travel management application. A mobile interface, from sketching to a prototype.",
     chip: "UX Design",
-    disciplines: ["design"],
     path: "travel-compass-phase1",
     isFeatured: false,
-    links: {
-      repo: "",
-      repoTitle: "",
-      figmaPrototype: "",
-      figmaPrototypeTitle: "",
-      xdPrototype:
-        "https://xd.adobe.com/view/70b5d4ab-3e64-42bc-a21c-636217837e02-25e6/?fullscreen",
-      xdPrototypeTitle: "Travel Compass Prototype: Add New Trip",
-      site: "",
-      siteTitle: "",
-      internalLink:
-        "https://www.monicazarate.com/projects/travel-compass-phase2",
-      internalLinkTitle: "Travel Compass Phase 2: Development",
-    },
-    tools: [{ name: "Adobe Xd", icon: xd }],
+    links: [
+      {
+        href: "https://xd.adobe.com/view/70b5d4ab-3e64-42bc-a21c-636217837e02-25e6/?fullscreen",
+        title: "Travel Compass Prototype: Add New Trip",
+        tag: "Adobe Xd Prototype",
+      },
+      {
+        href: "https://www.monicazarate.com/projects/travel-compass-phase2",
+        title: "Travel Compass Phase 2: Development",
+        tag: "Travel Compass Phase 2: Development",
+      },
+    ],
+    details: [
+      {
+        name: "Deliverables:",
+        description: "Design prototype.",
+        icon: BookmarkIcon,
+      },
+      {
+        name: "Role:",
+        description: "UI Designer.",
+        icon: BriefcaseIcon,
+      },
+      {
+        name: "Tools:",
+        description: "Adobe Xd was used to build the prototype.",
+        icon: PaintBrushIcon,
+      },
+    ],
+    tools: ["Adobe Xd"],
     intro: [
       "The Travel Compass prototype is presented as the first iteration of a travel management tool, it shows an example of how an existing user would create a new trip. The application's functionality would allow users to have all the information related to a trip in one place, you would be able to read the trip's itinerary through a daily breakdown.",
     ],
@@ -400,27 +441,38 @@ export const projects = [
     description:
       "Developed an Android application using React Native. The goal was to build the front end based on the Design from Phase 1.",
     chip: "Development",
-    disciplines: ["development"],
     path: "travel-compass-phase2",
     isFeatured: true,
-    links: {
-      repo: "https://github.com/monica-zarate/travel-compass",
-      repoTitle: "Travel Compass Project Repository",
-      figmaPrototype: "",
-      figmaPrototypeTitle: "",
-      xdPrototype: "",
-      xdPrototypeTitle: "",
-      site: "",
-      siteTitle: "",
-      internalLink:
-        "https://www.monicazarate.com/projects/travel-compass-phase1",
-      internalLinkTitle: "Travel Compass Phase 1: UI Design",
-    },
-    tools: [
-      { name: "React Native", icon: react },
-      { name: "Expo", icon: expo },
-      { name: "Android Studio", icon: android },
+    links: [
+      {
+        href: "https://github.com/monica-zarate/travel-compass",
+        title: "Travel Compass Project Repository",
+        tag: "GitHub Repository",
+      },
+      {
+        href: "https://www.monicazarate.com/projects/travel-compass-phase1",
+        title: "Travel Compass Phase 1: UI Design",
+        tag: "Travel Compass Phase 1: UI Design",
+      },
     ],
+    details: [
+      {
+        name: "Deliverables:",
+        description: "Project's repository.",
+        icon: BookmarkIcon,
+      },
+      {
+        name: "Role:",
+        description: "Front-end Developer.",
+        icon: BriefcaseIcon,
+      },
+      {
+        name: "Tools:",
+        description: "The codebase was built in Next.js with React Native.",
+        icon: PaintBrushIcon,
+      },
+    ],
+    tools: ["React Native", "Expo", "Android Studio"],
     intro: [
       "After the Design Phase was completed, I wanted to expand the Travel Compass Project by taking the high-fidelity mockups into a native application. I developed an Android application using React Native, Expo and Android Studio as a mobile emulator.",
       "Travel Compass is a travel management application. Its main purpose is to serve as an information hub where users can store all the information related to a given trip, like flight information, accommodation check-in and check-out dates and times, and other activities users might want to do during a holiday. It's intended for 20- to 50-year-old individuals who explicitly plan to travel for leisure at least once a year.",
@@ -488,21 +540,33 @@ export const projects = [
     description:
       "Designed the interface of an expense-tracking application. An interface for a desktop environment, from sketching to a prototype.",
     chip: "UX Design",
-    disciplines: ["design"],
     path: "billy",
     isFeatured: false,
-    links: {
-      repo: "",
-      repoTitle: "",
-      figmaPrototype:
-        "https://www.figma.com/proto/IgRu2NjUyhF1jB0D9RofhD/Expenses-Tracker-App?page-id=0%3A1&node-id=33%3A317&viewport=1328%2C-705%2C0.27&scaling=min-zoom&starting-point-node-id=33%3A317",
-      figmaPrototypeTitle: "Billy Prototype: Add New Expense",
-      xdPrototype: "",
-      xdPrototypeTitle: "",
-      site: "",
-      siteTitle: "",
-    },
-    tools: [{ name: "Figma", icon: figma }],
+    links: [
+      {
+        href: "https://www.figma.com/proto/IgRu2NjUyhF1jB0D9RofhD/Expenses-Tracker-App?page-id=0%3A1&node-id=33%3A317&viewport=1328%2C-705%2C0.27&scaling=min-zoom&starting-point-node-id=33%3A317",
+        title: "Billy Prototype: Add New Expense",
+        tag: "Figma Prototype",
+      },
+    ],
+    details: [
+      {
+        name: "Deliverables:",
+        description: "Design prototype.",
+        icon: BookmarkIcon,
+      },
+      {
+        name: "Role:",
+        description: "UI Designer.",
+        icon: BriefcaseIcon,
+      },
+      {
+        name: "Tools:",
+        description: "Figma was used to build the prototype.",
+        icon: PaintBrushIcon,
+      },
+    ],
+    tools: ["Figma"],
     intro: [
       "Billy's prototype is presented as the first iteration of an expense tracker tool that helps users manage their expenses and income, it shows an example of how an existing user would add a new expense. The application's functionality would offer users an easy-to-read overview of all the information related to their personal finances in one place. Billy is targeted at people who are new to expense tracking and budgeting.",
     ],
