@@ -52,7 +52,7 @@ export default function Projects() {
                                                     <div className="mt-6 flex border-t border-gray-900/5 pt-6">
                                                         <div className="relative flex items-center gap-x-4">
                                                             <div className="text-sm leading-6">
-                                                                <ul className="flex items-center gap-x-4 text-xs">
+                                                                <ul className="flex flex-wrap items-center gap-x-4 text-xs gap-y-4">
                                                                     {project.tools.map((tool, i) => (
                                                                         <li
                                                                         key={i}
