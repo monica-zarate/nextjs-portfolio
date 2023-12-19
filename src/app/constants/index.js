@@ -90,16 +90,6 @@ export const pagesContent = {
           },
           {
             id: 3,
-            content: "and",
-            isHighlight: false,
-          },
-          {
-            id: 4,
-            content: "Web Designer",
-            isHighlight: true,
-          },
-          {
-            id: 5,
             content: "with 1.5 years of experience building web applications.",
             isHighlight: false,
           },
@@ -355,7 +345,6 @@ export const pagesContent = {
     ids: {
       intro: "intro",
       learnMore: "learnmore",
-      guavaPunch: "guava-punch",
     },
   },
   notFound: {

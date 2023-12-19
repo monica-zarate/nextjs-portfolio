@@ -33,8 +33,7 @@ import tcDev1 from "./images/projects/tc-dev-1.png";
 import tcDev2 from "./images/projects/tc-dev-2.png";
 import tcDev3 from "./images/projects/tc-dev-3.png";
 import tc from "./images/projects/tc.png";
-import tcDesignThumb from "./images/projects/tc-design-thumb.png";
-import tcDevThumb from "./images/projects/tc-dev-thumb.png";
+import tcThumb from "./images/projects/tc-thumb.png";
 import mz from "./images/projects/mz.png";
 import mz1 from "./images/projects/mz-1.png";
 import mzThumb from "./images/projects/mz-thumb.png";
@@ -72,8 +71,7 @@ export {
   tcDev2,
   tcDev3,
   tc,
-  tcDesignThumb,
-  tcDevThumb,
+  tcThumb,
   mz,
   mz1,
   mzThumb,

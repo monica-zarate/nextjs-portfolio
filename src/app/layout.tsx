@@ -5,8 +5,8 @@ import Footer from "./_components/Footer"
 import GoogleAnalytics from "./GoogleAnalytics"
 
 export const metadata = {
-  title: "Monica Zarate - Web Designer and Developer",
-  description: "Monica Zarate is a Vancouver BC-based Web Designer and Developer.",
+  title: "Monica Zarate | Front-end Developer",
+  description: "Monica Zarate is a Vancouver BC-based Front-end Developer.",
 }
 
 export default function RootLayout({

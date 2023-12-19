@@ -27,8 +27,7 @@ import {
   tcDev2,
   tcDev3,
   tc,
-  tcDesignThumb,
-  tcDevThumb,
+  tcThumb,
   mz,
   mz1,
   mzThumb,
@@ -321,7 +320,7 @@ export const projects = [
     title: "Travel Compass: Phase 1 App Prototype",
     subtitle: "Travel Management Mobile App Interface Design",
     images: {
-      thumb: tcDesignThumb,
+      thumb: tcThumb,
       thumbAlt: "travel compass mobile interface preview",
       featuredImg: tc,
       featuredImgAlt: "travel compass mobile interface preview",
@@ -433,7 +432,7 @@ export const projects = [
     title: "Travel Compass: Phase 2 Development",
     subtitle: "React Native Application for Android devices",
     images: {
-      thumb: tcDevThumb,
+      thumb: tcThumb,
       thumbAlt: "travel compass mobile interface preview",
       featuredImg: tc,
       featuredImgAlt: "travel compass mobile interface preview",
