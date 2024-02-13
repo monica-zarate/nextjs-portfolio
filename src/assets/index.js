@@ -1,6 +1,6 @@
 // General Images
-import monicaProfilePhoto from "./images/monica-zarate.png";
-import monicaAboutPhoto from "./images/monica-zarate-about.png";
+import laptopIllustration from "./images/laptop.png";
+import monicaAboutPhoto from "./images/monica-zarate-about.jpg";
 import sunflower from "./images/sunflower.png";
 import sunflowerBG from "./images/sunflower-landscape.png";
 
@@ -39,7 +39,7 @@ import mz1 from "./images/projects/mz-1.png";
 import mzThumb from "./images/projects/mz-thumb.png";
 
 export {
-  monicaProfilePhoto,
+  laptopIllustration,
   monicaAboutPhoto,
   sunflower,
   sunflowerBG,
