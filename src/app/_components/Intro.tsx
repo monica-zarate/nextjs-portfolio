@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSeedling } from "@fortawesome/free-solid-svg-icons";
 
 // Project imports
-import { laptopIllustration } from "../../assets";
+import { monicaAboutPhoto } from "../../assets";
 import { pagesContent } from "../constants";
 import Social from "./Social";
 import RevealElement from "./RevealElement";
@@ -17,14 +17,19 @@ export default function Intro() {
   return (
     <div className="relative bg-white">
       <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
-        <div className="px-6 pb-24 pt-10 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-56 lg:pt-48 xl:col-span-6">
+        <div className="px-6 pb-24 pt-10 sm:pb-32 lg:col-span-9 lg:px-0 lg:py-40 xl:col-span-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <RevealElement>
-              <h1
-                className={`${caveat.className} text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl`}
-              >
-                {copy.h1}
-              </h1>
+              <div className="sm:flex sm:items-center sm:gap-x-4">
+                <Image
+                  className="mb-4 lg:mb-0 w-24 lg:w-32 lg:h-full rounded-full"
+                  src={monicaAboutPhoto}
+                  alt={copy.imgAlt}
+                />
+                <h1 className="playpen text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+                  {copy.h1}
+                </h1>
+              </div>
             </RevealElement>
             <ul className="mt-6">
               {copy.p.map((paragraph, i, { length }) => (
@@ -62,13 +67,6 @@ export default function Intro() {
               </RevealElement>
             </div>
           </div>
-        </div>
-        <div className="relative lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0">
-          <Image
-            className="aspect-[3/2] w-full bg-gray-50 object-cover lg:absolute lg:inset-0 lg:aspect-auto lg:h-full"
-            src={laptopIllustration}
-            alt={copy.imgAlt}
-          />
         </div>
       </div>
     </div>

@@ -16,6 +16,14 @@
   }
 }
 
+@font-face {
+  font-family: "Playpen Sans";
+  src: url("/fonts/PlaypenSans/PlaypenSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -24,4 +32,8 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.playpen {
+  font-family: "Playpen Sans";
 }
