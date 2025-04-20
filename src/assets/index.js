@@ -1,5 +1,5 @@
 // General Images
-import monicaAboutPhoto from "./images/monica-zarate-about.png";
+import monicaAboutPhoto from "./images/monica-zarate-about.jpg";
 import sunflower from "./images/sunflower.png";
 import sunflowerBG from "./images/sunflower-landscape.png";
 
