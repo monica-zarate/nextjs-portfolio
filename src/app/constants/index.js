@@ -70,6 +70,7 @@ export const pagesContent = {
   navbar: {
     copy: {
       title: "Monica Zarate",
+      nav: "mz",
     },
   },
   intro: {
@@ -90,7 +91,7 @@ export const pagesContent = {
           },
           {
             id: 3,
-            content: "with 1.5 years of experience building web applications.",
+            content: "with 3 years of experience building web applications.",
             isHighlight: false,
           },
         ],
@@ -198,9 +199,9 @@ export const pagesContent = {
       h3: "My journey so far",
       featured: [
         "Early 2020 I found myself at a crossroads, contemplating the direction of my professional journey.",
-        "I decided to embark on a thrilling career pivot towards the dynamic world of front-end development.",
-        "Fueled by a desire to channel my creativity into tangible digital experiences, this shift has been full of professional evolution and personal growth.",
-        "I graduated with Distinction from BCIT in the Summer of 2023 and I'm looking forward to embracing new challenges as a Front-end Developer!",
+        "Fueled by a desire to channel my creativity into tangible digital experiences, I decided to embark on a thrilling career pivot towards the dynamic world of front-end development.",
+        "I graduated with Distinction from BCIT in the Summer of 2023, this experience was full of professional evolution and personal growth.",
+        "For the past two years, I've been working professionally as a Web Designer and Developer — blending aesthetic sensibility with code to build clean, user-focused digital experiences.",
       ],
       skills: {
         h2: "Skills",
@@ -212,7 +213,6 @@ export const pagesContent = {
           "TypeScript",
           "React.js",
           "Next.js",
-          "React Native",
           "SQL",
           "Git",
           "Figma",
@@ -253,7 +253,7 @@ export const pagesContent = {
         events: [
           {
             company: "Cavallo Technologies Inc.",
-            title: "Web Design and Development Intern",
+            title: "Web Design and Developer",
             date: "May, 2023 - Present",
             description:
               "Implemented the company's branding and digital presence. Designed and Developed their live site. Currently participating in internal projects.",
@@ -280,25 +280,25 @@ export const pagesContent = {
           {
             name: "Baking something sweet",
             description:
-              "There's something incredibly magical about turning a bunch of seemingly random ingredients into a delicious treat.",
+              "There's something incredibly magical about a freshly baked sweet treat.",
             icon: CakeIcon,
           },
           {
             name: "Reading novels and manga",
             description:
-              "I grew up reading fantasy, like Harry Potter and manga by CLAMP. One of my favourite books is 1Q84 by Haruki Murakami.",
+              "I grew up reading fiction. One of my favourite books is 1Q84 by Haruki Murakami.",
             icon: SparklesIcon,
           },
           {
             name: "Snapping photos",
             description:
-              "Maintaining a visual diary to document my daily life is a great way for me to cherish the little moments.",
+              "I keep a visual diary to document my daily life and cherish the little moments.",
             icon: PhotoIcon,
           },
           {
             name: "Planning my next adventure",
             description:
-              "Always looking for a chance to break free from the routine, embrace spontaneity, and collect stories.",
+              "Always looking for a chance to explore new places and collect stories.",
             icon: MapPinIcon,
           },
         ],
