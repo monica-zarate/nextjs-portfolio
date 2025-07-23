@@ -11,9 +11,11 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 // Project imports
 import { routes } from "../constants";
 import { pagesContent, social } from "../constants";
+import { monicaLogo, monicaLogoLight } from "@/assets";
 
 export default function Navbar() {
   const [isMobile, setIsMobile] = useState(false);
+  const [logoSrc, setLogoSrc] = useState(monicaLogo);
   const { copy } = pagesContent.navbar;
   const linkedIn = social[0];
   const pathname = usePathname();
@@ -22,16 +24,18 @@ export default function Navbar() {
     <header className="bg-white">
       <Suspense>
         <nav
-          className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+          className="mx-auto flex max-w-7xl items-end justify-between p-6 lg:px-8"
           aria-label="Global"
         >
           <Link href="/">
             <span className="sr-only">{copy.title}</span>
-            <div className="flex items-baseline">
-              <span className="playpen text-black font-semibold text-4xl">
-                {copy.nav}
-              </span>
-            </div>
+            <Image
+              src={logoSrc}
+              alt={copy.title}
+              className="h-16 w-auto"
+              onMouseEnter={() => setLogoSrc(monicaLogoLight)}
+              onMouseLeave={() => setLogoSrc(monicaLogo)}
+            />
           </Link>
           <div className="flex lg:hidden">
             <button
@@ -43,7 +47,7 @@ export default function Navbar() {
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
-          <div className="hidden lg:flex lg:gap-x-12 items-center">
+          <div className="hidden lg:flex lg:gap-x-12 items-end">
             {routes.map((route) => (
               <Link
                 key={route.name}
@@ -62,6 +66,7 @@ export default function Navbar() {
               target="__blank"
               rel="noreferrer"
               title={linkedIn.title}
+              className="h-8"
             >
               <FontAwesomeIcon
                 icon={linkedIn.icon}

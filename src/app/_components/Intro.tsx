@@ -1,12 +1,9 @@
 // Vendor imports
 "use client";
-import Image from "next/image";
-import { caveat } from "../fonts";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSeedling } from "@fortawesome/free-solid-svg-icons";
 
 // Project imports
-import { monicaAboutPhoto } from "../../assets";
 import { pagesContent } from "../constants";
 import Social from "./Social";
 import RevealElement from "./RevealElement";
@@ -20,16 +17,9 @@ export default function Intro() {
         <div className="px-6 pb-24 pt-10 sm:pb-32 lg:col-span-9 lg:px-0 lg:py-40 xl:col-span-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <RevealElement>
-              <div className="sm:flex sm:items-center sm:gap-x-4">
-                <Image
-                  className="mb-4 lg:mb-0 w-24 lg:w-32 lg:h-full rounded-full"
-                  src={monicaAboutPhoto}
-                  alt={copy.imgAlt}
-                />
-                <h1 className="playpen text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                  {copy.h1}
-                </h1>
-              </div>
+              <h1 className="playpen text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+                {copy.h1}
+              </h1>
             </RevealElement>
             <ul className="mt-6">
               {copy.p.map((paragraph, i, { length }) => (

@@ -1,5 +1,7 @@
 // General Images
 import monicaAboutPhoto from "./images/monica-zarate-about.jpg";
+import monicaLogo from "./images/monica-logo.svg";
+import monicaLogoLight from "./images/monica-logo-light.svg";
 import sunflower from "./images/sunflower.png";
 import sunflowerBG from "./images/sunflower-landscape.png";
 
@@ -39,6 +41,8 @@ import mzThumb from "./images/projects/mz-thumb.png";
 
 export {
   monicaAboutPhoto,
+  monicaLogo,
+  monicaLogoLight,
   sunflower,
   sunflowerBG,
   acnh1,
