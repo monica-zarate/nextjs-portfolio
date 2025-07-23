@@ -99,7 +99,7 @@ export const pagesContent = {
           {
             id: 1,
             content:
-              "As a professional, some of the things I value in a project are inclusion, accessibility and agile work.",
+              "My focus is on intuitive, user-centered experiences that align with real business needs.",
             isHighlight: false,
           },
         ],
@@ -201,18 +201,16 @@ export const pagesContent = {
         "Early 2020 I found myself at a crossroads, contemplating the direction of my professional journey.",
         "Fueled by a desire to channel my creativity into tangible digital experiences, I decided to embark on a thrilling career pivot towards the dynamic world of front-end development.",
         "I graduated with Distinction from BCIT in the Summer of 2023, this experience was full of professional evolution and personal growth.",
-        "For the past two years, I've been working professionally as a Web Designer and Developer — blending aesthetic sensibility with code to build clean, user-focused digital experiences.",
+        "For the past two years, I've been working professionally as a Web Designer and Developer, blending aesthetic sensibility with code to build clean, user-focused digital experiences.",
       ],
       skills: {
         h2: "Skills",
         list: [
-          "HTML",
-          "CSS",
-          "Tailwind CSS",
           "Javascript",
           "TypeScript",
           "React.js",
           "Next.js",
+          "Tailwind CSS",
           "SQL",
           "Git",
           "Figma",
@@ -280,13 +278,13 @@ export const pagesContent = {
           {
             name: "Baking something sweet",
             description:
-              "There's something incredibly magical about a freshly baked sweet treat.",
+              "I try to bake with seasonal produce, it's a different creative outlet with yummy results.",
             icon: CakeIcon,
           },
           {
             name: "Reading novels and manga",
             description:
-              "I grew up reading fiction. One of my favourite books is 1Q84 by Haruki Murakami.",
+              "I grew up reading fiction. Most recently, I thoroughly enjoyed the Remembrance of Earth's Past trilogy.",
             icon: SparklesIcon,
           },
           {
@@ -305,14 +303,14 @@ export const pagesContent = {
       },
       cta: {
         h2: "Let's connect!",
-        p: "Interested in working together, grab a coffee or just want to say hi?",
+        p: "Interested in working together, grab a chai latte or just want to say hi?",
       },
     },
   },
   projects: {
     copy: {
       h2: "Featured Projects",
-      p: "Each project has offered me valuable experiences and insights, shaping my skills and deepening my understanding of effective and innovative web development practices.",
+      p: "Coming Soon",
     },
   },
   featured: {

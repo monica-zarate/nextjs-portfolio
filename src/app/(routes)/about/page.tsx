@@ -220,7 +220,7 @@ export default function About() {
                 <h2 className="playpen text-3xl font-bold tracking-tight text-lime-700 sm:text-4xl">
                   {copy.cta.h2}
                 </h2>
-                <p className="mt-6 max-w-xl text-lg leading-8 text-gray-600">
+                <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-600">
                   {copy.cta.p}
                 </p>
                 <div className="mt-10 flex items-center gap-x-6">
