@@ -24,9 +24,9 @@ export default function About() {
         exit={{ opacity: 0 }}
       >
         <main className="isolate">
-          <div className="bg-white py-24 sm:py-32">
+          <div className="bg-white py-8 lg:py-32">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
-              <div className="mx-auto grid grid-rows-2 lg:grid-rows-none max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+              <div className="mx-auto grid grid-rows-auto lg:grid-rows-none max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                 <RevealElement>
                   <Image
                     src={monicaAboutPhoto}
@@ -111,7 +111,7 @@ export default function About() {
           </div>
 
           {/* Skills section */}
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-32">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-16 lg:mt-32">
             <RevealElement>
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                 {copy.skills.h2}
@@ -131,7 +131,7 @@ export default function About() {
           </div>
 
           {/* Education timeline section */}
-          <div className="mx-auto mt-32 max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto mt-16 lg:mt-32 max-w-7xl px-6 lg:px-8">
             <RevealElement>
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                 {copy.educationTimeline.heading}
@@ -172,7 +172,7 @@ export default function About() {
           </div>
 
           {/* Image section */}
-          <div className="mt-32 xl:mx-auto xl:max-w-7xl xl:px-8">
+          <div className="mt-16 lg:mt-32 xl:mx-auto xl:max-w-7xl xl:px-8">
             <RevealElement>
               <Image
                 src={sunflowerBG}
@@ -183,7 +183,7 @@ export default function About() {
           </div>
 
           {/* {Hobbies section} */}
-          <div className="mx-auto mt-32 max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto mt-16 lg:mt-32 max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-7xl">
               <RevealElement>
                 <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
