@@ -14,7 +14,7 @@ To install the project's dependencies.
 
 To run the app in development mode.
 
-This website is a work in progress, and I'm constantly looking to improve the codebase and the showcased projects.
+I'm constantly looking to improve the codebase and the showcased projects.
 
 Have feedback, or just want to say hi? Send me an email!
 

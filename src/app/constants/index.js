@@ -310,7 +310,7 @@ export const pagesContent = {
   projects: {
     copy: {
       h2: "Featured Projects",
-      p: "Coming Soon",
+      p: "Each project has offered me valuable experiences and insights, shaping my skills and deepening my understanding of effective and innovative web development practices.",
     },
   },
   featured: {
